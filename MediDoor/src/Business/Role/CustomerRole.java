@@ -22,3 +22,4 @@ public class CustomerRole {
         return new CustomerWorkAreaJPanel(userProcessContainer, system, network, customer); 
     
 }
+}

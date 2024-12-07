@@ -4,19 +4,47 @@
  */
 package UI.LabEnterpriseRole;
 
+import Business.Customer.Customer;
+import Business.Ecosystem;
+import Business.Enterprise.Enterprise;
+import Business.Network.Network;
+import Business.Organization.Organization;
+import Business.UserAccount.UserAccount;
+import Business.UserAccount.UserAccountDirectory;
+import UI.LabCenters.ManageLabCentersJPanel;
+import UI.LabEnterpriseRole.ManageLabDeliveryAgentJPanel;
+import UI.LabEnterpriseRole.ManageLabOrdersJPanel;
+import java.awt.CardLayout;
+import javax.swing.JPanel;
 /**
  *
  * @author chandrkiran
  */
 public class LabEnterpriseWorkAreaJPanel extends javax.swing.JPanel {
 
+        private JPanel userProcessContainer;
+    private Ecosystem ecosystem;
+    private UserAccount account;
+    private UserAccountDirectory useraccountdirectory;
+    private Enterprise enterprise;
+    private Customer customer;
+    private Organization organization;
+    private Network network;
     /**
      * Creates new form LabEnterpriseWorkAreaJPanel
      */
-    public LabEnterpriseWorkAreaJPanel() {
+    public LabEnterpriseWorkAreaJPanel(JPanel userProcessContainer, UserAccount account,Network network,Organization organization, Enterprise enterprise,Ecosystem ecosystem) {
         initComponents();
-    }
 
+        this.userProcessContainer=userProcessContainer;
+        this.ecosystem=ecosystem;
+        this.account = account;
+        this.enterprise = enterprise;
+        this.organization = organization;
+        this.network = network;
+        this.customer = new Customer();
+
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -26,19 +54,92 @@ public class LabEnterpriseWorkAreaJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        btnmanageorders = new javax.swing.JButton();
+        btndeliveryagents = new javax.swing.JButton();
+        btnLabcenters = new javax.swing.JButton();
+
+        btnmanageorders.setBackground(new java.awt.Color(0, 102, 102));
+        btnmanageorders.setForeground(new java.awt.Color(255, 255, 255));
+        btnmanageorders.setText("Manage Orders");
+        btnmanageorders.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnmanageordersActionPerformed(evt);
+            }
+        });
+
+        btndeliveryagents.setBackground(new java.awt.Color(0, 102, 102));
+        btndeliveryagents.setForeground(new java.awt.Color(255, 255, 255));
+        btndeliveryagents.setText("Manage Delivery Agents");
+        btndeliveryagents.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btndeliveryagentsActionPerformed(evt);
+            }
+        });
+
+        btnLabcenters.setBackground(new java.awt.Color(0, 102, 102));
+        btnLabcenters.setForeground(new java.awt.Color(255, 255, 255));
+        btnLabcenters.setText("Manage Lab Centers");
+        btnLabcenters.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnLabcentersActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(179, Short.MAX_VALUE)
+                .addComponent(btnmanageorders, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(48, 48, 48)
+                .addComponent(btndeliveryagents, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(42, 42, 42)
+                .addComponent(btnLabcenters, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(171, 171, 171))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(257, 257, 257)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnmanageorders, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btndeliveryagents, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnLabcenters, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(451, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnmanageordersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmanageordersActionPerformed
+        // TODO add your handling code here:
+
+        ManageLabOrdersJPanel manageLabOrdersJPanel=new ManageLabOrdersJPanel(userProcessContainer, ecosystem,network,useraccountdirectory,enterprise,customer,organization, account);
+        userProcessContainer.add("manageLabOrdersJPanel",manageLabOrdersJPanel);
+        CardLayout layout=(CardLayout)userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnmanageordersActionPerformed
+
+    private void btndeliveryagentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndeliveryagentsActionPerformed
+        // TODO add your handling code here:
+        ManageLabDeliveryAgentJPanel manageDeliveryAgentJPanel=new ManageLabDeliveryAgentJPanel(userProcessContainer,ecosystem,network,account,useraccountdirectory,enterprise);
+        userProcessContainer.add("manageDeliveryAgentJPanel",manageDeliveryAgentJPanel);
+        CardLayout layout=(CardLayout)userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btndeliveryagentsActionPerformed
+
+    private void btnLabcentersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLabcentersActionPerformed
+        // TODO add your handling code here:
+
+        ManageLabCentersJPanel managelabs = new ManageLabCentersJPanel(userProcessContainer, account,network, organization, enterprise, ecosystem);
+        userProcessContainer.add("manageLabOrdersJPanel",managelabs);
+        CardLayout layout=(CardLayout)userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnLabcentersActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnLabcenters;
+    private javax.swing.JButton btndeliveryagents;
+    private javax.swing.JButton btnmanageorders;
     // End of variables declaration//GEN-END:variables
 }

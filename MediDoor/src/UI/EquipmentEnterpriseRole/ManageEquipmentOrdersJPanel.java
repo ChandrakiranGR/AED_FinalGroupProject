@@ -4,19 +4,97 @@
  */
 package UI.EquipmentEnterpriseRole;
 
+import Business.Customer.Customer;
+import Business.Customer.CustomerDirectory;
+import Business.DeliveryAgent.DeliveryAgent;
+import Business.Ecosystem;
+import Business.Enterprise.Enterprise;
+import javax.swing.JPanel;
+import Business.Network.Network;
+import Business.Orders.Order;
+import Business.Orders.OrderItem;
+import Business.Organization.Organization;
+import Business.Products.Product;
+import Business.UserAccount.UserAccount;
+import Business.UserAccount.UserAccountDirectory;
+import java.awt.CardLayout;
+import java.awt.Component;
+import java.util.ArrayList;
+import java.util.Arrays;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
+import java.util.Properties;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.Session;
+import javax.mail.PasswordAuthentication;
+import javax.mail.internet.MimeMessage;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.activation.*;
+import javax.mail.Address;
+
 /**
  *
  * @author chandrkiran
  */
 public class ManageEquipmentOrdersJPanel extends javax.swing.JPanel {
-
+    
+private JPanel userProcessContainer;
+    private Ecosystem business;
+    private CustomerDirectory customerDirectory;
+    UserAccount ua;
+    DeliveryAgent dlvrymn;
+    Enterprise enterprise;
+    DefaultTableModel dtm;
+    //ArrayList<DeliveryAgent> d;
+    UserAccountDirectory userdir;
+    Customer customer;
+    private OrderItem itemsdir;
+    private Order order;
+    private ArrayList<Order> orderplaced = new ArrayList<Order>();
+    Organization organization;
+    Network network;
+    ArrayList<DeliveryAgent> del;
+    ArrayList<Integer> z;
     /**
      * Creates new form ManageEquipmentOrdersJPanel
      */
-    public ManageEquipmentOrdersJPanel() {
+        public ManageEquipmentOrdersJPanel(JPanel userProcessContainer, Ecosystem business,Network network,UserAccountDirectory userdir, Enterprise enterprise, Customer customer, Organization organization, UserAccount ua) {
         initComponents();
-    }
+         this.userProcessContainer = userProcessContainer;
+        this.business = business;
+        this.userdir = userdir;
+        this.enterprise = enterprise;
+        this.customer = customer;
+        this.network = network;
+        this.organization = organization;
+         this.z = new ArrayList<>();
+         this.ua = ua;
+         this.dlvrymn = new DeliveryAgent();
 
+        System.out.println("CAME INTO LAB ORDER PANEL");
+        dtm = (DefaultTableModel) EquipmentOrderTable.getModel();
+
+
+        populateDp();
+        //Equipments
+    }
+        
+           public void populateDp() {
+         ArrayList<Customer> customerdir = this.network.getCustomerDirectory().getCustomerList();
+         System.out.println("Inside combo box");
+
+            for(Customer cust: customerdir){
+                    for (Order o : cust.getOrderlist()) {
+                if("ACCEPTED".equals(o.getStatus()) && o.getOrganizationname().equals("Equipments")){
+                orderscmb.addItem(String.valueOf(o.getOrderId()));
+            }
+        }
+
+    }
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -41,4 +119,51 @@ public class ManageEquipmentOrdersJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables
+private void populateTable() {
+        System.out.println("Inside populate Table");
+        dtm.setRowCount(0);
+         ArrayList<Customer> customerdir = this.network.getCustomerDirectory().getCustomerList();
+          del = this.enterprise.getDeliveryAgentsInEnterpiselist();
+//         ArrayList<OrderItem> cartOrder = this.customer.getCustomerCart().getCartItems();
+             System.out.println("Inside table");
+                this.z = new ArrayList<>();
+
+                for(Customer cust: customerdir){
+                    for (Order o : cust.getOrderlist()) {
+                        if(o.getOrganizationname().equals("Equipments"))
+                      {
+                    ArrayList<OrderItem> oi = o.getItemsOrdered();
+                    ArrayList<String> p = new ArrayList<>();
+
+                for (int i = 0; i < oi.size(); i++) {
+
+                    p.add(oi.get(i).getProductName());
+                }
+                if("ACCEPTED".equals(o.getStatus()) && orderscmb.getSelectedItem().toString().equals(String.valueOf(o.getOrderId()))){
+
+                dtm.insertRow(dtm.getRowCount(), new Object[]{
+                     o.getOrderId(),
+                     Arrays.toString(p.toArray()),
+                    cust.getName(),
+                    cust.getZipcode(),
+                    o.getPrice(),
+                    o.getDeliveryAgent().getUseraccount().getUsername()
+                });
+
+             for(DeliveryAgent dd : del ){
+              z = dd.getZipcodes();
+              for(int j =0; j< dd.getZipcodes().size(); j++){
+              if(cust.getZipcode() == z.get(j) && orderscmb.getSelectedItem().toString().equals(String.valueOf(o.getOrderId())) && dd.getActive() == true){
+                 deliverycmb.addItem(dd.getUseraccount().getUsername());
+                }
+                }
+                }//closing delivery agent assignment
+               }
+               }//closing if statement
+                    }
+            }
+
+               System.out.println("Done with populate table");
+   }
+
 }
