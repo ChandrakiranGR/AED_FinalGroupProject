@@ -3,18 +3,39 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package UI.SystemAdmin;
-
+import Business.Customer.Customer;
+import Business.Ecosystem;
+import Business.Enterprise.Enterprise;
+import Business.Network.Network;
+import Business.Orders.Order;
+import java.awt.BorderLayout;
+import org.jfree.chart.ChartFactory;
+import org.jfree.chart.ChartPanel;
+import org.jfree.chart.JFreeChart;
+import org.jfree.chart.plot.CategoryPlot;
+import org.jfree.chart.plot.PlotOrientation;
+import org.jfree.data.category.CategoryDataset;
+import org.jfree.data.category.DefaultCategoryDataset;
+import org.jfree.data.general.DefaultPieDataset;
 /**
  *
  * @author vish
  */
 public class StatisticsJPanel extends javax.swing.JPanel {
 
+    private final Ecosystem ecosystem;
+
     /**
      * Creates new form StatisticsJPanel
      */
-    public StatisticsJPanel() {
+    public StatisticsJPanel(Ecosystem system) {
         initComponents();
+
+        this.ecosystem = system;
+
+        createBarChart();
+        createorderBar();
+        createPieChart();
     }
 
     /**
@@ -37,7 +58,116 @@ public class StatisticsJPanel extends javax.swing.JPanel {
             .addGap(0, 300, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
+public void createBarChart() {
+        networkPanel.removeAll();
+        JFreeChart barchart = ChartFactory.createBarChart("CUSTOMER NETWORKS", "Network", "Customers", createdataset(), PlotOrientation.HORIZONTAL, true, true, true);
+        System.out.println("PLOT ");
+        CategoryPlot bar = barchart.getCategoryPlot();
 
+        ChartPanel chartPanel = new ChartPanel(barchart);
+        chartPanel.setSize(300, 300);
+        chartPanel.setVisible(true);
+        chartPanel.setBorder(null);
+
+        System.out.println("CAME HERE ");
+        networkPanel.removeAll();
+        networkPanel.setSize(300, 300);
+        networkPanel.add(chartPanel, BorderLayout.CENTER);
+
+        networkPanel.validate();
+    }
+
+    public void createorderBar() {
+        orderPanel.removeAll();
+        JFreeChart barchart = ChartFactory.createBarChart("ENTERPRISE ORDERS", "Network", "Customers", createorderdata(), PlotOrientation.VERTICAL, true, true, true);
+        System.out.println("PLOT ");
+        CategoryPlot bar = barchart.getCategoryPlot();
+
+        ChartPanel chartPanel = new ChartPanel(barchart);
+        chartPanel.setSize(800, 600);
+        chartPanel.setVisible(true);
+        chartPanel.setBorder(null);
+
+        System.out.println("CAME HERE ");
+        orderPanel.removeAll();
+        orderPanel.setSize(800, 800);
+        orderPanel.add(chartPanel, BorderLayout.CENTER);
+
+        orderPanel.validate();
+    }
+
+    public CategoryDataset createdataset() {
+        DefaultCategoryDataset dataset = new DefaultCategoryDataset();
+        for (Network n : this.ecosystem.getNetworks()) {
+            dataset.setValue(n.getCustomerDirectory().getCustomerList().size(), n.getNetworkName(), "");
+        }
+
+        return dataset;
+    }
+
+    public CategoryDataset createorderdata() {
+        DefaultCategoryDataset dataset = new DefaultCategoryDataset();
+        int pordercount = 0;
+        int mordercount = 0;
+        int lordercount = 0;
+        int vordercount = 0;
+
+        for (Network n : this.ecosystem.getNetworks()) {
+            for (Customer c : n.getCustomerDirectory().getCustomerList()) {
+                for (Order o : c.getOrderlist()) {
+                    if (o.getEnterprisename().equals("Medical Equipments")) {
+                        mordercount++;
+                    }
+                    if (o.getEnterprisename().equals("Pharmaceutical")) {
+                        pordercount++;
+                    }
+                    if (o.getEnterprisename().equals("Lab Center & Diagnostics")) {
+                        lordercount++;
+                    }
+                    if (o.getEnterprisename().equals("Immunization & Vaccination")) {
+                        vordercount++;
+                    }
+                }
+            }
+        }
+
+        dataset.setValue(pordercount, "#orders", "Pharmaceutical");
+        dataset.setValue(mordercount, "#orders", "Medical Equipments");
+        dataset.setValue(vordercount, "#orders", "Immunization & Vaccination");
+        dataset.setValue(lordercount, "#orders", "Lab Center & Diagnostics");
+
+        return dataset;
+    }
+
+    public void createPieChart() {
+        deliveryAgentsPanel.removeAll();
+        JFreeChart pieChart = ChartFactory.createPieChart("Delivery Agents", deliverydataset(), true, true, true);
+
+        pieChart.setBorderVisible(false);
+
+        ChartPanel piechartpanel = new ChartPanel(pieChart);
+        piechartpanel.setVisible(true);
+        piechartpanel.setSize(300, 300);
+        deliveryAgentsPanel.removeAll();
+        deliveryAgentsPanel.setSize(300, 300);
+        deliveryAgentsPanel.add(piechartpanel, BorderLayout.CENTER);
+        deliveryAgentsPanel.validate();
+
+    }
+
+    public DefaultPieDataset deliverydataset() {
+        DefaultPieDataset pieset = new DefaultPieDataset();
+        int i = 0;
+        for (Network n : this.ecosystem.getNetworks()) {
+            for (Enterprise e : n.getEnterpriseDirectory().getEnterpriseList()) {
+                i += e.getDeliveryAgentsInEnterpiselist().size();
+            }
+            pieset.setValue(n.getNetworkName(), i);
+            i = 0;
+        }
+
+        return pieset;
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables
