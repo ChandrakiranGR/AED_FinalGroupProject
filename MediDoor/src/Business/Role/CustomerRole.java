@@ -4,10 +4,21 @@
  */
 package Business.Role;
 
+import Business.Customer.Customer;
+import Business.Ecosystem;
+import Business.Enterprise.Enterprise;
+import Business.Network.Network;
+import Business.Organization.Organization;
+import Business.UserAccount.UserAccount;
+import javax.swing.JPanel;
+import UI.Customer.CustomerWorkAreaJPanel;
+
 /**
  *
  * @author vish
  */
 public class CustomerRole {
+    public JPanel createWorkArea(JPanel userProcessContainer, Ecosystem system, Network network, Customer customer) {
+        return new CustomerWorkAreaJPanel(userProcessContainer, system, network, customer); 
     
 }
