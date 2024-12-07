@@ -3,18 +3,46 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package UI.LabCenters;
-
+import Business.Ecosystem;
+import Business.Enterprise.Enterprise;
+import Business.LabAssistants.LabAssistants;
+import Business.Network.Network;
+import Business.Organization.Organization;
+import Business.Products.Product;
+import Business.UserAccount.UserAccount;
+import UI.SystemAdmin.ManageCustomersJPanel;
+import java.awt.CardLayout;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author chandrkiran
  */
 public class ManageLabCentersJPanel extends javax.swing.JPanel {
 
+    JPanel userProcessContainer;
+    UserAccount account;
+    Organization organization;
+    Enterprise enterprise;
+    Ecosystem business;
+    Network network;
+    DefaultTableModel tablemodel;
     /**
      * Creates new form ManageLabCentersJPanel
      */
-    public ManageLabCentersJPanel() {
+   public ManageLabCentersJPanel(JPanel userProcessContainer, UserAccount account, Network network, Organization organization, Enterprise enterprise, Ecosystem business) {
         initComponents();
+
+        this.userProcessContainer = userProcessContainer;
+        this.account = account;
+        this.network = network;
+        this.enterprise = this.network.getEnterpriseDirectory().getEnterprise("Lab Center & Diagnostics");
+        this.organization = this.enterprise.getOrganizationDirectory().getOrganizationByName("Sample Collection Center");
+        this.business = business;
+        this.tablemodel = (DefaultTableModel) labTable.getModel();
+        populateTable();
+        System.out.println("CAME BROOOOO");
     }
 
     /**
@@ -26,19 +54,149 @@ public class ManageLabCentersJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jScrollPane1 = new javax.swing.JScrollPane();
+        labTable = new javax.swing.JTable();
+        btnAdd = new javax.swing.JButton();
+        btnView = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+
+        labTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "PRODUCT ID", "PRODUCT NAME", "PRODUCT PRICE"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, true, true
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(labTable);
+
+        btnAdd.setText("Add");
+        btnAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddActionPerformed(evt);
+            }
+        });
+
+        btnView.setText("View");
+        btnView.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("REFRESH");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(143, 143, 143)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 730, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(181, 181, 181)
+                        .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(80, 80, 80)
+                        .addComponent(btnView, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(67, 67, 67)
+                        .addComponent(jButton2)))
+                .addContainerGap(166, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(169, 169, 169)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnView, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(2, 2, 2)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(303, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
+        // TODO add your handling code here:
+
+        AddLabCentersJPanel manageCustomerJPanel = new AddLabCentersJPanel(userProcessContainer, business, account, network, enterprise, organization);
+        userProcessContainer.add("manageCustomerJPanel", manageCustomerJPanel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnAddActionPerformed
+
+    private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
+        // TODO add your handling code here:
+
+        int selectedRow = labTable.getSelectedRow();
+        if (selectedRow < 0) {
+            JOptionPane.showMessageDialog(null, "Please Select a row from table first", "Warining", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+
+        //Customer customer = (Customer)customerJTable.getValueAt(selectedRow,0);
+        int prodId = (int) labTable.getValueAt(selectedRow, 0);
+
+        for (Product p : this.organization.getProductList()) {
+            if (p.getProductId() == prodId) {
+                ViewLabCentersJPanel manageCustomerJPanel = new ViewLabCentersJPanel(userProcessContainer, business, p);
+                userProcessContainer.add("manageCustomerJPanel", manageCustomerJPanel);
+                CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+                layout.next(userProcessContainer);
+
+                break;
+            }
+        }
+
+    }//GEN-LAST:event_btnViewActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        populateTable();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAdd;
+    private javax.swing.JButton btnView;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable labTable;
     // End of variables declaration//GEN-END:variables
+
+public void populateTable() {
+
+        DefaultTableModel model = (DefaultTableModel) labTable.getModel();
+        model.setRowCount(0);
+
+        try {
+            for (Product p : this.organization.getProductList()) {
+                Object[] row = new Object[3];
+                row[0] = p.getProductId();
+                row[1] = p.getName();
+                row[2] = p.getPrice();
+
+                model.addRow(row);
+            }
+        } catch (Exception e) {
+
+        }
+    }
 }
+
