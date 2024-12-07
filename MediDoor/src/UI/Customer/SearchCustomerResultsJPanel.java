@@ -4,18 +4,45 @@
  */
 package UI.Customer;
 
+import Business.Customer.Customer;
+import Business.Ecosystem;
+import java.awt.CardLayout;
+import java.awt.Component;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
 /**
  *
  * @author antaradeshmukh
  */
 public class SearchCustomerResultsJPanel extends javax.swing.JPanel {
-
-    /**
-     * Creates new form SearchCustomerResultsJPanel
-     */
-    public SearchCustomerResultsJPanel() {
+ private JPanel userProcessContainer; 
+    private Ecosystem business;
+    private Customer customer;
+    
+    public SearchCustomerResultsJPanel(JPanel userProcessContainer, Ecosystem business,  Customer customer) {
         initComponents();
+        
+        this.userProcessContainer = userProcessContainer;
+        this.business = business;
+        this.customer = customer;
+        
+        txtName.setText(customer.getName());
+        txtEmail.setText(customer.getEmail());
+        txtLocation.setText(customer.getLocation());
+        txtAddress.setText(customer.getAddress());
+        txtPhone.setText(String.valueOf(customer.getPhoneNumber()));
+        txtZipcode.setText(String.valueOf(customer.getZipcode()));
+        
+        txtName.setEditable(false);
+        txtEmail.setEditable(false);
+        txtLocation.setEditable(false);
+        txtAddress.setEditable(false);
+        txtPhone.setEditable(false);
+        txtZipcode.setEditable(false);
+        btnSave.setEnabled(false);
     }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -38,6 +65,64 @@ public class SearchCustomerResultsJPanel extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+ private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        // TODO add your handling code here:
+        
+        userProcessContainer.remove(this);
+        Component[] componentArray = userProcessContainer.getComponents();
+        Component component = componentArray[componentArray.length - 1];
+        ManageCustomersJPanel sysAdminwjp = (ManageCustomersJPanel) component;
+        sysAdminwjp.populateTable();
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
+    }                                       
+
+    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {                                          
+        // TODO add your handling code here:
+
+        btnUpdate.setEnabled(false);
+        txtName.setEditable(true);
+        txtEmail.setEditable(true);
+        txtLocation.setEditable(true);
+        txtAddress.setEditable(true);
+        txtPhone.setEditable(true);
+        txtZipcode.setEditable(true);
+        btnSave.setEnabled(true);
+    }                                         
+
+    private void btnSaveActionPerformed(java.awt.event.ActionEvent evt) {                                        
+        // TODO add your handling code here:
+
+        if(txtName.getText().isEmpty() || txtPhone.getText().isEmpty() || txtAddress.getText().isEmpty() ||
+            txtEmail.getText().isEmpty() || txtLocation.getText().isEmpty() || txtZipcode.getText().isEmpty()){
+
+            JOptionPane.showMessageDialog(null, "Please fill the empty fields", "Warining", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+
+        String name = txtName.getText();
+        int phone = Integer.parseInt(txtPhone.getText());
+        int zipcode = Integer.parseInt(txtZipcode.getText());
+        String streetaddress = txtAddress.getText();
+        String emailaddress = txtEmail.getText();
+        String location = txtLocation.getText();
+
+        customer.setName(name);
+        customer.setEmail(emailaddress);
+        customer.setAddress(streetaddress);
+        customer.setLocation(location);
+        customer.setZipcode(zipcode);
+        customer.setPhoneNumber(phone);
+
+        JOptionPane.showMessageDialog(null, "Customer Profile Updated");
+        txtName.setText("");
+        txtPhone.setText("");
+        txtEmail.setText("");
+        txtLocation.setText("");
+        txtAddress.setText("");
+        txtZipcode.setText("");
+
+    }                                       
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     // End of variables declaration//GEN-END:variables
