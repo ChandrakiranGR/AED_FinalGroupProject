@@ -3,18 +3,46 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package UI.LabCenters;
-
+import Business.Ecosystem;
+import Business.Employee.Employee;
+import Business.Enterprise.Enterprise;
+import Business.LabAssistants.LabAssistants;
+import Business.Network.Network;
+import Business.Organization.Organization;
+import Business.Products.Product;
+import Business.Role.LabAssistantRole;
+import Business.UserAccount.UserAccount;
+import java.awt.CardLayout;
+import java.util.ArrayList;
+import java.util.regex.Pattern;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
 /**
  *
  * @author chandrkiran
  */
 public class AddLabCentersJPanel extends javax.swing.JPanel {
-
+JPanel userProcessContainer;
+    Ecosystem business;
+    UserAccount account;
+    Enterprise enterprise;
+    Network network;
+    Organization organization;
+    //ArrayList<LabAssistants> labassistants;
+    ArrayList<Product> products;
     /**
      * Creates new form AddLabCentersJPanel
      */
-    public AddLabCentersJPanel() {
+   public AddLabCentersJPanel(JPanel userProcessContainer, Ecosystem business, UserAccount account, Network network, Enterprise enterprise, Organization organization) {
         initComponents();
+        
+        this.userProcessContainer = userProcessContainer;
+        this.business = business;
+        this.account = account;
+        this.network = network;
+        this.enterprise = this.network.getEnterpriseDirectory().getEnterprise("Lab Center & Diagnostics");
+        this.organization = this.enterprise.getOrganizationDirectory().getOrganizationByName("Sample Collection Center");     
+        this.products = this.organization.getOrganizationProducts();
     }
 
     /**
@@ -26,19 +54,134 @@ public class AddLabCentersJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel5 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        txtTest = new javax.swing.JTextField();
+        txtPrice = new javax.swing.JTextField();
+        btnAdd = new javax.swing.JButton();
+
+        jLabel5.setText("Price ");
+
+        jLabel7.setText("Test Name");
+
+        txtPrice.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtPriceActionPerformed(evt);
+            }
+        });
+
+        btnAdd.setText("Add");
+        btnAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(361, 361, 361)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel7)
+                        .addGap(37, 37, 37)
+                        .addComponent(txtTest, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(30, 30, 30)
+                        .addComponent(jLabel5)
+                        .addGap(37, 37, 37)
+                        .addComponent(txtPrice, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(70, 70, 70)
+                        .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(398, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addGap(228, 228, 228)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel7)
+                    .addComponent(txtTest, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(17, 17, 17)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel5)
+                    .addComponent(txtPrice, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(57, 57, 57)
+                .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(349, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void txtPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPriceActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPriceActionPerformed
+
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
+        // TODO add your handling code here:
+
+        Pattern p;
+
+        //LabAssistants la = new LabAssistants();
+
+        String test = txtTest.getText();
+        double price = Double.parseDouble(txtPrice.getText());
+
+        if(test.isEmpty() || txtPrice.getText().isEmpty()){
+
+            JOptionPane.showMessageDialog(null, "Please fill the empty fields", "Warning", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+
+        String testmatch = "[A-Za-z]{1,100}";
+        p = Pattern.compile(testmatch);
+        if(p.matcher(test).matches()){
+            JOptionPane.showMessageDialog(null, "Use only characters.", "Warning", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+
+        System.out.println("Inside loop");
+        boolean flag = business.getUserAccountDirectory().checkIfUsernameIsUnique(test);
+        if(flag == false){
+            JOptionPane.showMessageDialog(null, "Test already exists");
+        }
+
+        else{
+            Product prod = new Product();
+            //ecosystem.getCustomerdirectory().newCustomer(name, phone, age, streetaddress, emailaddress, username, password, country, city, zipcode);
+            System.out.println("Inside else statement");
+            //Employee employee = business.getEmployeeDirectory().createEmployee(name);
+            //business.getUserAccountDirectory().createUserAccount(username, password, employee , new LabAssistantRole());
+
+            prod.setName(test);
+            prod.setPrice(price);
+
+            products.add(prod);
+            /*
+            for(Network n : business.getNetworks()){
+                for(int i=0; i<n.getCustomerDirectory().getCustomerList().size(); i++){
+                    for(int j=0; j<n.getCustomerDirectory().getCustomerList().get(i).getOrderlist().size(); j++){
+
+                        n.getCustomerDirectory().getCustomerList().get(i).getOrderlist().get(j).setLabAssistant(la);
+                    }
+                }
+            }*/
+
+            JOptionPane.showMessageDialog(null,"Details Added.");
+        }
+
+        txtTest.setText("");
+        txtPrice.setText("");
+    }//GEN-LAST:event_btnAddActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAdd;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JTextField txtPrice;
+    private javax.swing.JTextField txtTest;
     // End of variables declaration//GEN-END:variables
 }
