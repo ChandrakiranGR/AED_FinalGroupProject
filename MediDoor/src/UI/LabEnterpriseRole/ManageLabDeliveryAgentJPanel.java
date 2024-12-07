@@ -4,18 +4,88 @@
  */
 package UI.LabEnterpriseRole;
 
+import Business.Customer.Customer;
+import Business.DeliveryAgent.DeliveryAgent;
+import Business.Employee.Employee;
+import Business.Customer.CustomerDirectory;
+import Business.DB4OUtil.DB4OUtil;
+import Business.Ecosystem;
+import static Business.Ecosystem.ecosystem;
+import Business.Enterprise.Enterprise;
+import Business.Enterprise.EnterpriseDirectory;
+import javax.swing.JPanel;
+import Business.Network.Network;
+import Business.Role.DeliveryAgentRole;
+import Business.UserAccount.UserAccount;
+import Business.UserAccount.UserAccountDirectory;
+import java.awt.CardLayout;
+import java.awt.Component;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author chandrkiran
  */
 public class ManageLabDeliveryAgentJPanel extends javax.swing.JPanel {
-
+JPanel userProcessContainer;
+    Ecosystem business;
+    UserAccountDirectory userdir;
+    UserAccount ua;
+    DeliveryAgent dlvrymn;
+    Enterprise enterprise;
+    DefaultTableModel dtm;
+    ArrayList<DeliveryAgent> del;
+    ArrayList<Integer> z;
+    Network network;
     /**
      * Creates new form ManageLabDeliveryAgentJPanel
      */
-    public ManageLabDeliveryAgentJPanel() {
+    public ManageLabDeliveryAgentJPanel(JPanel userProcessContainer, Ecosystem ecosystem,Network network, UserAccount ua,UserAccountDirectory userdir, Enterprise enterprise) {
+
         initComponents();
+        this.userProcessContainer = userProcessContainer;
+        this.business = ecosystem;
+        this.ua = ua;
+        this.userdir = userdir;
+        this.enterprise = enterprise;
+        this.network = network;
+        this.z = new ArrayList<>();
+        System.out.println("CAME INTO LAB DELIVERY AGENT PANEL");
+
+
+
+        this.dtm = (DefaultTableModel) delivery.getModel();
+        System.out.println("Going inside populate table");
+        populateTable();
+        displaycombo();
+
+
+
+        if(this.business.getUserAccountDirectory() == null) {
+            this.userdir = new UserAccountDirectory();
+            business.setUserAccountDirectory(userdir);
+        } else {
+            this.userdir = business.getUserAccountDirectory();
+
+        }
+
+
+
+
     }
+    
+        private void displaycombo() {
+
+         del = enterprise.getDeliveryAgentsInEnterpiselist();
+
+              z = network.getZipcodes();
+              for(int i =0; i< z.size(); i++){
+              cmbzipcode.addItem(z.get(i).toString());
+              }
+    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -26,19 +96,353 @@ public class ManageLabDeliveryAgentJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jLabel2 = new javax.swing.JLabel();
+        txtName = new javax.swing.JTextField();
+        jLabel7 = new javax.swing.JLabel();
+        cmbzipcode = new javax.swing.JComboBox<>();
+        jLabel3 = new javax.swing.JLabel();
+        jcheckyes = new javax.swing.JCheckBox();
+        jcheckno = new javax.swing.JCheckBox();
+        jLabel8 = new javax.swing.JLabel();
+        txtUsername = new javax.swing.JTextField();
+        jLabel9 = new javax.swing.JLabel();
+        txtPassword = new javax.swing.JTextField();
+        btnAdd = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        delivery = new javax.swing.JTable();
+        btndelete = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
+
+        jLabel2.setText("Name");
+
+        jLabel7.setText("Zipcode");
+
+        cmbzipcode.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
+
+        jLabel3.setText("Active");
+
+        jcheckyes.setText("yes");
+        jcheckyes.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcheckyesActionPerformed(evt);
+            }
+        });
+
+        jcheckno.setText("no");
+        jcheckno.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jchecknoActionPerformed(evt);
+            }
+        });
+
+        jLabel8.setText("Username");
+
+        jLabel9.setText("Password");
+
+        btnAdd.setBackground(new java.awt.Color(0, 102, 102));
+        btnAdd.setForeground(new java.awt.Color(255, 255, 255));
+        btnAdd.setText("Add");
+        btnAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddActionPerformed(evt);
+            }
+        });
+
+        delivery.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
+            },
+            new String [] {
+                "Name", "Zipcode", "Active", "Username", "Password"
+            }
+        ));
+        jScrollPane1.setViewportView(delivery);
+
+        btndelete.setBackground(new java.awt.Color(0, 102, 102));
+        btndelete.setForeground(new java.awt.Color(255, 255, 255));
+        btndelete.setText("Delete");
+        btndelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btndeleteActionPerformed(evt);
+            }
+        });
+
+        btnBack.setBackground(new java.awt.Color(0, 102, 102));
+        btnBack.setForeground(new java.awt.Color(255, 255, 255));
+        btnBack.setText("<< Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(btndelete)
+                .addGap(373, 373, 373))
+            .addGroup(layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(83, 83, 83)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(jLabel2)
+                                .addGap(38, 38, 38)
+                                .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(1, 1, 1)
+                                .addComponent(jLabel7)
+                                .addGap(22, 22, 22)
+                                .addComponent(cmbzipcode, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(1, 1, 1)
+                                .addComponent(jLabel3)
+                                .addGap(44, 44, 44)
+                                .addComponent(jcheckyes)
+                                .addGap(56, 56, 56)
+                                .addComponent(jcheckno))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(1, 1, 1)
+                                .addComponent(jLabel8)
+                                .addGap(11, 11, 11)
+                                .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(1, 1, 1)
+                                .addComponent(jLabel9)
+                                .addGap(12, 12, 12)
+                                .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(121, 121, 121)
+                                .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addGap(88, 88, 88)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 477, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(26, 26, 26)
+                        .addComponent(btnBack)))
+                .addContainerGap(162, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(btnBack)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 197, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 323, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(5, 5, 5)
+                                .addComponent(jLabel2))
+                            .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(27, 27, 27)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(jLabel7))
+                            .addComponent(cmbzipcode, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(13, 13, 13)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(jLabel3))
+                            .addComponent(jcheckyes)
+                            .addComponent(jcheckno))
+                        .addGap(13, 13, 13)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(jLabel8))
+                            .addComponent(txtUsername, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(13, 13, 13)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(10, 10, 10)
+                                .addComponent(jLabel9))
+                            .addComponent(txtPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(13, 13, 13)
+                        .addComponent(btnAdd)))
+                .addGap(18, 18, 18)
+                .addComponent(btndelete)
+                .addGap(126, 126, 126))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jcheckyesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcheckyesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcheckyesActionPerformed
+
+    private void jchecknoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jchecknoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jchecknoActionPerformed
+
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
+        // TODO add your handling code here:
+
+        Employee em = new Employee();
+        DeliveryAgent d = new DeliveryAgent();
+        UserAccount u = d.getUseraccount();
+
+        String name = txtName.getText();
+        int zip = Integer.parseInt((String) cmbzipcode.getSelectedItem());
+        String username = txtUsername.getText();
+        String password = txtPassword.getText();
+        boolean available;
+        if(jcheckyes.isSelected() == true){
+            available = true;
+        }
+        else if(jcheckno.isSelected() == true)
+        {
+            available = true;
+        }else{
+            available = false;
+        }
+
+        if(name.isEmpty() ||
+            txtPassword.getText().isEmpty() || username.isEmpty() || password.isEmpty() || cmbzipcode.getSelectedItem().toString().isEmpty()){
+            JOptionPane.showMessageDialog(null, "Please fill the empty fields", "Warining", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        //        if(txtZipcode.getText().length() < 5 || txtZipcode.getText().length() > 6){
+            //            JOptionPane.showMessageDialog(null, "Zip code must be 5 or 6 digits", "Warining", JOptionPane.WARNING_MESSAGE);
+            //            return;
+            //        }
+        System.out.println("Inside loop");
+        boolean flag = business.getUserAccountDirectory().checkIfUsernameIsUnique(username);
+        if(flag == false){
+            JOptionPane.showMessageDialog(null, "User name already exists");
+        }
+
+        else{
+            //ecosystem.getCustomerdirectory().newCustomer(name, phone, age, streetaddress, emailaddress, username, password, country, city, zipcode);
+            System.out.println("Inside else statement");
+            //Employee employee = business.getEmployeeDirectory().createEmployee(name);
+            //business.getUserAccountDirectory().createUserAccount(username, password, employee , new DeliveryAgentRole());
+
+            ArrayList<Integer> zipcodes = new ArrayList<Integer>();
+            zipcodes.add(zip);
+            ArrayList<DeliveryAgent> delList = enterprise.getDeliveryAgentsInEnterpiselist();
+            em.setName(name);
+            u.setUsername(username);
+            u.setPassword(password);
+            u.setRole(new DeliveryAgentRole());
+            u.setEmployee(em);
+            // d.setUseraccount(u);
+            d.setZipcodes(zipcodes);
+            d.setEnterprisename(enterprise);
+
+            if(available == true){
+                d.setActive(true);
+            }else{
+                d.setActive(false);
+            }
+            delList.add(d);
+            enterprise.setDeliveryAgentsInEnterpiselist(delList);
+
+            JOptionPane.showMessageDialog(null,"Delivery agent Added.");
+            populateTable();
+        }
+
+        txtName.setText("");
+        cmbzipcode.setSelectedItem("");
+        txtUsername.setText("");
+        txtPassword.setText("");
+        jcheckyes.setSelected(false);
+        jcheckno.setSelected(false);
+
+    }//GEN-LAST:event_btnAddActionPerformed
+
+    private void btndeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndeleteActionPerformed
+        // TODO add your handling code here:
+        int selectrow = delivery.getSelectedRow();
+        String name = delivery.getValueAt(selectrow, 0).toString();
+
+        if(selectrow < 0) {
+            JOptionPane.showMessageDialog(null,"Please Select a row from table first", "Warining", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+
+        ArrayList<UserAccount> usrl = userdir.getUserAccountList();
+        ArrayList<DeliveryAgent> delList = enterprise.getDeliveryAgentsInEnterpiselist();
+        String deliveryman = dtm.getValueAt(selectrow,0).toString();
+        //        ArrayList<Integer> z1 = new ArrayList<>();
+        //        z1.add((Integer) dtm.getValueAt(selectrow,1));
+        // String zipcodes = dtm.getValueAt(selectrow,1).toString();
+        //  String available = dtm.getValueAt(selectrow, 2).toString();
+        String uname = dtm.getValueAt(selectrow,3).toString();
+        String passwd = dtm.getValueAt(selectrow,4).toString();
+        int dialogueb = JOptionPane.YES_NO_OPTION;
+        int dialoguer = JOptionPane.showConfirmDialog(this, "Delete this data","Delete", dialogueb);
+        if(dialoguer == 0){
+
+            try{
+                for(DeliveryAgent dm: delList){
+                    if(dm.getUseraccount().getEmployee().getName().equals(deliveryman) && dm.getUseraccount().getUsername().equals(uname)){
+                        delList.remove(dm);
+                        System.out.println("Removed delivery man");
+                    }
+                }
+            }
+            catch(Exception ex){
+                System.out.println("Exception caught");
+            }
+
+            for(UserAccount ua:usrl ){
+                if(ua.getUsername().equals(uname) || ua.getPassword().equals(passwd)){
+                    // usrl.remove(uname);
+                    usrl.remove(dtm.getValueAt(selectrow,3));
+                    usrl.remove(dtm.getValueAt(selectrow,4));
+                    //  usrl.remove(ua.getPassword().equals(passwd));
+
+                    System.out.println("Removed username and password");
+                }
+            }
+
+            this.dtm.removeRow(selectrow);
+        }
+
+        populateTable();
+    }//GEN-LAST:event_btndeleteActionPerformed
+
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+        // TODO add your handling code here:
+
+        //        userProcessContainer.remove(this);
+        //        Component[] componentArray = userProcessContainer.getComponents();
+        //        Component component = componentArray[componentArray.length - 1];
+        //        PharmaceuticalEnterpriseJPanel sysAdminwjp = (PharmaceuticalEnterpriseJPanel) component;
+        //      populateTable();
+        //        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        //        layout.previous(userProcessContainer);
+        userProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
+    }//GEN-LAST:event_btnBackActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAdd;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btndelete;
+    private javax.swing.JComboBox<String> cmbzipcode;
+    private javax.swing.JTable delivery;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JCheckBox jcheckno;
+    private javax.swing.JCheckBox jcheckyes;
+    private javax.swing.JTextField txtName;
+    private javax.swing.JTextField txtPassword;
+    private javax.swing.JTextField txtUsername;
     // End of variables declaration//GEN-END:variables
 }
