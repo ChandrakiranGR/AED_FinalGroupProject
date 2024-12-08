@@ -1,6 +1,7 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package Business.DB4OUtil;
 
@@ -15,9 +16,10 @@ import java.nio.file.Paths;
 
 /**
  *
- * @author antaradeshmukh
+ * @author Antara Deshmukh
  */
 public class DB4OUtil {
+
     private static final String FILENAME = Paths.get("Databank.db4o").toAbsolutePath().toString();// path to the data store
     private static DB4OUtil dB4OUtil;
     private ObjectContainer conn;
@@ -94,5 +96,4 @@ public class DB4OUtil {
         }
         return null;
     }
-    
 }

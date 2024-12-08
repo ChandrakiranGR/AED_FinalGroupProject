@@ -31,6 +31,7 @@ import UI.OrganizationPanels.PharmacyJPanel;
 import UI.OrganizationPanels.VaccineJPanel;
 import java.awt.Image;
 import java.util.ArrayList;
+import java.util.List;
 import javax.imageio.ImageIO;
 import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
@@ -43,20 +44,53 @@ import javax.swing.table.DefaultTableModel;
  */
 public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
 
-    /**
-     * Creates new form CustomerWorkAreaJPanel
-     */
-    public CustomerWorkAreaJPanel() {
-        this(userProcessContainer, system, network, customer);
-    }
+     Ecosystem system;
+    Network network;
+    Customer customer;
+    JPanel userProcessContainer;
+    DefaultTableModel tableModel;
+    DefaultTableModel model;
+    private final Alert alert;
+   // private List<BloodRequestWorkRequest> requestList = new ArrayList<>();
 
-    /**
-     * Creates new form CustomerWorkAreaJPanel
-     */
-    public CustomerWorkAreaJPanel(JPanel userProcessContainer, Ecosystem system, Network network, Customer customer) {
+    public CustomerWorkAreaJPanel(JPanel userProcessContainer, Ecosystem system, Network network, Customer c) {
         initComponents();
-    }
+        this.setSize(1000, 800);
+        this.system = system;
+        this.customer = c;
+        this.network = network;//To change body of generated methods, choose Tools | Templates.
+        this.userProcessContainer = userProcessContainer;
+        this.alert = new Alert();
+        netname.setText(network.getNetworkName());
+        String[] columns = {"PRODUCT ID", "PRODUCT NAME", "PRODUCT  PRICE", "PRODUCT QTY", "PRODUCT", "ADD TO CART"};
 
+        this.tableModel = new DefaultTableModel(null, columns) {
+            @Override
+            public Class<?> getColumnClass(int column) {
+                switch (column) {
+                    case 0:
+                        return Integer.class;
+                    case 1:
+                        return String.class;
+                    case 2:
+                        return Double.class;
+                    case 3:
+                        return Integer.class;
+                    case 4:
+                        return ImageIcon.class;
+                    case 5:
+                        return Boolean.class;
+                    default:
+                        return Object.class;
+                }
+            }
+        };
+
+        supermarketTable.setModel(tableModel);
+        populateTable();
+        populateBloodTypeComboBox();
+        
+    }
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -548,5 +582,9 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
 
 
 //throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+    }
+
+    private void populateBloodTypeComboBox() {
+        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
     }
 }

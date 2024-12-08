@@ -15,6 +15,10 @@ import java.util.ArrayList;
  */
 public class UserAccountDirectory {
 
+    public void setUserAccountList(ArrayList<UserAccount> userAccountList) {
+        this.userAccountList = userAccountList;
+    }
+
     private ArrayList<UserAccount> userAccountList;
 
     public UserAccountDirectory() {

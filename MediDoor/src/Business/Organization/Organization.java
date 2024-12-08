@@ -154,6 +154,7 @@ public abstract class Organization {
         } 
         return null;
     }
+    
 
     public ArrayList<PrescriptionUploadWorkRequest> getPrescriptionWorkList() {
         return prescriptionWorkList;

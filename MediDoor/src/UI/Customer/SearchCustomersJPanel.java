@@ -145,25 +145,25 @@ public class SearchCustomersJPanel extends javax.swing.JPanel {
 
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
         // TODO add your handling code here:
-
-        try{
-            Customer customer;
-            String name = txtName.getText();
-            customer = customerDirectory.searchCustomer(name);
-            if(customer!=null){
-                SearchCustomerResultsJPanel search = new SearchCustomerResultsJPanel(userProcessContainer, business, customer);
-                userProcessContainer.add("Search Results", search);
-                CardLayout layout = (CardLayout)userProcessContainer.getLayout();
-                layout.next(userProcessContainer);
-            }
-            else{
-                JOptionPane.showMessageDialog(null, "Nothing found", "No result found matching your criteria!!", JOptionPane.WARNING_MESSAGE);
-                //return;
-            }
-        }
-        catch(Exception e){
-            JOptionPane.showMessageDialog(null, "Nothing found", "No result found matching your criteria!!", JOptionPane.WARNING_MESSAGE);
-        }
+//
+//        try{
+//            Customer customer;
+//            String name = txtName.getText();
+//            customer = customerDirectory.searchCustomer(name);
+//            if(customer!=null){
+//                SearchCustomerResultsJPanel search = new SearchCustomerResultsJPanel(userProcessContainer, business, customer);
+//                userProcessContainer.add("Search Results", search);
+//                CardLayout layout = (CardLayout)userProcessContainer.getLayout();
+//                layout.next(userProcessContainer);
+//            }
+//            else{
+//                JOptionPane.showMessageDialog(null, "Nothing found", "No result found matching your criteria!!", JOptionPane.WARNING_MESSAGE);
+//                //return;
+//            }
+//        }
+//        catch(Exception e){
+//            JOptionPane.showMessageDialog(null, "Nothing found", "No result found matching your criteria!!", JOptionPane.WARNING_MESSAGE);
+//        }
     }//GEN-LAST:event_btnSearchActionPerformed
 
 
