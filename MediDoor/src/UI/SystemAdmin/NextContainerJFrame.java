@@ -4,6 +4,7 @@
  */
 package UI.SystemAdmin;
 
+import javax.swing.JPanel;
 /**
  *
  * @author vish
@@ -13,8 +14,15 @@ public class NextContainerJFrame extends javax.swing.JFrame {
     /**
      * Creates new form NextContainerJFrame
      */
-    public NextContainerJFrame() {
+    private JPanel userProcessContainer;
+    
+    public NextContainerJFrame(JPanel userProcessContainer) {
         initComponents();
+        System.out.println("Inside next frame");
+        this.userProcessContainer = userProcessContainer;
+        this.getContentPane().add(userProcessContainer);
+        System.out.println("Inside add frame");
+        this.setVisible(true);
     }
 
     /**
@@ -72,7 +80,7 @@ public class NextContainerJFrame extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new NextContainerJFrame().setVisible(true);
+                //new NextContainerJFrame().setVisible(true);
             }
         });
     }
