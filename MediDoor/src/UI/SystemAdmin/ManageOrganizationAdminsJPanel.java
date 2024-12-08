@@ -1,8 +1,10 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package UI.SystemAdmin;
+
 import Business.Ecosystem;
 import Business.Employee.Employee;
 import Business.Enterprise.Enterprise;
@@ -20,9 +22,10 @@ import java.awt.CardLayout;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
+
 /**
  *
- * @author vish
+ * @author Nidhi Raghavendra
  */
 public class ManageOrganizationAdminsJPanel extends javax.swing.JPanel {
 
@@ -53,7 +56,6 @@ public class ManageOrganizationAdminsJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         Table = new javax.swing.JTable();
         btnBack = new javax.swing.JButton();
@@ -69,8 +71,8 @@ public class ManageOrganizationAdminsJPanel extends javax.swing.JPanel {
         jLabel7 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
 
-        jPanel2.setBackground(new java.awt.Color(253, 252, 249));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setBackground(new java.awt.Color(253, 252, 249));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Table.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -97,7 +99,7 @@ public class ManageOrganizationAdminsJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(Table);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, 756, 260));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, 756, 260));
 
         btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Images/icons8-back-50.png"))); // NOI18N
         btnBack.setText("Back");
@@ -106,70 +108,50 @@ public class ManageOrganizationAdminsJPanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
-        jPanel2.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 140, 70));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 140, 70));
 
         comboNetwork.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 comboNetworkActionPerformed(evt);
             }
         });
-        jPanel2.add(comboNetwork, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 540, 150, -1));
+        add(comboNetwork, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 540, 150, -1));
 
         comboEnteprise.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 comboEntepriseActionPerformed(evt);
             }
         });
-        jPanel2.add(comboEnteprise, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 590, 150, -1));
+        add(comboEnteprise, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 590, 150, -1));
 
-        jPanel2.add(comboOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 640, 150, -1));
-        jPanel2.add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 540, 150, -1));
-        jPanel2.add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 590, 150, -1));
-        jPanel2.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 640, 150, -1));
+        add(comboOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 640, 150, -1));
+        add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 540, 150, -1));
+        add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 590, 150, -1));
+        add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 640, 150, -1));
 
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Images/icons8-organization-50.png"))); // NOI18N
         jButton1.setText("ADD");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 580, 160, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 580, 160, -1));
 
         jLabel2.setText("Name");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 550, 50, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 550, 50, -1));
 
         jLabel4.setText("Username");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 590, -1, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 590, -1, -1));
 
         jLabel7.setText("Password");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 640, 60, -1));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 640, 60, -1));
 
         jLabel1.setBackground(new java.awt.Color(253, 252, 249));
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Manage Organizations");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 1100, -1));
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1112, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 912, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 900, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 1100, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
@@ -202,32 +184,32 @@ public class ManageOrganizationAdminsJPanel extends javax.swing.JPanel {
 
             Organization o = (Organization) comboOrg.getSelectedItem();
             Employee emp = new Employee();
-            emp.setName(fieldname.getText());
+            emp.setName(txtName.getText());
 
             switch (o.getName()) {
                 case "Doctor Associate":
-                UserAccount user = o.getUserAccountDirectory().createUserAccount(fieldusername.getText(), fieldpassword.getText(), emp, new DoctorRole());
-                break;
+                    UserAccount user = o.getUserAccountDirectory().createUserAccount(txtUsername.getText(), txtPassword.getText(), emp, new DoctorRole());
+                    break;
                 case "Pharmacy":
-                UserAccount user1 = o.getUserAccountDirectory().createUserAccount(fieldusername.getText(), fieldpassword.getText(), emp, new PharmacistRole());
-                break;
+                    UserAccount user1 = o.getUserAccountDirectory().createUserAccount(txtUsername.getText(), txtPassword.getText(), emp, new PharmacistRole());
+                    break;
                 case "Supermarket":
-                UserAccount user2 = o.getUserAccountDirectory().createUserAccount(fieldusername.getText(), fieldpassword.getText(), emp, new MarketManagerRole());
-                break;
+                    UserAccount user2 = o.getUserAccountDirectory().createUserAccount(txtUsername.getText(), txtPassword.getText(), emp, new MarketManagerRole());
+                    break;
                 case "Equipments":
-                UserAccount user3 = o.getUserAccountDirectory().createUserAccount(fieldusername.getText(), fieldpassword.getText(), emp, new EquipmentProviderRole());
-                break;
+                    UserAccount user3 = o.getUserAccountDirectory().createUserAccount(txtUsername.getText(), txtPassword.getText(), emp, new EquipmentProviderRole());
+                    break;
                 case "Immunization":
-                UserAccount user4 = o.getUserAccountDirectory().createUserAccount(fieldusername.getText(), fieldpassword.getText(), emp, new VaccinatorRole());
-                break;
+                    UserAccount user4 = o.getUserAccountDirectory().createUserAccount(txtUsername.getText(), txtPassword.getText(), emp, new VaccinatorRole());
+                    break;
                 case "Lab Center":
-                UserAccount user5 = o.getUserAccountDirectory().createUserAccount(fieldusername.getText(), fieldpassword.getText(), emp, new LabAssistantRole());
-                break;
+                    UserAccount user5 = o.getUserAccountDirectory().createUserAccount(txtUsername.getText(), txtPassword.getText(), emp, new LabAssistantRole());
+                    break;
                 case "Sample Collection Center":
-                UserAccount user6 = o.getUserAccountDirectory().createUserAccount(fieldusername.getText(), fieldpassword.getText(), emp, new LabTesterRole());
-                break;
+                    UserAccount user6 = o.getUserAccountDirectory().createUserAccount(txtUsername.getText(), txtPassword.getText(), emp, new LabTesterRole());
+                    break;
                 default:
-                break;
+                    break;
             }
 
             JOptionPane.showMessageDialog(null, "Created Organization Admins");
@@ -235,9 +217,14 @@ public class ManageOrganizationAdminsJPanel extends javax.swing.JPanel {
         } catch (Exception e) {
 
         }
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
-public void populateTable() {
+    private void comboOrgActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_comboOrgActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_comboOrgActionPerformed
+
+    public void populateTable() {
         this.tablemodel.setRowCount(0);
 
         try {
@@ -299,13 +286,13 @@ public void populateTable() {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField txtName;
     private javax.swing.JTextField txtPassword;
     private javax.swing.JTextField txtUsername;
     // End of variables declaration//GEN-END:variables
-private void populateOrgs(Enterprise e) {
+
+    private void populateOrgs(Enterprise e) {
         try {
             comboOrg.removeAllItems();
             for (Organization o : e.getOrganizationDirectory().getOrganizationList()) {
