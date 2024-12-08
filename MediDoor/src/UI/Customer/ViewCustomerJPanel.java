@@ -19,7 +19,7 @@ import javax.swing.JPanel;
  * @author antaradeshmukh
  */
 public class ViewCustomerJPanel extends javax.swing.JPanel {
-  */
+  
     private JPanel userProcessContainer;
     private Ecosystem business;
     private Customer customer;

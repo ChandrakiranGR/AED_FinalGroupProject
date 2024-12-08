@@ -11,6 +11,7 @@ import Business.Network.Network;
 import UI.SystemAdmin.ManageCustomersJPanel;
 import java.awt.CardLayout;
 import java.awt.Component;
+import javax.swing.JComboBox;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 
@@ -26,10 +27,11 @@ public class AddCustomerJPanel extends javax.swing.JPanel {
     private Ecosystem business;
     private Employee employee;
     private CustomerDirectory customerdirectory;
+    private JComboBox comboLoc;
     /**
      * Creates new form AddCustomerJPanel
      */
-     public AddCustomerJPanel(JPanel userProcessContainer, Ecosystem business) {
+      public AddCustomerJPanel(JPanel userProcessContainer, Ecosystem business) {
         initComponents();
 
         this.userProcessContainer = userProcessContainer;
@@ -246,7 +248,7 @@ public class AddCustomerJPanel extends javax.swing.JPanel {
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         // TODO add your handling code here:
 
-        String name = txtName.getText();
+          String name = txtName.getText();
         int phone = Integer.valueOf(txtPhone.getText());
         int zip = Integer.valueOf(txtZipcode.getText());
         String streetaddress = txtAddress.getText();
@@ -255,7 +257,7 @@ public class AddCustomerJPanel extends javax.swing.JPanel {
         String password = txtPassword.getText();
 
         if (name.isEmpty() || txtPhone.getText().isEmpty() || email.isEmpty() || streetaddress.isEmpty()
-            || txtPassword.getText().isEmpty() || username.isEmpty() || password.isEmpty()) {
+                || txtPassword.getText().isEmpty() || username.isEmpty() || password.isEmpty()) {
             JOptionPane.showMessageDialog(null, "Please fill the empty fields", "Warining", JOptionPane.WARNING_MESSAGE);
             return;
         }
