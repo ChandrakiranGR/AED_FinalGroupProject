@@ -1,8 +1,10 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package UI.SystemAdmin;
+
 import Business.Customer.Customer;
 import Business.Ecosystem;
 import Business.Enterprise.Enterprise;
@@ -17,6 +19,7 @@ import org.jfree.chart.plot.PlotOrientation;
 import org.jfree.data.category.CategoryDataset;
 import org.jfree.data.category.DefaultCategoryDataset;
 import org.jfree.data.general.DefaultPieDataset;
+
 /**
  *
  * @author vish
@@ -47,18 +50,60 @@ public class StatisticsJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        orderPanel = new javax.swing.JPanel();
+        networkPanel = new javax.swing.JPanel();
+        deliveryAgentsPanel = new javax.swing.JPanel();
+
+        setBackground(new java.awt.Color(253, 252, 249));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        orderPanel.setOpaque(false);
+
+        javax.swing.GroupLayout orderPanelLayout = new javax.swing.GroupLayout(orderPanel);
+        orderPanel.setLayout(orderPanelLayout);
+        orderPanelLayout.setHorizontalGroup(
+            orderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 910, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        orderPanelLayout.setVerticalGroup(
+            orderPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 580, Short.MAX_VALUE)
         );
+
+        add(orderPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 910, 580));
+
+        networkPanel.setOpaque(false);
+
+        javax.swing.GroupLayout networkPanelLayout = new javax.swing.GroupLayout(networkPanel);
+        networkPanel.setLayout(networkPanelLayout);
+        networkPanelLayout.setHorizontalGroup(
+            networkPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 420, Short.MAX_VALUE)
+        );
+        networkPanelLayout.setVerticalGroup(
+            networkPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 270, Short.MAX_VALUE)
+        );
+
+        add(networkPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(1000, 40, 420, 270));
+
+        deliveryAgentsPanel.setOpaque(false);
+
+        javax.swing.GroupLayout deliveryAgentsPanelLayout = new javax.swing.GroupLayout(deliveryAgentsPanel);
+        deliveryAgentsPanel.setLayout(deliveryAgentsPanelLayout);
+        deliveryAgentsPanelLayout.setHorizontalGroup(
+            deliveryAgentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 430, Short.MAX_VALUE)
+        );
+        deliveryAgentsPanelLayout.setVerticalGroup(
+            deliveryAgentsPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 290, Short.MAX_VALUE)
+        );
+
+        add(deliveryAgentsPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 350, 430, 290));
     }// </editor-fold>//GEN-END:initComponents
-public void createBarChart() {
+
+    public void createBarChart() {
         networkPanel.removeAll();
         JFreeChart barchart = ChartFactory.createBarChart("CUSTOMER NETWORKS", "Network", "Customers", createdataset(), PlotOrientation.HORIZONTAL, true, true, true);
         System.out.println("PLOT ");
@@ -170,5 +215,8 @@ public void createBarChart() {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel deliveryAgentsPanel;
+    private javax.swing.JPanel networkPanel;
+    private javax.swing.JPanel orderPanel;
     // End of variables declaration//GEN-END:variables
 }
