@@ -282,7 +282,19 @@ public class SupermarketAdminJPanel extends javax.swing.JPanel {
         jTabbedPane1.setComponentAt(0, jPanel1);
         jTabbedPane1.setComponentAt(1, new PharmacyProductJPanel(userprocessocntainer, ecosystem, user, network, organization, enterprise));
     }//GEN-LAST:event_jTabbedPane1MouseClicked
-public void populateItems() {
+
+    public void fetchOrderObject() {
+        for (Customer customer : this.network.getCustomerDirectory().getCustomerList()) {
+            for (Order o : customer.getOrderlist()) {
+                if (o.getOrderId() == this.orderid) {
+                    this.currentOrder = o;
+                    this.currentCustomer = customer;
+                }
+            }
+        }
+    }
+
+    public void populateItems() {
         this.temTbleModel.setRowCount(0);
         try {
             for (OrderItem oi : this.currentOrder.getItemsOrdered()) {
@@ -323,7 +335,6 @@ public void populateItems() {
             System.out.println("IN SUPERMARKET Admin POPULATE ORDER ------ " + e);
         }
     }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAccept;
     private javax.swing.JButton btnreject;

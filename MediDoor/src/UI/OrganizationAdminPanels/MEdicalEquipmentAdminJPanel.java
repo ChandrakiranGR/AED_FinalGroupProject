@@ -31,7 +31,7 @@ public class MEdicalEquipmentAdminJPanel extends javax.swing.JPanel {
     /**
      * Creates new form MEdicalEquipmentAdminJPanel
      */
-    private final JPanel userprocessocntainer;
+     private final JPanel userprocessocntainer;
     private final UserAccount user;
     private final Ecosystem ecosystem;
     private final Network network;
@@ -256,13 +256,13 @@ public class MEdicalEquipmentAdminJPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1534, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 12, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 919, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGap(0, 12, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -357,7 +357,19 @@ public class MEdicalEquipmentAdminJPanel extends javax.swing.JPanel {
         chooser.addChoosableFileFilter(filter);
         this.chosenFile = chooser.getSelectedFile();
     }//GEN-LAST:event_jButton3ActionPerformed
-public void populateItems() {
+public void fetchOrderObject() {
+        for (Customer customer : this.network.getCustomerDirectory().getCustomerList()) {
+            for (Order o : customer.getOrderlist()) {
+                if (o.getOrderId() == this.orderid) {
+                    this.currentOrder = o;
+                    this.currentCustomer = customer;
+                    break;
+                }
+            }
+        }
+    }
+
+    public void populateItems() {
         this.temTbleModel.setRowCount(0);
         try {
             for (OrderItem oi : this.currentOrder.getItemsOrdered()) {
