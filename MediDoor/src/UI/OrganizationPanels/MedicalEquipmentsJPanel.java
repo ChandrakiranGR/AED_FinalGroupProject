@@ -4,6 +4,20 @@
  */
 package UI.OrganizationPanels;
 
+import Business.Customer.Customer;
+import Business.Ecosystem;
+import Business.Enterprise.Enterprise;
+import Business.Network.Network;
+import Business.Orders.Cart;
+import Business.Orders.OrderItem;
+import Business.Organization.Organization;
+import Business.Products.Product;
+import UI.Alert;
+import java.util.ArrayList;
+import javax.swing.DefaultListModel;
+import javax.swing.ImageIcon;
+import javax.swing.JList;
+import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author shivanisugurushetty
@@ -13,8 +27,108 @@ public class MedicalEquipmentsJPanel extends javax.swing.JPanel {
     /**
      * Creates new form MedicalEquipmentsJPanel
      */
-    public MedicalEquipmentsJPanel() {
+    Ecosystem ecosystem;
+    Network network;
+    Enterprise enterprise;
+    Organization organization;
+    Customer customer;
+    DefaultTableModel tableModel;
+    Alert alert;
+
+    public MedicalEquipmentsJPanel(Ecosystem system, Network network, Customer c) {
         initComponents();
+
+        this.ecosystem = system;
+        this.network = network;
+        this.customer = c;
+        this.alert = new Alert();
+        this.tableModel = (DefaultTableModel) medTable.getModel();
+
+        String[] columns = {"PRODUCT ID", "PRODUCT NAME", "PRODUCT  PRICE", "PRODUCT QTY", "PRODUCT", "ADD TO CART"};
+
+        this.tableModel = new DefaultTableModel(null, columns) {
+            @Override
+            public Class<?> getColumnClass(int column) {
+                switch (column) {
+                    case 0:
+                        return Integer.class;
+                    case 1:
+                        return String.class;
+                    case 2:
+                        return Double.class;
+                    case 3:
+                        return Integer.class;
+                    case 4:
+                        return ImageIcon.class;
+                    case 5:
+                        return Boolean.class;
+                    default:
+                        return Object.class;
+                }
+            }
+        };
+
+        medTable.setModel(tableModel);
+
+        this.enterprise = this.network.getEnterpriseDirectory().getEnterprise("Medical Equipments");
+        this.organization = this.enterprise.getOrganizationDirectory().getOrganizationByName("Equipments");
+
+        populateTable();
+        populateStockList();
+    }
+
+    public void populateTable() {
+        tableModel.setRowCount(0);
+        medTable.setRowHeight(50);
+        ArrayList<Product> products = this.organization.getOrganizationProducts();
+        try {
+            for (Product p : products) {
+                if (p.getProductImage() != null) {
+                    ImageIcon icon = new ImageIcon(p.getProductImage().getAbsolutePath());
+
+                    tableModel.insertRow(tableModel.getRowCount(), new Object[]{
+                        p.getProductId(),
+                        p.getName(),
+                        p.getPrice(),
+                        1,
+                        icon,
+                        false
+                    });
+                } else {
+                    ImageIcon icon = new ImageIcon("pill.png");
+
+                    tableModel.insertRow(tableModel.getRowCount(), new Object[]{
+                        p.getProductId(),
+                        p.getName(),
+                        p.getPrice(),
+                        1,
+                        icon,
+                        false
+                    });
+
+                }
+            }
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
+    }
+
+    public void populateStockList() {
+        ArrayList<Product> products = this.organization.getOrganizationProducts();
+        DefaultListModel dlm = new DefaultListModel();
+        try {
+            int counter = 0;
+            for (Product p : products) {
+                if (p.getStockunits() == 0) {                    
+                    dlm.addElement(p.getName());
+                }
+            }
+            stockList.setModel(dlm);
+
+        } catch (Exception e) {
+            System.out.println(e);
+        }
     }
 
     /**
@@ -26,19 +140,153 @@ public class MedicalEquipmentsJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        medTable = new javax.swing.JTable();
+        jButton1 = new javax.swing.JButton();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        stockList = new javax.swing.JList<>();
+        jLabel1 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
+
+        jPanel1.setBackground(new java.awt.Color(253, 252, 249));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        medTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+
+            }
+        ));
+        jScrollPane1.setViewportView(medTable);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(144, 64, 681, 450));
+
+        jButton1.setBackground(new java.awt.Color(0, 102, 102));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("ADD TO CART");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(414, 547, -1, -1));
+
+        stockList.setBackground(new java.awt.Color(239, 239, 254));
+        jScrollPane2.setViewportView(stockList);
+
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(878, 161, 190, 325));
+
+        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
+        jLabel1.setText("OUT OF STOCK :(");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 110, -1, -1));
+
+        jButton2.setText("REFRESH");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 590, 101, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 1500, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1500, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 1000, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1000, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        //        Customer adds to cart
+
+        int rows = tableModel.getRowCount();
+        Cart custoemrcart = this.customer.getCustomerCart();
+
+        ArrayList<OrderItem> customerCartItems = this.customer.getCustomerCart().getCartItems();
+
+        try {
+            for (int i = 0; i < rows; i++) {
+                if ((Boolean) tableModel.getValueAt(i, 5)) {
+
+                    System.out.println(custoemrcart.getCartId() + " :: THIS IS HIS CART ID");
+                    //                    Look for an already existing order in the cart
+                    if (customerCartItems.size() > 0) {
+                        System.out.println("CART IS > 0 ");
+                        Boolean found = false;
+                        for (OrderItem item : customerCartItems) {
+                            System.out.println(item.getProductName() + " ******** item");
+                            if (item.getProductName().equals(String.valueOf(tableModel.getValueAt(i, 1)))) {
+                                System.out.println(item.getProductName() + " ******** item exists");
+                                this.alert.ShowAlert("Chosen item" + item.getProductName() + " already in cart!");
+                                found = true;
+                                break;
+                            }
+                        }
+
+                        if (!found) {
+                            OrderItem o = new OrderItem();
+                            o.setProductId(Integer.valueOf((Integer) tableModel.getValueAt(i, 0)));
+                            o.setProductName((String) tableModel.getValueAt(i, 1));
+                            o.setProductPrice(Double.valueOf((Double) tableModel.getValueAt(i, 2)));
+                            o.setQty(Integer.valueOf((Integer) tableModel.getValueAt(i, 3)));
+                            o.setOrganizationname("Equipments");
+                            customerCartItems.add(o);
+                            this.alert.ShowAlert("Added " + o.getProductName() + " to cart!");
+                        }
+                    } else {
+                        System.out.println("NEW ITEMS ADDED ");
+                        OrderItem o = new OrderItem();
+                        o.setProductId(Integer.valueOf((Integer) tableModel.getValueAt(i, 0)));
+                        o.setProductName((String) tableModel.getValueAt(i, 1));
+                        o.setProductPrice(Double.valueOf((Double) tableModel.getValueAt(i, 2)));
+                        o.setQty(Integer.valueOf((Integer) tableModel.getValueAt(i, 3)));
+                        o.setOrganizationname("Equipments");
+                        customerCartItems.add(o);
+                        this.alert.ShowAlert("Added " + o.getProductName() + " to cart!");
+                    }
+                } else {
+                }
+
+            }
+
+        } catch (Exception e) {
+            System.out.println(e + " CART PROBLEM IN EQUIP ");
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        populateTable();
+        populateStockList();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable medTable;
+    private javax.swing.JList<String> stockList;
     // End of variables declaration//GEN-END:variables
 }
