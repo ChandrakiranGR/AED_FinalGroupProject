@@ -113,7 +113,7 @@ JPanel userProcessContainer;
 
         jPanel2.setBackground(new java.awt.Color(253, 252, 249));
         jPanel2.setMinimumSize(new java.awt.Dimension(1500, 1000));
-        jPanel2.setPreferredSize(new java.awt.Dimension(1290, 1190));
+        jPanel2.setPreferredSize(new java.awt.Dimension(1500, 900));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setText("Name");
@@ -139,7 +139,7 @@ JPanel userProcessContainer;
                 btnAddActionPerformed(evt);
             }
         });
-        jPanel2.add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 360, 100, -1));
+        jPanel2.add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 360, 110, 40));
 
         btndelete.setBackground(new java.awt.Color(0, 102, 102));
         btndelete.setForeground(new java.awt.Color(255, 255, 255));
@@ -149,9 +149,8 @@ JPanel userProcessContainer;
                 btndeleteActionPerformed(evt);
             }
         });
-        jPanel2.add(btndelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 430, -1, -1));
+        jPanel2.add(btndelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(860, 440, 120, 40));
 
-        deliveryjTable.setBackground(new java.awt.Color(204, 255, 204));
         deliveryjTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -194,17 +193,17 @@ JPanel userProcessContainer;
         jLabel1.setForeground(new java.awt.Color(0, 102, 102));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Manage Delivery agent");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 40, 1006, -1));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 40, 1006, -1));
 
         btnBack.setBackground(new java.awt.Color(0, 102, 102));
         btnBack.setForeground(new java.awt.Color(255, 255, 255));
-        btnBack.setText("<< Back");
+        btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        jPanel2.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
+        jPanel2.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, 80, 30));
 
         jLabel4.setText("jLabel4");
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-90, 100, 1620, 870));

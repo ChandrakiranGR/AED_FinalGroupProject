@@ -128,7 +128,7 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
 
         jPanel1.setBackground(new java.awt.Color(253, 252, 249));
         jPanel1.setMinimumSize(new java.awt.Dimension(1500, 900));
-        jPanel1.setPreferredSize(new java.awt.Dimension(1500, 1000));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1500, 900));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         pane.setDividerSize(1);
@@ -138,7 +138,7 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
         leftPane.setBackground(new java.awt.Color(253, 252, 249));
         leftPane.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        prescriptionBtn.setBackground(new java.awt.Color(0, 153, 153));
+        prescriptionBtn.setBackground(new java.awt.Color(0, 102, 102));
         prescriptionBtn.setForeground(new java.awt.Color(255, 255, 255));
         prescriptionBtn.setText("MY PRESCRIPTIONS");
         prescriptionBtn.addActionListener(new java.awt.event.ActionListener() {
@@ -146,9 +146,9 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
                 prescriptionBtnActionPerformed(evt);
             }
         });
-        leftPane.add(prescriptionBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 150, 40));
+        leftPane.add(prescriptionBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 200, 40));
 
-        browseBtn1.setBackground(new java.awt.Color(0, 153, 153));
+        browseBtn1.setBackground(new java.awt.Color(0, 102, 102));
         browseBtn1.setForeground(new java.awt.Color(255, 255, 255));
         browseBtn1.setText("BROWSE");
         browseBtn1.addActionListener(new java.awt.event.ActionListener() {
@@ -156,9 +156,9 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
                 browseBtn1ActionPerformed(evt);
             }
         });
-        leftPane.add(browseBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 150, 40));
+        leftPane.add(browseBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 150, 200, 40));
 
-        cartBtn1.setBackground(new java.awt.Color(0, 153, 153));
+        cartBtn1.setBackground(new java.awt.Color(0, 102, 102));
         cartBtn1.setForeground(new java.awt.Color(255, 255, 255));
         cartBtn1.setText("MY CART");
         cartBtn1.addActionListener(new java.awt.event.ActionListener() {
@@ -166,9 +166,9 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
                 cartBtn1ActionPerformed(evt);
             }
         });
-        leftPane.add(cartBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 150, 40));
+        leftPane.add(cartBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 200, 40));
 
-        orderBtn1.setBackground(new java.awt.Color(0, 153, 153));
+        orderBtn1.setBackground(new java.awt.Color(0, 102, 102));
         orderBtn1.setForeground(new java.awt.Color(255, 255, 255));
         orderBtn1.setText("MY ORDERS");
         orderBtn1.addActionListener(new java.awt.event.ActionListener() {
@@ -176,9 +176,9 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
                 orderBtn1ActionPerformed(evt);
             }
         });
-        leftPane.add(orderBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 150, 40));
+        leftPane.add(orderBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 200, 40));
 
-        paymentBTn1.setBackground(new java.awt.Color(0, 153, 153));
+        paymentBTn1.setBackground(new java.awt.Color(0, 102, 102));
         paymentBTn1.setForeground(new java.awt.Color(255, 255, 255));
         paymentBTn1.setText("MY PAYMENTS");
         paymentBTn1.addActionListener(new java.awt.event.ActionListener() {
@@ -186,9 +186,9 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
                 paymentBTn1ActionPerformed(evt);
             }
         });
-        leftPane.add(paymentBTn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 150, 40));
+        leftPane.add(paymentBTn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 300, 200, 40));
 
-        jButton2.setBackground(new java.awt.Color(0, 153, 153));
+        jButton2.setBackground(new java.awt.Color(0, 102, 102));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("PRESCRIPTION HISTORY");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -196,7 +196,7 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
-        leftPane.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 150, 40));
+        leftPane.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 200, 40));
         leftPane.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 0, 110, 120));
 
         netname.setFont(new java.awt.Font("Lucida Grande", 1, 13)); // NOI18N
@@ -247,7 +247,7 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
         supermarketTable.setOpaque(false);
         jScrollPane2.setViewportView(supermarketTable);
 
-        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 70, 700, 390));
+        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, 700, 390));
 
         addCartButton.setBackground(new java.awt.Color(0, 102, 102));
         addCartButton.setForeground(new java.awt.Color(255, 255, 255));
@@ -259,6 +259,8 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
         });
         jPanel2.add(addCartButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 500, -1, -1));
 
+        jButton3.setBackground(new java.awt.Color(0, 102, 102));
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("REFRESH");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -267,14 +269,13 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
         });
         jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 500, 100, -1));
 
-        stockList.setBackground(new java.awt.Color(239, 239, 254));
         jScrollPane1.setViewportView(stockList);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 130, 210, 330));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 120, 210, 330));
 
-        jLabel1.setFont(new java.awt.Font("Comic Sans MS", 0, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 0, 14)); // NOI18N
         jLabel1.setText("OUT OF STOCK :(");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(990, 90, -1, -1));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(920, 90, -1, -1));
 
         jLabel2.setToolTipText("");
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 250, 600, 420));

@@ -93,7 +93,7 @@ public class VaccinationAdminJPanel extends javax.swing.JPanel {
 
         jTabbedPane1.setBackground(new java.awt.Color(253, 252, 249));
         jTabbedPane1.setMinimumSize(new java.awt.Dimension(1500, 1000));
-        jTabbedPane1.setPreferredSize(new java.awt.Dimension(1500, 1000));
+        jTabbedPane1.setPreferredSize(new java.awt.Dimension(1500, 900));
 
         jPanel2.setBackground(new java.awt.Color(253, 252, 249));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -159,7 +159,7 @@ public class VaccinationAdminJPanel extends javax.swing.JPanel {
 
         jButton2.setBackground(new java.awt.Color(0, 102, 102));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("ACCEPT ORDER");
+        jButton2.setText("Accept Order");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -169,7 +169,7 @@ public class VaccinationAdminJPanel extends javax.swing.JPanel {
 
         jButton3.setBackground(new java.awt.Color(255, 153, 0));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("REJECT ORDER");
+        jButton3.setText("Reject Order");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -207,39 +207,39 @@ public class VaccinationAdminJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(prodTable);
 
-        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 310, 519, 241));
+        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 310, 519, 241));
 
         addBt.setBackground(new java.awt.Color(0, 102, 102));
         addBt.setForeground(new java.awt.Color(255, 255, 255));
-        addBt.setText("ADD PRODUCTS");
+        addBt.setText("Add Products");
         addBt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addBtActionPerformed(evt);
             }
         });
-        jPanel3.add(addBt, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 570, -1, -1));
-        jPanel3.add(fieldProductName, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 110, 263, -1));
+        jPanel3.add(addBt, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 360, -1, -1));
+        jPanel3.add(fieldProductName, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 90, 263, -1));
 
         jLabel1.setText("PRODUCT NAME");
-        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 80, -1, -1));
-        jPanel3.add(fieldProductPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 170, 263, -1));
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, -1, -1));
+        jPanel3.add(fieldProductPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 150, 263, -1));
 
         jLabel2.setText("PRODUCT PRICE");
-        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 140, -1, -1));
-        jPanel3.add(fieldStock, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 230, 263, -1));
+        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, -1, -1));
+        jPanel3.add(fieldStock, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 210, 263, -1));
 
         jLabel3.setText("STOCK");
-        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 200, -1, -1));
+        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 210, -1, -1));
 
         jButton1.setBackground(new java.awt.Color(0, 102, 102));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("UPDATE PRODUCTS");
+        jButton1.setText("Update Products");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 570, -1, -1));
+        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 420, -1, -1));
 
         jTabbedPane1.addTab("MANAGE PRODUCTS", jPanel3);
 

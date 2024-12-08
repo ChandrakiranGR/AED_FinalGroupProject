@@ -85,17 +85,18 @@ public class CustomerTestOrderJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1500, 900));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel3.setFont(new java.awt.Font("Lucida Grande", 1, 15)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 102, 102));
         jLabel3.setText("Order Total: ");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 480, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 500, -1, -1));
 
         labelTotalOrder.setFont(new java.awt.Font("Lucida Grande", 1, 15)); // NOI18N
         labelTotalOrder.setForeground(new java.awt.Color(0, 102, 102));
         labelTotalOrder.setText("<value>");
-        jPanel1.add(labelTotalOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 480, 104, -1));
+        jPanel1.add(labelTotalOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 500, 104, -1));
 
         btnAddtoCart.setBackground(new java.awt.Color(0, 102, 102));
         btnAddtoCart.setForeground(new java.awt.Color(255, 255, 255));
@@ -105,7 +106,7 @@ public class CustomerTestOrderJPanel extends javax.swing.JPanel {
                 btnAddtoCartActionPerformed(evt);
             }
         });
-        jPanel1.add(btnAddtoCart, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 430, 105, -1));
+        jPanel1.add(btnAddtoCart, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 430, 130, 40));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {

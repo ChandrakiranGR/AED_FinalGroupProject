@@ -82,6 +82,7 @@ public class PharmacyAdminJPanel extends javax.swing.JPanel {
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
 
+        jPanel1.setPreferredSize(new java.awt.Dimension(1500, 900));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jSplitPane1.setDividerSize(1);
@@ -90,37 +91,37 @@ public class PharmacyAdminJPanel extends javax.swing.JPanel {
         jPanel2.setBackground(new java.awt.Color(253, 252, 249));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton3.setText("REFRESH");
-        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 420, -1, -1));
+        jButton3.setText("Refresh");
+        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 340, -1, -1));
 
         jButton2.setBackground(new java.awt.Color(255, 153, 0));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("REJECT ORDER");
+        jButton2.setText("Reject Order");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 420, -1, -1));
+        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 340, -1, -1));
 
         jButton1.setBackground(new java.awt.Color(0, 102, 102));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("ACCEPT ORDER");
+        jButton1.setText("Accept Order");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 420, -1, -1));
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 340, -1, -1));
 
         btnSendPrescription.setBackground(new java.awt.Color(204, 204, 204));
-        btnSendPrescription.setText("SEND PRESCRIPTION");
+        btnSendPrescription.setText("Send Prescription");
         btnSendPrescription.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSendPrescriptionActionPerformed(evt);
             }
         });
-        jPanel2.add(btnSendPrescription, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 420, -1, -1));
+        jPanel2.add(btnSendPrescription, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 340, -1, -1));
 
         tableOrder.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -152,39 +153,42 @@ public class PharmacyAdminJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(tableOrder);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 170, 614, 184));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 100, 614, 184));
 
         jSplitPane1.setRightComponent(jPanel2);
 
         jPanel3.setBackground(new java.awt.Color(253, 252, 249));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jButton4.setBackground(new java.awt.Color(0, 153, 153));
-        jButton4.setText("MANAGE PRODUCTS");
+        jButton4.setBackground(new java.awt.Color(0, 102, 102));
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
+        jButton4.setText("Manage Products");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 190, 60));
+        jPanel3.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 260, 190, 40));
 
-        jButton5.setBackground(new java.awt.Color(0, 153, 153));
-        jButton5.setText("MANAGE ORDERS");
+        jButton5.setBackground(new java.awt.Color(0, 102, 102));
+        jButton5.setForeground(new java.awt.Color(255, 255, 255));
+        jButton5.setText("Manage Orders");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 190, 60));
+        jPanel3.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 190, 40));
 
-        jButton6.setBackground(new java.awt.Color(0, 153, 153));
-        jButton6.setText("MANAGE PRESCRIPTIONS");
+        jButton6.setBackground(new java.awt.Color(0, 102, 102));
+        jButton6.setForeground(new java.awt.Color(255, 255, 255));
+        jButton6.setText("Manage Prescriptions");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
             }
         });
-        jPanel3.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 190, 60));
+        jPanel3.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 190, 40));
 
         jSplitPane1.setLeftComponent(jPanel3);
 

@@ -77,7 +77,9 @@ public class PharmaceuticalEnterpriseJPanel extends javax.swing.JPanel {
         btnmanageorders = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
-        jPanel1.setPreferredSize(new java.awt.Dimension(1500, 1000));
+        setPreferredSize(new java.awt.Dimension(1500, 900));
+
+        jPanel1.setPreferredSize(new java.awt.Dimension(1500, 900));
 
         jPanel2.setBackground(new java.awt.Color(253, 252, 249));
 
@@ -90,17 +92,16 @@ public class PharmaceuticalEnterpriseJPanel extends javax.swing.JPanel {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1488, Short.MAX_VALUE)
-                .addContainerGap())
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(41, 41, 41)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 728, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(731, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addComponent(jLabel1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
+                .addGap(0, 29, Short.MAX_VALUE)
+                .addComponent(jLabel1))
         );
 
         jPanel3.setBackground(new java.awt.Color(253, 252, 249));
@@ -114,7 +115,7 @@ public class PharmaceuticalEnterpriseJPanel extends javax.swing.JPanel {
                 btndeliveryagentsActionPerformed(evt);
             }
         });
-        jPanel3.add(btndeliveryagents, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 70, 190, 40));
+        jPanel3.add(btndeliveryagents, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 160, 200, 40));
 
         btnmanageorders.setBackground(new java.awt.Color(0, 102, 102));
         btnmanageorders.setForeground(new java.awt.Color(255, 255, 255));
@@ -124,7 +125,7 @@ public class PharmaceuticalEnterpriseJPanel extends javax.swing.JPanel {
                 btnmanageordersActionPerformed(evt);
             }
         });
-        jPanel3.add(btnmanageorders, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 70, 200, 40));
+        jPanel3.add(btnmanageorders, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 80, 200, 40));
         jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 130, 700, 400));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

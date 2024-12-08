@@ -117,9 +117,9 @@ private JPanel userProcessContainer;
         jLabel2 = new javax.swing.JLabel();
 
         jPanel2.setBackground(new java.awt.Color(253, 252, 249));
+        jPanel2.setPreferredSize(new java.awt.Dimension(1500, 900));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        EquipmentOrderTable.setBackground(new java.awt.Color(204, 255, 204));
         EquipmentOrderTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -138,9 +138,8 @@ private JPanel userProcessContainer;
         });
         jScrollPane1.setViewportView(EquipmentOrderTable);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 50, 803, 110));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 180, 803, 110));
 
-        btnBack.setBackground(new java.awt.Color(0, 102, 102));
         btnBack.setForeground(new java.awt.Color(255, 255, 255));
         btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Images/icons8-back-50.png"))); // NOI18N
         btnBack.addActionListener(new java.awt.event.ActionListener() {
@@ -148,19 +147,19 @@ private JPanel userProcessContainer;
                 btnBackActionPerformed(evt);
             }
         });
-        jPanel2.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 20, -1, -1));
+        jPanel2.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
 
         deliverycmb.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deliverycmbActionPerformed(evt);
             }
         });
-        jPanel2.add(deliverycmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 640, 148, -1));
+        jPanel2.add(deliverycmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 430, 148, -1));
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 102, 102));
         jLabel1.setText("Assign Delivery agent");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 630, -1, 40));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 420, -1, 40));
 
         assignbtn.setBackground(new java.awt.Color(0, 102, 102));
         assignbtn.setForeground(new java.awt.Color(255, 255, 255));
@@ -170,7 +169,7 @@ private JPanel userProcessContainer;
                 assignbtnActionPerformed(evt);
             }
         });
-        jPanel2.add(assignbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 670, 105, -1));
+        jPanel2.add(assignbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 490, 105, -1));
 
         btnshoworders.setBackground(new java.awt.Color(0, 102, 102));
         btnshoworders.setForeground(new java.awt.Color(255, 255, 255));
@@ -180,14 +179,14 @@ private JPanel userProcessContainer;
                 btnshowordersActionPerformed(evt);
             }
         });
-        jPanel2.add(btnshoworders, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 20, 130, 30));
+        jPanel2.add(btnshoworders, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 90, 130, 30));
 
         orderscmb.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 orderscmbActionPerformed(evt);
             }
         });
-        jPanel2.add(orderscmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 20, 110, -1));
+        jPanel2.add(orderscmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 90, 110, 30));
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 160, 1200, 470));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

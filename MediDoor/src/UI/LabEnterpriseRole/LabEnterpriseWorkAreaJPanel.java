@@ -63,11 +63,11 @@ public class LabEnterpriseWorkAreaJPanel extends javax.swing.JPanel {
         btnLabcenters = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
 
-        jPanel1.setPreferredSize(new java.awt.Dimension(1500, 1000));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1500, 900));
 
         jPanel2.setBackground(new java.awt.Color(253, 252, 249));
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 102, 102));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Lab Enterprise Work Area");
@@ -76,14 +76,17 @@ public class LabEnterpriseWorkAreaJPanel extends javax.swing.JPanel {
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1500, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(75, 75, 75)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 836, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(589, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(40, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(44, 44, 44)
                 .addComponent(jLabel1)
-                .addGap(50, 50, 50))
+                .addContainerGap(46, Short.MAX_VALUE))
         );
 
         jPanel3.setBackground(new java.awt.Color(253, 252, 249));
@@ -97,7 +100,7 @@ public class LabEnterpriseWorkAreaJPanel extends javax.swing.JPanel {
                 btndeliveryagentsActionPerformed(evt);
             }
         });
-        jPanel3.add(btndeliveryagents, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 40, 200, 40));
+        jPanel3.add(btndeliveryagents, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 100, 200, 40));
 
         btnmanageorders.setBackground(new java.awt.Color(0, 102, 102));
         btnmanageorders.setForeground(new java.awt.Color(255, 255, 255));
@@ -107,7 +110,7 @@ public class LabEnterpriseWorkAreaJPanel extends javax.swing.JPanel {
                 btnmanageordersActionPerformed(evt);
             }
         });
-        jPanel3.add(btnmanageorders, new org.netbeans.lib.awtextra.AbsoluteConstraints(392, 40, 200, 40));
+        jPanel3.add(btnmanageorders, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 40, 200, 40));
 
         btnLabcenters.setBackground(new java.awt.Color(0, 102, 102));
         btnLabcenters.setForeground(new java.awt.Color(255, 255, 255));
@@ -117,7 +120,7 @@ public class LabEnterpriseWorkAreaJPanel extends javax.swing.JPanel {
                 btnLabcentersActionPerformed(evt);
             }
         });
-        jPanel3.add(btnLabcenters, new org.netbeans.lib.awtextra.AbsoluteConstraints(882, 40, 200, 40));
+        jPanel3.add(btnLabcenters, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 160, 200, 40));
         jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 90, -1, -1));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

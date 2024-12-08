@@ -111,10 +111,9 @@ public class ManageVaccinationOrdersJPanel extends javax.swing.JPanel {
         jPanel1.setPreferredSize(new java.awt.Dimension(1500, 1000));
 
         jPanel2.setBackground(new java.awt.Color(253, 252, 249));
-        jPanel2.setPreferredSize(new java.awt.Dimension(1500, 1000));
+        jPanel2.setPreferredSize(new java.awt.Dimension(1500, 900));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        VaccineOrderTable.setBackground(new java.awt.Color(204, 255, 204));
         VaccineOrderTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -133,17 +132,17 @@ public class ManageVaccinationOrdersJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(VaccineOrderTable);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 60, 803, 120));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 220, 803, 120));
 
         btnBack.setBackground(new java.awt.Color(0, 102, 102));
         btnBack.setForeground(new java.awt.Color(255, 255, 255));
-        btnBack.setText("<< Back");
+        btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        jPanel2.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+        jPanel2.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, 90, 40));
 
         deliverycmb.setForeground(new java.awt.Color(0, 102, 102));
         deliverycmb.addActionListener(new java.awt.event.ActionListener() {
@@ -151,12 +150,12 @@ public class ManageVaccinationOrdersJPanel extends javax.swing.JPanel {
                 deliverycmbActionPerformed(evt);
             }
         });
-        jPanel2.add(deliverycmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 650, 148, 20));
+        jPanel2.add(deliverycmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 420, 148, 20));
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 102, 102));
         jLabel1.setText("Assign Delivery agent");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 650, -1, -1));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 420, -1, -1));
 
         assignbtn.setBackground(new java.awt.Color(0, 102, 102));
         assignbtn.setForeground(new java.awt.Color(255, 255, 255));
@@ -166,7 +165,7 @@ public class ManageVaccinationOrdersJPanel extends javax.swing.JPanel {
                 assignbtnActionPerformed(evt);
             }
         });
-        jPanel2.add(assignbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 680, 105, -1));
+        jPanel2.add(assignbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 470, 105, -1));
 
         btnshoworders.setBackground(new java.awt.Color(0, 102, 102));
         btnshoworders.setForeground(new java.awt.Color(255, 255, 255));
@@ -176,7 +175,7 @@ public class ManageVaccinationOrdersJPanel extends javax.swing.JPanel {
                 btnshowordersActionPerformed(evt);
             }
         });
-        jPanel2.add(btnshoworders, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 20, 130, -1));
+        jPanel2.add(btnshoworders, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 120, 130, -1));
 
         orderscmb.setForeground(new java.awt.Color(0, 102, 102));
         orderscmb.addActionListener(new java.awt.event.ActionListener() {
@@ -184,7 +183,7 @@ public class ManageVaccinationOrdersJPanel extends javax.swing.JPanel {
                 orderscmbActionPerformed(evt);
             }
         });
-        jPanel2.add(orderscmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 20, 110, -1));
+        jPanel2.add(orderscmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 120, 110, -1));
         jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 1200, 460));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

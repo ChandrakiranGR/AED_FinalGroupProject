@@ -68,6 +68,7 @@ public class CustomerPrescriptionJPanel extends javax.swing.JPanel {
         jButton2 = new javax.swing.JButton();
 
         jPanel1.setBackground(new java.awt.Color(253, 252, 249));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1500, 900));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -82,9 +83,9 @@ public class CustomerPrescriptionJPanel extends javax.swing.JPanel {
         });
         jPanel1.add(dropdownOrders, new org.netbeans.lib.awtextra.AbsoluteConstraints(77, 69, 160, -1));
 
-        jButton1.setBackground(new java.awt.Color(0, 153, 153));
+        jButton1.setBackground(new java.awt.Color(0, 102, 102));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("SHOW ITEMS");
+        jButton1.setText("Show Items");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -121,7 +122,7 @@ public class CustomerPrescriptionJPanel extends javax.swing.JPanel {
 
         jFile.setBackground(new java.awt.Color(0, 102, 102));
         jFile.setForeground(new java.awt.Color(255, 255, 255));
-        jFile.setText("UPLOAD PRESCRIPTION");
+        jFile.setText("Upload Prescription");
         jFile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jFileActionPerformed(evt);
@@ -131,7 +132,7 @@ public class CustomerPrescriptionJPanel extends javax.swing.JPanel {
 
         jButton2.setBackground(new java.awt.Color(0, 102, 102));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("UPDATE ORDER");
+        jButton2.setText("Update Order");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);

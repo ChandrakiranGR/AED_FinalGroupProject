@@ -91,6 +91,7 @@ public class MEdicalEquipmentAdminJPanel extends javax.swing.JPanel {
         jButton3 = new javax.swing.JButton();
 
         jTabbedPane1.setBackground(new java.awt.Color(253, 252, 249));
+        jTabbedPane1.setPreferredSize(new java.awt.Dimension(1500, 900));
 
         jPanel1.setBackground(new java.awt.Color(253, 252, 249));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -125,7 +126,7 @@ public class MEdicalEquipmentAdminJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(ordeTable);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, -1, 276));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, -1, 276));
 
         prodTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -152,7 +153,7 @@ public class MEdicalEquipmentAdminJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(prodTable);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 120, -1, 280));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 120, -1, 280));
 
         jButton1.setBackground(new java.awt.Color(0, 102, 102));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -162,7 +163,7 @@ public class MEdicalEquipmentAdminJPanel extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 460, -1, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 460, -1, -1));
 
         jButton2.setBackground(new java.awt.Color(255, 153, 0));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
@@ -172,7 +173,7 @@ public class MEdicalEquipmentAdminJPanel extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 460, -1, -1));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 510, -1, -1));
 
         jTabbedPane1.addTab("MANAGE ORDERS", jPanel1);
 
@@ -204,49 +205,49 @@ public class MEdicalEquipmentAdminJPanel extends javax.swing.JPanel {
         });
         jScrollPane4.setViewportView(productsTable);
 
-        jPanel2.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 310, 519, 241));
+        jPanel2.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 340, 519, 241));
 
         addBt1.setBackground(new java.awt.Color(0, 102, 102));
         addBt1.setForeground(new java.awt.Color(255, 255, 255));
-        addBt1.setText("ADD PRODUCTS");
+        addBt1.setText("Add Products");
         addBt1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addBt1ActionPerformed(evt);
             }
         });
-        jPanel2.add(addBt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 600, -1, -1));
-        jPanel2.add(fieldProductName, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 90, 263, -1));
+        jPanel2.add(addBt1, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 380, 130, -1));
+        jPanel2.add(fieldProductName, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 80, 263, -1));
 
         jLabel4.setText("PRODUCT NAME");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 70, -1, -1));
-        jPanel2.add(fieldProductPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 150, 263, -1));
+        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 80, -1, -1));
+        jPanel2.add(fieldProductPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, 263, -1));
 
         jLabel5.setText("PRODUCT PRICE");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 130, -1, -1));
-        jPanel2.add(fieldStock, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 210, 263, -1));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 150, -1, -1));
+        jPanel2.add(fieldStock, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 220, 263, -1));
 
         jLabel6.setText("STOCK");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 190, -1, -1));
+        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 220, -1, -1));
 
         jButton4.setBackground(new java.awt.Color(0, 102, 102));
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("UPDATE PRODUCTS");
+        jButton4.setText("Update Products");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 600, -1, -1));
+        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 440, -1, -1));
 
         jButton3.setBackground(new java.awt.Color(0, 102, 102));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("UPLOAD IMAGE");
+        jButton3.setText("Upload Image");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 260, -1, -1));
+        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 130, -1, -1));
 
         jTabbedPane1.addTab("MANAGE PRODUCTS", jPanel2);
 

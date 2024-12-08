@@ -138,9 +138,9 @@ public class DeliveryAgentWorkAreaJPanel extends javax.swing.JPanel {
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel2.setBackground(new java.awt.Color(253, 252, 249));
+        jPanel2.setPreferredSize(new java.awt.Dimension(1500, 900));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        DeliveryOrderTable.setBackground(new java.awt.Color(204, 255, 204));
         DeliveryOrderTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -154,7 +154,7 @@ public class DeliveryAgentWorkAreaJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(DeliveryOrderTable);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 140, 550, 220));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 150, 550, 220));
 
         orderPicked_btn.setBackground(new java.awt.Color(0, 102, 102));
         orderPicked_btn.setForeground(new java.awt.Color(255, 255, 255));
@@ -172,7 +172,7 @@ public class DeliveryAgentWorkAreaJPanel extends javax.swing.JPanel {
                 orderPicked_btnActionPerformed(evt);
             }
         });
-        jPanel2.add(orderPicked_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 470, 190, 44));
+        jPanel2.add(orderPicked_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 170, 190, 44));
 
         orderDelivered_btn.setBackground(new java.awt.Color(0, 102, 102));
         orderDelivered_btn.setForeground(new java.awt.Color(255, 255, 255));
@@ -190,7 +190,7 @@ public class DeliveryAgentWorkAreaJPanel extends javax.swing.JPanel {
                 orderDelivered_btnActionPerformed(evt);
             }
         });
-        jPanel2.add(orderDelivered_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 520, 190, 44));
+        jPanel2.add(orderDelivered_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 250, 190, 44));
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 520, 700));
@@ -199,19 +199,19 @@ public class DeliveryAgentWorkAreaJPanel extends javax.swing.JPanel {
         jLabel3.setForeground(new java.awt.Color(0, 102, 102));
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         jLabel3.setText("Welcome:");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 30, -1, -1));
+        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 30, -1, -1));
 
         jLabel_DelMan1.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         jLabel_DelMan1.setForeground(new java.awt.Color(0, 102, 102));
         jLabel_DelMan1.setText("<name>");
-        jPanel2.add(jLabel_DelMan1, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 30, -1, -1));
+        jPanel2.add(jLabel_DelMan1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 30, -1, -1));
 
         orderscmb.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 orderscmbActionPerformed(evt);
             }
         });
-        jPanel2.add(orderscmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 80, 110, -1));
+        jPanel2.add(orderscmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 90, 120, 30));
 
         btnshoworders.setBackground(new java.awt.Color(0, 102, 102));
         btnshoworders.setForeground(new java.awt.Color(255, 255, 255));
@@ -221,7 +221,7 @@ public class DeliveryAgentWorkAreaJPanel extends javax.swing.JPanel {
                 btnshowordersActionPerformed(evt);
             }
         });
-        jPanel2.add(btnshoworders, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 80, 130, 30));
+        jPanel2.add(btnshoworders, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 90, 130, 30));
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 70, 720, 480));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);

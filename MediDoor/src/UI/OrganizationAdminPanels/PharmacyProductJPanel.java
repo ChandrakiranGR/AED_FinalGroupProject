@@ -72,6 +72,7 @@ public class PharmacyProductJPanel extends javax.swing.JPanel {
         jButton3 = new javax.swing.JButton();
 
         jPanel1.setBackground(new java.awt.Color(253, 252, 249));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1500, 900));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         prodTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -99,49 +100,49 @@ public class PharmacyProductJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(prodTable);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 310, 519, 241));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 310, 519, 241));
 
         addBt.setBackground(new java.awt.Color(0, 102, 102));
         addBt.setForeground(new java.awt.Color(255, 255, 255));
-        addBt.setText("ADD PRODUCTS");
+        addBt.setText("Add Products");
         addBt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addBtActionPerformed(evt);
             }
         });
-        jPanel1.add(addBt, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 570, -1, -1));
-        jPanel1.add(fieldProductName, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 110, 263, -1));
+        jPanel1.add(addBt, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 390, 130, -1));
+        jPanel1.add(fieldProductName, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 90, 263, -1));
 
         jLabel1.setText("PRODUCT NAME");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 80, -1, -1));
-        jPanel1.add(fieldProductPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 170, 263, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, -1, -1));
+        jPanel1.add(fieldProductPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 160, 263, -1));
 
         jLabel2.setText("PRODUCT PRICE");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 140, -1, -1));
-        jPanel1.add(fieldStock, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 230, 263, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 160, -1, -1));
+        jPanel1.add(fieldStock, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 220, 263, -1));
 
         jLabel3.setText("STOCK");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 200, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 220, -1, -1));
 
         jButton1.setBackground(new java.awt.Color(0, 102, 102));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("UPDATE PRODUCTS");
+        jButton1.setText("Update Products");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 570, -1, -1));
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 340, -1, -1));
 
-        jButton3.setBackground(new java.awt.Color(0, 204, 204));
+        jButton3.setBackground(new java.awt.Color(0, 102, 102));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("UPLOAD IMAGE");
+        jButton3.setText("Upload Image");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 270, -1, -1));
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 150, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

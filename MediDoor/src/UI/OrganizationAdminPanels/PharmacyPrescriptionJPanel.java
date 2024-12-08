@@ -95,6 +95,7 @@ public class PharmacyPrescriptionJPanel extends javax.swing.JPanel {
         jLabel7 = new javax.swing.JLabel();
 
         jPanel1.setBackground(new java.awt.Color(253, 252, 249));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1500, 900));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("PHARMACIST'S PRESCRIPTION WORK AREA");
@@ -161,7 +162,7 @@ public class PharmacyPrescriptionJPanel extends javax.swing.JPanel {
 
         createOrderbttn.setBackground(new java.awt.Color(0, 102, 102));
         createOrderbttn.setForeground(new java.awt.Color(255, 255, 255));
-        createOrderbttn.setText("CREATE ORDER");
+        createOrderbttn.setText("Create Order");
         createOrderbttn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 createOrderbttnActionPerformed(evt);
@@ -171,7 +172,7 @@ public class PharmacyPrescriptionJPanel extends javax.swing.JPanel {
 
         btnGo.setBackground(new java.awt.Color(0, 102, 102));
         btnGo.setForeground(new java.awt.Color(255, 255, 255));
-        btnGo.setText("GO");
+        btnGo.setText("Go");
         btnGo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGoActionPerformed(evt);

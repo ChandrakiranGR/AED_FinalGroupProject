@@ -72,7 +72,7 @@ public class VaccinationEnterpriseWorkAreaJPanel extends javax.swing.JPanel {
         btnmanageorders = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
 
-        jPanel1.setPreferredSize(new java.awt.Dimension(1500, 1000));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1500, 900));
 
         jPanel2.setBackground(new java.awt.Color(253, 252, 249));
 
@@ -110,7 +110,7 @@ public class VaccinationEnterpriseWorkAreaJPanel extends javax.swing.JPanel {
                 btndeliveryagentsActionPerformed(evt);
             }
         });
-        jPanel3.add(btndeliveryagents, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 100, 200, 40));
+        jPanel3.add(btndeliveryagents, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 280, 200, 40));
 
         btnmanageorders.setBackground(new java.awt.Color(0, 102, 102));
         btnmanageorders.setForeground(new java.awt.Color(255, 255, 255));
@@ -120,7 +120,7 @@ public class VaccinationEnterpriseWorkAreaJPanel extends javax.swing.JPanel {
                 btnmanageordersActionPerformed(evt);
             }
         });
-        jPanel3.add(btnmanageorders, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 100, 200, 40));
+        jPanel3.add(btnmanageorders, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 210, 200, 40));
         jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 60, 1060, 810));
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -140,7 +140,7 @@ public class VaccinationEnterpriseWorkAreaJPanel extends javax.swing.JPanel {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 768, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
