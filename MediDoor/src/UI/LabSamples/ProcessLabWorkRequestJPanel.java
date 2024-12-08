@@ -4,6 +4,31 @@
  */
 package UI.LabSamples;
 
+import Business.Customer.Customer;
+import Business.Ecosystem;
+import Business.Enterprise.Enterprise;
+import Business.Network.Network;
+import Business.Organization.Organization;
+import java.awt.CardLayout;
+import java.awt.Component;
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileReader;
+import java.util.Properties;
+import javax.mail.Address;
+import javax.mail.Message;
+import javax.mail.MessagingException;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
+import javax.mail.Transport;
+import javax.mail.internet.InternetAddress;
+import javax.mail.internet.MimeMessage;
+import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.filechooser.FileNameExtensionFilter;
 /**
  *
  * @author chandrkiran
@@ -13,8 +38,25 @@ public class ProcessLabWorkRequestJPanel extends javax.swing.JPanel {
     /**
      * Creates new form ProcessLabWorkRequestJPanel
      */
-    public ProcessLabWorkRequestJPanel() {
+        private JPanel userProcessContainer;
+    private Ecosystem business;
+    private Network network;
+    private Customer customer;
+    private Enterprise enterprise;
+    private Organization organization;
+    private File chosenFile;
+    
+    public ProcessLabWorkRequestJPanel(JPanel userProcessContainer, Ecosystem business, Network network, Customer customer) {
         initComponents();
+
+        this.userProcessContainer = userProcessContainer;
+        this.business = business;
+        this.network = network;
+        this.customer = customer;
+
+        this.enterprise = this.network.getEnterpriseDirectory().getEnterprise("Lab Center & Diagnostics");
+        this.organization = this.enterprise.getOrganizationDirectory().getOrganizationByName("Sample Collection");
+
     }
 
     /**
@@ -26,19 +68,219 @@ public class ProcessLabWorkRequestJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        btnSubmit = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        backJButton = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
+        btnSubmit.setText("Send");
+        btnSubmit.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSubmitActionPerformed(evt);
+            }
+        });
+
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 16)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Result");
+
+        backJButton.setText("Back");
+        backJButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backJButtonActionPerformed(evt);
+            }
+        });
+
+        jButton1.setText("Upload File");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(16, 16, 16)
+                .addComponent(backJButton)
+                .addContainerGap(709, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(32, 32, 32)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 145, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(51, 51, 51)
+                        .addComponent(btnSubmit)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 103, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 385, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(115, 115, 115))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(14, 14, 14)
+                .addComponent(backJButton)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(198, 198, 198)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel1)
+                            .addComponent(jButton1))
+                        .addGap(33, 33, 33)
+                        .addComponent(btnSubmit))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(38, 38, 38)
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 429, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(90, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 797, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 594, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
+
+        int dialogueb = JOptionPane.INFORMATION_MESSAGE;
+        System.out.println("" + dialogueb);
+        int dialoguer = JOptionPane.showConfirmDialog(this, "SENDING EMAIL\n"
+            + "If yes please wait", "Mailing .........", dialogueb);
+        if (dialoguer == 0) {
+            String recipients = "vachanabelgavi777@gmail.com";
+            System.out.println("Entering assign for email ==========");
+            String subjects = "New Credentials";
+            String messaget = "Hello Vachana! Welcome to Door Delivery. Your is ready. Please view the file.";
+
+            System.out.println("Start");
+            final String usernamesender = "pannagaveeramohan@gmail.com";
+            final String passwordsender = "9686300037";
+
+            Properties p = new Properties();
+            p.put("mail.smtp.auth", "true");
+            p.put("mail.smtp.host", "smtp.gmail.com");
+            p.put("mail.smtp.port", "465");
+            p.put("mail.transport.protocol", "smtp");
+            p.put("mail.smtp.starttls.enable", "true");
+            p.put("mail.smtp.starttls.enable", "true");
+            p.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+
+            Session session = Session.getInstance(p,
+                new javax.mail.Authenticator() {
+                    protected PasswordAuthentication getPasswordAuthentication() {
+                        return new PasswordAuthentication(usernamesender, passwordsender);
+                    }
+                });
+
+                try {
+
+                    Transport transport = session.getTransport();
+                    Message message = new MimeMessage(session);
+                    message.setFrom(new InternetAddress("pannagaveeramohan@gmail.com"));//formBean.getString("fromEmail")
+
+                    final Address[] recipientAddresses = InternetAddress.parse(recipients);
+                    message.setRecipients(Message.RecipientType.TO, recipientAddresses);
+                    message.setSubject(subjects);//formBean.getString(
+                        message.setText(messaget);
+                        transport.connect();
+                        transport.send(message, recipientAddresses);//(message);
+
+                        System.out.println("Done");
+
+                    } catch (MessagingException ex) {
+                        System.out.println("e=" + ex);
+                        ex.printStackTrace();
+                        throw new RuntimeException(ex);
+
+                    }
+                    JOptionPane.showMessageDialog(null, "Email sent to customer successful");
+                } else {
+                    JOptionPane.showMessageDialog(null, "Email sending cancelled");
+                }
+    }//GEN-LAST:event_btnSubmitActionPerformed
+
+    private void backJButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backJButtonActionPerformed
+
+        userProcessContainer.remove(this);
+        Component[] componentArray = userProcessContainer.getComponents();
+        Component component = componentArray[componentArray.length - 1];
+        LabAssistantJPanel dwjp = (LabAssistantJPanel) component;
+        dwjp.populateTable();
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
+    }//GEN-LAST:event_backJButtonActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+
+        JFileChooser chooser = new JFileChooser();
+        chooser.showOpenDialog(null);
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("png", "jpg", "jpeg", "pdf");
+        chooser.addChoosableFileFilter(filter);
+        this.chosenFile = chooser.getSelectedFile();
+        /*
+        String[] headers = {"Number of Games Played:", "Total Score:", "Average Score:"};
+        JLabel[] labels = new JLabel[3];
+        for (int index = 0; index < labels.length; index++) {
+            labels[index] = new JLabel();
+            // Add label to screen
+        }
+
+        try {
+            BufferedReader br = new BufferedReader(new FileReader(chosenFile));
+            String text = null;
+            int lineCount = 0;
+            while ((text = br.readLine()) != null && lineCount < 10) {
+                System.out.println(text);
+                labels[lineCount].setText(headers[lineCount] + " " + text);
+                lineCount++;
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Looks like you missed an attachment!");
+        }
+        */
+
+        try {
+            ImageIcon ii = new ImageIcon(this.chosenFile.getAbsolutePath());
+            jLabel2.setIcon(ii);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Looks like you missed an attachment!");
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton backJButton;
+    private javax.swing.JButton btnSubmit;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables
 }

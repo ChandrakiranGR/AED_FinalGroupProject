@@ -4,6 +4,17 @@
  */
 package UI.SystemAdmin;
 
+import Business.Ecosystem;
+import Business.Enterprise.Enterprise;
+import Business.Network.Network;
+import Business.Organization.Organization;
+import Business.Organization.OrganizationDirectory;
+import Business.UserAccount.UserAccount;
+import java.awt.CardLayout;
+import java.util.ArrayList;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
 /**
  *
  * @author vish
@@ -13,8 +24,18 @@ public class ManageEnterprisesJPanel extends javax.swing.JPanel {
     /**
      * Creates new form ManageEnterprisesJPanel
      */
-    public ManageEnterprisesJPanel() {
+    private JPanel userProcessContainer;
+    private Ecosystem business;
+    ArrayList<Network> networkList;
+
+    public ManageEnterprisesJPanel(JPanel userProcessContainer, Ecosystem business) {
         initComponents();
+
+        this.userProcessContainer = userProcessContainer;
+        this.business = business;
+        this.networkList = business.getNetworks();
+        populateTable();
+        populateNetworkComboBox();
     }
 
     /**
@@ -26,19 +47,353 @@ public class ManageEnterprisesJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        enterpriseJTable = new javax.swing.JTable();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        btnBack = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        txtName = new javax.swing.JTextField();
+        btnAdd = new javax.swing.JButton();
+        btnDelete = new javax.swing.JButton();
+        jLabel7 = new javax.swing.JLabel();
+        networkJComboBox = new javax.swing.JComboBox();
+        enterpriseJComboBox1 = new javax.swing.JComboBox();
+        combozip = new javax.swing.JComboBox();
+
+        jPanel1.setBackground(new java.awt.Color(253, 252, 249));
+
+        enterpriseJTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null},
+                {null, null, null},
+                {null, null, null},
+                {null, null, null}
+            },
+            new String [] {
+                "Network", "Enterprise Name", "Location"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(enterpriseJTable);
+
+        jPanel2.setBackground(new java.awt.Color(253, 252, 249));
+
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Enterprises");
+
+        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Images/icons8-back-50.png"))); // NOI18N
+        btnBack.setText("Back");
+        btnBack.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnBackActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1000, Short.MAX_VALUE)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 134, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(13, 13, 13)
+                .addComponent(btnBack)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jLabel1)
+                .addContainerGap(50, Short.MAX_VALUE))
+        );
+
+        jLabel2.setText("Network");
+
+        jLabel3.setText("Enterprise");
+
+        jLabel6.setText("Name");
+
+        btnAdd.setText("Add");
+        btnAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddActionPerformed(evt);
+            }
+        });
+
+        btnDelete.setText("Delete");
+        btnDelete.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnDeleteActionPerformed(evt);
+            }
+        });
+
+        jLabel7.setText("Zipcode");
+
+        networkJComboBox.setBackground(new java.awt.Color(0, 102, 204));
+        networkJComboBox.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        networkJComboBox.setForeground(new java.awt.Color(255, 255, 255));
+        networkJComboBox.addItemListener(new java.awt.event.ItemListener() {
+            public void itemStateChanged(java.awt.event.ItemEvent evt) {
+                networkJComboBoxItemStateChanged(evt);
+            }
+        });
+        networkJComboBox.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                networkJComboBoxActionPerformed(evt);
+            }
+        });
+
+        enterpriseJComboBox1.setBackground(new java.awt.Color(0, 102, 204));
+        enterpriseJComboBox1.setFont(new java.awt.Font("Arial", 1, 11)); // NOI18N
+        enterpriseJComboBox1.setForeground(new java.awt.Color(255, 255, 255));
+        enterpriseJComboBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                enterpriseJComboBox1ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel6)
+                    .addComponent(jLabel7))
+                .addGap(40, 40, 40)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtName)
+                    .addComponent(networkJComboBox, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(enterpriseJComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(combozip, javax.swing.GroupLayout.PREFERRED_SIZE, 180, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(372, 372, 372))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(185, 185, 185)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 616, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btnDelete, javax.swing.GroupLayout.PREFERRED_SIZE, 130, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(404, 404, 404)
+                        .addComponent(btnAdd, javax.swing.GroupLayout.PREFERRED_SIZE, 136, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(26, 26, 26)
+                .addComponent(btnDelete)
+                .addGap(35, 35, 35)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(networkJComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel3)
+                    .addComponent(enterpriseJComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel6)
+                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel7)
+                    .addComponent(combozip, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(39, 39, 39)
+                .addComponent(btnAdd)
+                .addContainerGap(259, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 1000, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 959, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+        // TODO add your handling code here:
+
+        userProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
+    }//GEN-LAST:event_btnBackActionPerformed
+
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
+        // TODO add your handling code here:
+
+        Network network = (Network) networkJComboBox.getSelectedItem();
+        Enterprise.EnterpriseType type = (Enterprise.EnterpriseType) enterpriseJComboBox1.getSelectedItem();
+        System.out.println("CAME HERE ");
+        if (network == null || type == null) {
+            JOptionPane.showMessageDialog(null, "Invalid Input!");
+            return;
+        }
+
+        if (txtName.getText().isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Please fill the empty fields", "Warining", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+
+        String name = txtName.getText();
+        int zipcode = (int) combozip.getSelectedItem();
+
+        Enterprise enterprise = network.getEnterpriseDirectory().createEnterprise(type, name, network.getNetworkName());
+        OrganizationDirectory o = enterprise.getOrganizationDirectory();
+
+        if (type.toString().equalsIgnoreCase("pharmaceutical")) {
+            Organization orgP = o.createOrganization(Organization.Type.Doctor, "Doctor Associate", network.getNetworkName(), zipcode);
+            Organization orgP1 = o.createOrganization(Organization.Type.Pharmacist, "Pharmacy", network.getNetworkName(), zipcode);
+            Organization orgP2 = o.createOrganization(Organization.Type.MarketManager, "Supermarket", network.getNetworkName(), zipcode);
+
+        } else if (type.toString().equalsIgnoreCase("medical equipments")) {
+            Organization orgM = o.createOrganization(Organization.Type.EquipmentManager, "Equipments", network.getNetworkName(), zipcode);
+
+        } else if (type.toString().equalsIgnoreCase("immunization & vaccination")) {
+            Organization orgV = o.createOrganization(Organization.Type.PharmaOrgAdmin, "Immunization", network.getNetworkName(), zipcode);
+        } else {
+            Organization orgL = o.createOrganization(Organization.Type.LabAssistant, "Lab Center", network.getNetworkName(), zipcode);
+            Organization orgL1 = o.createOrganization(Organization.Type.LabTester, "Sample Collection Center", network.getNetworkName(), zipcode);
+        }
+
+        JOptionPane.showMessageDialog(txtName, "Enterprise Added Successfully");
+
+        populateTable();
+
+        txtName.setText("");
+    }//GEN-LAST:event_btnAddActionPerformed
+
+    private void btnDeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnDeleteActionPerformed
+        // TODO add your handling code here:
+
+        int selectedrow = enterpriseJTable.getSelectedRow();
+
+        System.out.print(enterpriseJTable.getValueAt(selectedrow, 0).toString());
+        //        String name = "knjk";
+        //
+        //        for (Network n : business.getNetworks()){
+            //            Enterprise e = n.getEnterpriseDirectory().getEnterprise(name);
+            //            n.getEnterpriseDirectory().removeEnterprise(e);
+            //        }
+        populateTable();
+    }//GEN-LAST:event_btnDeleteActionPerformed
+
+    private void networkJComboBoxItemStateChanged(java.awt.event.ItemEvent evt) {//GEN-FIRST:event_networkJComboBoxItemStateChanged
+        // TODO add your handling code here:
+    }//GEN-LAST:event_networkJComboBoxItemStateChanged
+
+    private void networkJComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_networkJComboBoxActionPerformed
+
+        Network network = (Network) networkJComboBox.getSelectedItem();
+        if (network != null) {
+            populateEnterpriseComboBox(network);
+            combozip.removeAllItems();
+            for (int z : network.getZipcodes()) {
+                combozip.addItem(z);
+            }
+        }
+
+    }//GEN-LAST:event_networkJComboBoxActionPerformed
+
+    private void enterpriseJComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enterpriseJComboBox1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_enterpriseJComboBox1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAdd;
+    private javax.swing.JButton btnBack;
+    private javax.swing.JButton btnDelete;
+    private javax.swing.JComboBox combozip;
+    private javax.swing.JComboBox enterpriseJComboBox1;
+    private javax.swing.JTable enterpriseJTable;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JComboBox networkJComboBox;
+    private javax.swing.JTextField txtName;
     // End of variables declaration//GEN-END:variables
+    public void populateTable() {
+
+        DefaultTableModel model = (DefaultTableModel) enterpriseJTable.getModel();
+        model.setRowCount(0);
+
+        for (Network network : business.getNetworks()) {
+            for (Enterprise enterprise : network.getEnterpriseDirectory().getEnterpriseList()) {
+
+                for (UserAccount userAccount : enterprise.getEnterpriseUserAccountDirectory().getUserAccountList()) {
+                    Object[] row = new Object[3];
+                    row[1] = enterprise.getName();
+                    row[0] = network.getNetworkName();
+                    row[2] = userAccount.getUsername();
+
+                    model.addRow(row);
+                }
+            }
+        }
+    }
+
+    public void populateNetworkComboBox() {
+
+        networkJComboBox.removeAllItems();
+
+        for (Network network : business.getNetworks()) {
+            if (network != null) {
+                networkJComboBox.addItem(network);
+            }
+        }
+    }
+
+    private void populateEnterpriseComboBox(Network network) {
+        enterpriseJComboBox1.removeAllItems();
+
+            enterpriseJComboBox1.addItem(Enterprise.EnterpriseType.Pharmaceutical);
+            enterpriseJComboBox1.addItem(Enterprise.EnterpriseType.Vaccination);
+            enterpriseJComboBox1.addItem(Enterprise.EnterpriseType.LabDiagnostics);
+            enterpriseJComboBox1.addItem(Enterprise.EnterpriseType.MedicalEquipements);
+        
+
+    }
 }

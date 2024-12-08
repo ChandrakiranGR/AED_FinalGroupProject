@@ -4,6 +4,18 @@
  */
 package UI.SystemAdmin;
 
+import Business.Customer.Customer;
+import Business.Customer.CustomerDirectory;
+import Business.Ecosystem;
+import Business.Network.Network;
+import UI.Customer.AddCustomerJPanel;
+import UI.Customer.SearchCustomersJPanel;
+import UI.Customer.ViewCustomerJPanel;
+import java.awt.CardLayout;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author vish
@@ -13,8 +25,22 @@ public class ManageCustomersJPanel extends javax.swing.JPanel {
     /**
      * Creates new form ManageCustomersJPanel
      */
-    public ManageCustomersJPanel() {
+    private JPanel userProcessContainer; 
+    private Ecosystem business;
+    private CustomerDirectory customerDirectory;
+    
+    public ManageCustomersJPanel(JPanel userProcessContainer, Ecosystem business) {
         initComponents();
+        
+        this.userProcessContainer = userProcessContainer;
+        this.business = business;
+        
+        for(Network n : business.getNetworks()){
+            this.customerDirectory = n.getCustomerDirectory();
+        }
+        
+        populateTable();
+        
     }
 
     /**
@@ -26,19 +52,162 @@ public class ManageCustomersJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        customerJTable = new javax.swing.JTable();
+        btnAdd = new javax.swing.JButton();
+        btnView = new javax.swing.JButton();
+        btnSearch = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+
+        jPanel1.setBackground(new java.awt.Color(253, 252, 249));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        customerJTable.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+
+            },
+            new String [] {
+                "Name", "Email", "Location", "Address", "Phone", "Zipcode", "Username", "Password"
+            }
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
+        jScrollPane1.setViewportView(customerJTable);
+
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 230, 780, 270));
+
+        btnAdd.setText("Add Customer");
+        btnAdd.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAddActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 540, 220, -1));
+
+        btnView.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Images/icons8-user-50.png"))); // NOI18N
+        btnView.setText("View Customer");
+        btnView.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnViewActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 540, 230, 80));
+
+        btnSearch.setText("Search Customer");
+        btnSearch.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnSearchActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 550, 200, 70));
+
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Manage Customers");
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, 770, 70));
+
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Images/icons8-back-50.png"))); // NOI18N
+        jButton1.setText("Back");
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 120, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addGap(0, 1000, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1000, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addGap(0, 1000, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1000, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
+        // TODO add your handling code here:
+
+        AddCustomerJPanel createCustomer = new AddCustomerJPanel(userProcessContainer, business);
+        userProcessContainer.add("CreateCustomersJPanel",createCustomer);
+        CardLayout layout=(CardLayout)userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnAddActionPerformed
+
+    private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
+        // TODO add your handling code here:
+
+        int selectedRow = customerJTable.getSelectedRow();
+        if(selectedRow < 0) {
+            JOptionPane.showMessageDialog(null,"Please Select a row from table first", "Warining", JOptionPane.WARNING_MESSAGE);
+            return;
+        }
+        Customer customer = (Customer)customerJTable.getValueAt(selectedRow,0);
+
+        ViewCustomerJPanel modifyCustomer = new ViewCustomerJPanel(userProcessContainer, business, customerDirectory, customer);
+        userProcessContainer.add("ModifyCustomersJPanel",modifyCustomer);
+        CardLayout layout=(CardLayout)userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+
+    }//GEN-LAST:event_btnViewActionPerformed
+
+    private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
+        // TODO add your handling code here:
+
+        SearchCustomersJPanel createCustomer = new SearchCustomersJPanel(userProcessContainer, business, customerDirectory);
+        userProcessContainer.add("SearchCustomersJPanel",createCustomer);
+        CardLayout layout=(CardLayout)userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnSearchActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAdd;
+    private javax.swing.JButton btnSearch;
+    private javax.swing.JButton btnView;
+    private javax.swing.JTable customerJTable;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
+    public void populateTable(){
+        
+        DefaultTableModel dtm = (DefaultTableModel) customerJTable.getModel();
+        dtm.setRowCount(0);
+        
+        for(Network n : business.getNetworks()){
+            
+            for(int i=0; i < n.getCustomerDirectory().getCustomerList().size(); i++){
+                
+                Object [] row = new Object[9];
+                row[0] = n.getCustomerDirectory().getCustomerList().get(i).getName();
+                row[1] = n.getCustomerDirectory().getCustomerList().get(i).getEmail();
+                row[2] = n.getCustomerDirectory().getCustomerList().get(i).getLocation();
+                row[3] = n.getCustomerDirectory().getCustomerList().get(i).getAddress();
+                row[4] = n.getCustomerDirectory().getCustomerList().get(i).getPhoneNumber();
+                row[5] = n.getCustomerDirectory().getCustomerList().get(i).getZipcode();
+                row[6] = n.getCustomerDirectory().getCustomerList().get(i).getUsername();
+                row[7] = n.getCustomerDirectory().getCustomerList().get(i).getPassword();
+                
+                dtm.addRow(row);
+            }
+        }
+    }
 }
