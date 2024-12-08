@@ -4,6 +4,13 @@
  */
 package UI.DeliveryAgentRole;
 
+import Business.Ecosystem;
+import Business.Enterprise.Enterprise;
+import Business.Network.Network;
+import Business.Organization.Organization;
+import Business.UserAccount.UserAccount;
+import javax.swing.JPanel;
+
 /**
  *
  * @author antaradeshmukh
@@ -14,6 +21,13 @@ public class DeliveryAgentWorkAreaJPanel extends javax.swing.JPanel {
      * Creates new form DeliveryAgentWorkAreaJPanel
      */
     public DeliveryAgentWorkAreaJPanel() {
+        this(userProcessContainer, account, network, organization, enterprise, system);
+    }
+
+    /**
+     * Creates new form DeliveryAgentWorkAreaJPanel
+     */
+    public DeliveryAgentWorkAreaJPanel(JPanel userProcessContainer, UserAccount account, Network network, Organization organization, Enterprise enterprise, Ecosystem system) {
         initComponents();
     }
 

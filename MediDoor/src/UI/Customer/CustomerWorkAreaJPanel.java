@@ -47,6 +47,13 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
      * Creates new form CustomerWorkAreaJPanel
      */
     public CustomerWorkAreaJPanel() {
+        this(userProcessContainer, system, network, customer);
+    }
+
+    /**
+     * Creates new form CustomerWorkAreaJPanel
+     */
+    public CustomerWorkAreaJPanel(JPanel userProcessContainer, Ecosystem system, Network network, Customer customer) {
         initComponents();
     }
 
