@@ -91,29 +91,31 @@ public class ManageNetworksJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(networkJTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 230, 560, 174));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 150, 560, 174));
 
         jLabel2.setText("Network Name");
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 450, -1, 20));
         add(txtNetworkName, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 450, 160, 30));
 
-        btnAdd.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Images/icons8-thin-client-50.png"))); // NOI18N
+        btnAdd.setBackground(new java.awt.Color(0, 102, 102));
+        btnAdd.setForeground(new java.awt.Color(255, 255, 255));
         btnAdd.setText("Add");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddActionPerformed(evt);
             }
         });
-        add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 570, 140, 60));
+        add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 560, 110, 30));
 
-        btnDelete.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Images/icons8-trash-can-50.png"))); // NOI18N
+        btnDelete.setBackground(new java.awt.Color(0, 102, 102));
+        btnDelete.setForeground(new java.awt.Color(255, 255, 255));
         btnDelete.setText("Delete");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteActionPerformed(evt);
             }
         });
-        add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 440, 130, -1));
+        add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 340, 130, -1));
 
         jLabel3.setText("Zipcode");
         add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 500, -1, 20));
@@ -129,9 +131,10 @@ public class ManageNetworksJPanel extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Networks");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 1000, 80));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 50, 1000, 80));
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Images/icons8-back-50.png"))); // NOI18N
+        btnBack.setBackground(new java.awt.Color(0, 102, 102));
+        btnBack.setForeground(new java.awt.Color(255, 255, 255));
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -83,9 +83,9 @@ public class CustomerPrescriptionJPanel extends javax.swing.JPanel {
         });
         add(dropdownOrders, new org.netbeans.lib.awtextra.AbsoluteConstraints(77, 69, 160, -1));
 
-        jButton1.setBackground(new java.awt.Color(0, 153, 153));
+        jButton1.setBackground(new java.awt.Color(0, 102, 102));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("SHOW ITEMS");
+        jButton1.setText("Show Items");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -122,7 +122,7 @@ public class CustomerPrescriptionJPanel extends javax.swing.JPanel {
 
         jFile.setBackground(new java.awt.Color(0, 102, 102));
         jFile.setForeground(new java.awt.Color(255, 255, 255));
-        jFile.setText("UPLOAD PRESCRIPTION");
+        jFile.setText("Upload Prescription");
         jFile.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jFileActionPerformed(evt);
@@ -132,13 +132,13 @@ public class CustomerPrescriptionJPanel extends javax.swing.JPanel {
 
         jButton2.setBackground(new java.awt.Color(0, 102, 102));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("UPDATE ORDER");
+        jButton2.setText("Update Order");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 570, -1, -1));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 560, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFileActionPerformed

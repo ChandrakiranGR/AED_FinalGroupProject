@@ -179,7 +179,7 @@ public class PharmacyPrescriptionJPanel extends javax.swing.JPanel {
 
         createOrderbttn.setBackground(new java.awt.Color(0, 102, 102));
         createOrderbttn.setForeground(new java.awt.Color(255, 255, 255));
-        createOrderbttn.setText("CREATE ORDER");
+        createOrderbttn.setText("Create Order");
         createOrderbttn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 createOrderbttnActionPerformed(evt);
@@ -189,7 +189,7 @@ public class PharmacyPrescriptionJPanel extends javax.swing.JPanel {
 
         btnGo.setBackground(new java.awt.Color(0, 102, 102));
         btnGo.setForeground(new java.awt.Color(255, 255, 255));
-        btnGo.setText("GO");
+        btnGo.setText("Go");
         btnGo.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnGoActionPerformed(evt);

@@ -76,6 +76,8 @@ public class LabAssistantJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(255, 255, 255));
 
+        btnProcess.setBackground(new java.awt.Color(0, 102, 102));
+        btnProcess.setForeground(new java.awt.Color(255, 255, 255));
         btnProcess.setText("Process");
         btnProcess.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -83,6 +85,8 @@ public class LabAssistantJPanel extends javax.swing.JPanel {
             }
         });
 
+        btnItems.setBackground(new java.awt.Color(0, 102, 102));
+        btnItems.setForeground(new java.awt.Color(255, 255, 255));
         btnItems.setText("Order Items");
         btnItems.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

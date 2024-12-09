@@ -125,13 +125,11 @@ public class ManagePharmaOrdersJPanel extends javax.swing.JPanel {
         assignbtn = new javax.swing.JButton();
         btnshoworders = new javax.swing.JButton();
         orderscmb = new javax.swing.JComboBox<>();
-        jLabel2 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(253, 252, 249));
         setPreferredSize(new java.awt.Dimension(1500, 1000));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        pharmaOrderTable.setBackground(new java.awt.Color(204, 255, 204));
         pharmaOrderTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -150,17 +148,17 @@ public class ManagePharmaOrdersJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(pharmaOrderTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 90, 740, 110));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 230, 740, 110));
 
         btnBack.setBackground(new java.awt.Color(0, 102, 102));
         btnBack.setForeground(new java.awt.Color(255, 255, 255));
-        btnBack.setText("<< Back");
+        btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, -1, -1));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 90, 30));
 
         deliverycmb.setForeground(new java.awt.Color(0, 102, 102));
         deliverycmb.addActionListener(new java.awt.event.ActionListener() {
@@ -193,7 +191,7 @@ public class ManagePharmaOrdersJPanel extends javax.swing.JPanel {
                 btnshowordersActionPerformed(evt);
             }
         });
-        add(btnshoworders, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 60, 130, 30));
+        add(btnshoworders, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 140, 130, 30));
 
         orderscmb.setForeground(new java.awt.Color(0, 102, 102));
         orderscmb.addActionListener(new java.awt.event.ActionListener() {
@@ -201,10 +199,7 @@ public class ManagePharmaOrdersJPanel extends javax.swing.JPanel {
                 orderscmbActionPerformed(evt);
             }
         });
-        add(orderscmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 60, 120, 30));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/resources/order_management_gif.gif"))); // NOI18N
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 1120, 460));
+        add(orderscmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 140, 120, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
@@ -383,7 +378,6 @@ public class ManagePharmaOrdersJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnshoworders;
     private javax.swing.JComboBox<String> deliverycmb;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JComboBox<String> orderscmb;
     private javax.swing.JTable pharmaOrderTable;
