@@ -20,7 +20,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author vachanabelgavi
+ * @author chandrakiran
  */
 public class ViewLabCentersJPanel extends javax.swing.JPanel {
 

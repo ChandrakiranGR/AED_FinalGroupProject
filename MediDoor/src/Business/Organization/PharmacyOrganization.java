@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Nidhi Raghavendra
+ * @author chandrakiran
  */
 public class PharmacyOrganization extends Organization {
     public PharmacyOrganization(String name, String location, int zipcode) {

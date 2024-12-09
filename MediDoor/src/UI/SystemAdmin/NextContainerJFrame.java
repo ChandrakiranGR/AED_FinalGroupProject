@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author vachanabelgavi
+ * @author vish
  */
 public class NextContainerJFrame extends javax.swing.JFrame {
 

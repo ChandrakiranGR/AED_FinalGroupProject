@@ -18,7 +18,7 @@ import java.awt.CardLayout;
 import javax.swing.JPanel;
 /**
  *
- * @author pannaga
+ * @author chandrakiran
  */
 public class EquipmentEnterpriseWorkAreaJPanel extends javax.swing.JPanel {
 

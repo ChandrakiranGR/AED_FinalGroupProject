@@ -22,7 +22,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author pannaga
+ * @author shivanisugurushetty
  */
 public class PharmaceuticalEnterpriseJPanel extends javax.swing.JPanel {
 

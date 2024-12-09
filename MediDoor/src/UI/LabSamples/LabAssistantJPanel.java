@@ -22,7 +22,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author vachanabelgavi
+ * @author chandrakiran
  */
 public class LabAssistantJPanel extends javax.swing.JPanel {
 

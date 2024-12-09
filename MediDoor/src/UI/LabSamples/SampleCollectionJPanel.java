@@ -25,7 +25,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author vachanabelgavi
+ * @author chandrakiran
  */
 public class SampleCollectionJPanel extends javax.swing.JPanel {
 

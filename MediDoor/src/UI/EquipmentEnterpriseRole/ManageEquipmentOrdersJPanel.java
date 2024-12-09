@@ -37,7 +37,7 @@ import javax.activation.*;
 import javax.mail.Address;
 /**
  *
- * @author pannaga
+ * @author chandrakiran
  */
 public class ManageEquipmentOrdersJPanel extends javax.swing.JPanel {
 

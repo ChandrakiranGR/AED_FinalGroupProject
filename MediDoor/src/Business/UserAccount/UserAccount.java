@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Nidhi Raghavendra
+ * @author vish
  */
 public class UserAccount {
 
@@ -24,7 +24,7 @@ public class UserAccount {
     private EnterpriseRole enterpriseRole;
     private WorkQueue workQueue;
 
-    public UserAccount(String admin, String adminpass123) {
+    public UserAccount() {
         workQueue = new WorkQueue();
         username = "";
         password = "";

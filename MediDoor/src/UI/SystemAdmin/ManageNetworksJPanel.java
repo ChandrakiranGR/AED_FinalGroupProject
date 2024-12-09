@@ -20,7 +20,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author vachanabelgavi
+ * @author vish
  */
 public class ManageNetworksJPanel extends javax.swing.JPanel {
 

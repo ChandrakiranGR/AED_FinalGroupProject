@@ -1,6 +1,5 @@
 package Business;
 
-import Business.BloodBank.BloodBank;
 import Business.Customer.Customer;
 import Business.DB4OUtil.DB4OUtil;
 import Business.Enterprise.Enterprise;
@@ -11,10 +10,6 @@ import Business.Role.SystemAdminRole;
 import Business.UserAccount.UserAccount;
 import java.util.ArrayList;
 
-//
-import Business.BloodBank.BloodBankDirectory;//change
-import Business.Enterprise.Role.BloodBankAdminRole;
-
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -22,14 +17,12 @@ import Business.Enterprise.Role.BloodBankAdminRole;
  */
 /**
  *
- * @author Nidhi Raghavendra
+ * @author antaradeshmukh
  */
 public class Ecosystem extends Organization {
 
     public static Ecosystem ecosystem;
     private ArrayList<Network> networkList;
-    
-    private BloodBankDirectory bloodBankDirectory;//
 
     public Network createNetwork() {
         Network network = new Network();
@@ -41,16 +34,6 @@ public class Ecosystem extends Organization {
         super(null, "", "", 0);
 
         this.networkList = new ArrayList<Network>();
-        this.bloodBankDirectory = new BloodBankDirectory();
-    }
-    //Getter for Blood Bank direc
-    public BloodBankDirectory getBloodBankDirectory() {
-        return this.bloodBankDirectory;
-    }
-
-    // Setter for BloodBankDirectory (Optional, depending on design)
-    public void setBloodBankDirectory(BloodBankDirectory bloodBankDirectory) {
-        this.bloodBankDirectory = bloodBankDirectory;
     }
 
     public ArrayList<Network> getNetworks() {
@@ -89,42 +72,9 @@ public class Ecosystem extends Organization {
 
     public static void main(String args[]) {
 //        main function
-       System.out.println("Hey there!");
-    DB4OUtil database = DB4OUtil.getInstance();
-    Ecosystem system = database.retrieveSystem();
-    
-    // Initialize BloodBankDirectory if it's not already initialized
-//    if (system.getBloodBankDirectory() == null) {
-//        system.setBloodBankDirectory(new BloodBankDirectory());
-//    }
-
-    
-    
-    
-    
-    
-     if (system.getBloodBankDirectory() == null) {
-        system.setBloodBankDirectory(new BloodBankDirectory());
-    }
-    
-    // Create UserAccount for BloodBank Admin (During initialization)
-  UserAccount bloodBankAdminAccount = new UserAccount("adminBank", "adminpass123");  // Create UserAccount for BloodBank Admin
-
-// Assign the BloodBankAdminRole to the UserAccount
-//bloodBankAdminAccount.setRole(new BloodBankAdminRole());
-
-// Create BloodBank and associate it with the UserAccount
-BloodBank bloodBank = new BloodBank("City Blood Bank", "Downtown", "A+", 50, "123-456-7890");
-bloodBank.setUserAccount(bloodBankAdminAccount);
-
-// Add the blood bank to the directory
-//system.getBloodBankDirectory().addBloodBank(bloodBank);
-  
-         
-         
-         
-         
-
+        System.out.println("Hey there!");
+        DB4OUtil database = DB4OUtil.getInstance();
+        Ecosystem system = database.retrieveSystem();
 
         System.out.println("SYSTEM -- " + system.getEmployeeDirectory().getEmployeeList().get(0).getName());
         System.out.println(system.getSupportedRole());
@@ -150,26 +100,7 @@ bloodBank.setUserAccount(bloodBankAdminAccount);
                     }
                 }
             }
-            
-           
         }
-        // Example: Add blood bank during initialization (optional)
-//        system.getBloodBankDirectory().addBloodBank(
-//            "City Blood Bank",
-//            "Downtown",
-//            "A+",
-//            50,
-//            "123-456-7890"
-//            
-//        );
-//         UserAccount bloodBankAdminAccount = new UserAccount("admin", "adminpass123");
-//
-//        // Print blood bank details (for testing)
-//        for (var bloodBank : system.getBloodBankDirectory().getBloodBankList()) {
-//            System.out.println("Blood Bank: " + bloodBank.getName() + ", Type: " + bloodBank.getBloodType());
-//        }
-        
-        
 
     }
 }

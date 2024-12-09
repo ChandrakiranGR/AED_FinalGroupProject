@@ -16,7 +16,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author pannaga
+ * @author chandrakiran
  */
 public class LabEnterpriseWorkAreaJPanel extends javax.swing.JPanel {
 

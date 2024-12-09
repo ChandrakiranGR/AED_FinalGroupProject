@@ -39,7 +39,7 @@ import javax.mail.Address;
 
 /**
  *
- * @author pannaga
+ * @author shivanisugurushetty
  */
 public class ManagePharmaOrdersJPanel extends javax.swing.JPanel {
 

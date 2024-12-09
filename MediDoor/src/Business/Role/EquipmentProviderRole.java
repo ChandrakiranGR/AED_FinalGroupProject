@@ -16,7 +16,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Nidhi Raghavendra
+ * @author vish
  */
 public class EquipmentProviderRole extends Role {
 

@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Nidhi Raghavendra
+ * @author chandrakiran
  */
 public class LabCenterOrganization extends Organization {
     public LabCenterOrganization(String name, String location, int zipcode) {

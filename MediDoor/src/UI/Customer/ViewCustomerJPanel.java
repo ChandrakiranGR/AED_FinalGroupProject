@@ -16,7 +16,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author vachanabelgavi
+ * @author antaradeshmukh
  */
 public class ViewCustomerJPanel extends javax.swing.JPanel {
 

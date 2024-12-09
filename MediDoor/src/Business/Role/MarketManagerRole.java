@@ -15,7 +15,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Nidhi Raghavendra
+ * @author vish
  */
 public class MarketManagerRole extends Role {
 

@@ -30,7 +30,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author pannaga
+ * @author vish
  */
 public class ManageVaccinationDeliveryAgentJPanel extends javax.swing.JPanel {
 JPanel userProcessContainer;

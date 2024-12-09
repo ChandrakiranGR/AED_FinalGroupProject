@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Nidhi Raghavendra
+ * @author antaradeshmukh
  */
 public class DeliveryAgent {
     private int deliveryboyId;
@@ -24,7 +24,7 @@ public class DeliveryAgent {
     public DeliveryAgent() {
         this.deliveryboyId = this.count++;
         this.active = true;
-        this.useraccount = new UserAccount("admin", "adminpass123");
+        this.useraccount = new UserAccount();
         this.zipcodes = new ArrayList<>();
     }
     

@@ -33,7 +33,7 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
  *
- * @author vachanabelgavi
+ * @author chandrakiran
  */
 public class ProcessLabWorkRequestJPanel extends javax.swing.JPanel {
 
@@ -225,28 +225,6 @@ public class ProcessLabWorkRequestJPanel extends javax.swing.JPanel {
         FileNameExtensionFilter filter = new FileNameExtensionFilter("png", "jpg", "jpeg", "pdf");
         chooser.addChoosableFileFilter(filter);
         this.chosenFile = chooser.getSelectedFile();
-        /*
-        String[] headers = {"Number of Games Played:", "Total Score:", "Average Score:"};
-        JLabel[] labels = new JLabel[3];
-        for (int index = 0; index < labels.length; index++) {
-            labels[index] = new JLabel();
-            // Add label to screen
-        }
-
-        try {
-            BufferedReader br = new BufferedReader(new FileReader(chosenFile));
-            String text = null;
-            int lineCount = 0;
-            while ((text = br.readLine()) != null && lineCount < 10) {
-                System.out.println(text);
-                labels[lineCount].setText(headers[lineCount] + " " + text);
-                lineCount++;
-    }
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Looks like you missed an attachment!");
-        }
-         */
-
         try {
             ImageIcon ii = new ImageIcon(this.chosenFile.getAbsolutePath());
             jLabel2.setIcon(ii);

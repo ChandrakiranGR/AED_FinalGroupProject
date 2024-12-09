@@ -23,7 +23,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author vachanabelgavi
+ * @author chandrakiran
  */
 public class AddLabCentersJPanel extends javax.swing.JPanel {
 
