@@ -88,7 +88,6 @@ public class CustomerTestOrderJPanel extends javax.swing.JPanel {
         btnAddtoCart = new javax.swing.JButton();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -111,7 +110,7 @@ public class CustomerTestOrderJPanel extends javax.swing.JPanel {
                 btnAddtoCartActionPerformed(evt);
             }
         });
-        add(btnAddtoCart, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 430, 105, -1));
+        add(btnAddtoCart, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 430, 105, 30));
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -139,9 +138,6 @@ public class CustomerTestOrderJPanel extends javax.swing.JPanel {
         jScrollPane1.setViewportView(jTable1);
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(185, 117, 620, 270));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/resources/Clinical-Trials.gif"))); // NOI18N
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 270, -1, 390));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAddtoCartActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddtoCartActionPerformed
@@ -233,7 +229,6 @@ public class CustomerTestOrderJPanel extends javax.swing.JPanel {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAddtoCart;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTable1;

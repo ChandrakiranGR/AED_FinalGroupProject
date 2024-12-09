@@ -99,16 +99,17 @@ public class ManageOrganizationAdminsJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(Table);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 230, 756, 260));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 140, 756, 260));
 
-        btnBack.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Images/icons8-back-50.png"))); // NOI18N
+        btnBack.setBackground(new java.awt.Color(0, 102, 102));
+        btnBack.setForeground(new java.awt.Color(255, 255, 255));
         btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 140, 70));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 130, 40));
 
         comboNetwork.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -129,7 +130,8 @@ public class ManageOrganizationAdminsJPanel extends javax.swing.JPanel {
         add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 590, 150, -1));
         add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 640, 150, -1));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Images/icons8-organization-50.png"))); // NOI18N
+        jButton1.setBackground(new java.awt.Color(0, 102, 102));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("ADD");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -151,7 +153,7 @@ public class ManageOrganizationAdminsJPanel extends javax.swing.JPanel {
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Manage Organizations");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 1100, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-40, 70, 1100, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed

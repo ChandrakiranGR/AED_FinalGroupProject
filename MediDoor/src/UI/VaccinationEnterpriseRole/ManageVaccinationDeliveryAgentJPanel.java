@@ -109,7 +109,6 @@ JPanel userProcessContainer;
         cmbzipcode = new javax.swing.JComboBox<>();
         jLabel1 = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
 
         setPreferredSize(new java.awt.Dimension(1500, 1000));
 
@@ -153,7 +152,6 @@ JPanel userProcessContainer;
         });
         jPanel1.add(btndelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 430, -1, -1));
 
-        deliveryjTable.setBackground(new java.awt.Color(204, 255, 204));
         deliveryjTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
@@ -200,17 +198,13 @@ JPanel userProcessContainer;
 
         btnBack.setBackground(new java.awt.Color(0, 102, 102));
         btnBack.setForeground(new java.awt.Color(255, 255, 255));
-        btnBack.setText("<< Back");
+        btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
         jPanel1.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/resources/delivery-man-parcel-handover-to-customer-online-delivery-service-smartphone-cartoon-art-illustration-vector.jpeg"))); // NOI18N
-        jLabel4.setText("jLabel4");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-90, 100, 1620, 870));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -384,7 +378,6 @@ JPanel userProcessContainer;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;

@@ -69,18 +69,18 @@ public class ManageEnterpriseAdminsJPanel extends javax.swing.JPanel {
         comboEnterprise = new javax.swing.JComboBox();
         comboNetwork = new javax.swing.JComboBox();
 
-        setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(253, 252, 249));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setText("Network");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(145, 318, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 450, -1, -1));
 
         jLabel3.setText("Enterprise");
-        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(136, 359, -1, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 490, -1, -1));
 
         jLabel6.setText("Name");
-        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(158, 398, -1, -1));
-        add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(225, 395, 180, -1));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 540, -1, -1));
+        add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 530, 180, -1));
 
         enterpriseJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -103,31 +103,37 @@ public class ManageEnterpriseAdminsJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(enterpriseJTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 136, 616, 160));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 180, 616, 160));
 
+        btnAdd.setBackground(new java.awt.Color(0, 102, 102));
+        btnAdd.setForeground(new java.awt.Color(255, 255, 255));
         btnAdd.setText("Add");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddActionPerformed(evt);
             }
         });
-        add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 510, 95, -1));
+        add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 670, 130, 30));
 
+        btnDelete.setBackground(new java.awt.Color(0, 102, 102));
+        btnDelete.setForeground(new java.awt.Color(255, 255, 255));
         btnDelete.setText("Delete");
         btnDelete.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnDeleteActionPerformed(evt);
             }
         });
-        add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 314, 105, -1));
+        add(btnDelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 360, 130, 40));
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(253, 252, 249));
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Enterprises");
 
-        btnBack.setText("<< Back");
+        btnBack.setBackground(new java.awt.Color(0, 102, 102));
+        btnBack.setForeground(new java.awt.Color(255, 255, 255));
+        btnBack.setText("Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
@@ -138,31 +144,34 @@ public class ManageEnterpriseAdminsJPanel extends javax.swing.JPanel {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 998, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnBack)
+                .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 113, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(13, 13, 13)
-                .addComponent(btnBack)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnBack, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
                 .addComponent(jLabel1)
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 800, -1));
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1000, -1));
 
         jLabel7.setText("Username");
-        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(137, 436, -1, -1));
-        add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(225, 433, 180, -1));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 580, -1, -1));
+        add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 570, 180, -1));
 
         jLabel8.setText("Password");
-        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(139, 474, -1, -1));
-        add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(225, 471, 180, -1));
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 620, -1, 20));
+        add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 610, 180, -1));
 
         comboEnterprise.setModel(new javax.swing.DefaultComboBoxModel(new String[] { }));
         comboEnterprise.addActionListener(new java.awt.event.ActionListener() {
@@ -170,16 +179,15 @@ public class ManageEnterpriseAdminsJPanel extends javax.swing.JPanel {
                 comboEnterpriseActionPerformed(evt);
             }
         });
-        add(comboEnterprise, new org.netbeans.lib.awtextra.AbsoluteConstraints(225, 355, 180, -1));
+        add(comboEnterprise, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 490, 180, -1));
 
-        comboNetwork.setBackground(new java.awt.Color(0, 204, 153));
         comboNetwork.setModel(new javax.swing.DefaultComboBoxModel<>());
         comboNetwork.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 comboNetworkActionPerformed(evt);
             }
         });
-        add(comboNetwork, new org.netbeans.lib.awtextra.AbsoluteConstraints(225, 314, 180, -1));
+        add(comboNetwork, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 450, 180, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed

@@ -159,7 +159,7 @@ public class MEdicalEquipmentAdminJPanel extends javax.swing.JPanel {
 
         jButton1.setBackground(new java.awt.Color(0, 102, 102));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("ACCEPT ORDER");
+        jButton1.setText("Accept Order");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -169,7 +169,7 @@ public class MEdicalEquipmentAdminJPanel extends javax.swing.JPanel {
 
         jButton2.setBackground(new java.awt.Color(255, 153, 0));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("REJECT ORDER");
+        jButton2.setText("Reject Order");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -211,7 +211,7 @@ public class MEdicalEquipmentAdminJPanel extends javax.swing.JPanel {
 
         addBt1.setBackground(new java.awt.Color(0, 102, 102));
         addBt1.setForeground(new java.awt.Color(255, 255, 255));
-        addBt1.setText("ADD PRODUCTS");
+        addBt1.setText("Add Products ");
         addBt1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addBt1ActionPerformed(evt);
@@ -233,7 +233,7 @@ public class MEdicalEquipmentAdminJPanel extends javax.swing.JPanel {
 
         jButton4.setBackground(new java.awt.Color(0, 102, 102));
         jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("UPDATE PRODUCTS");
+        jButton4.setText("Update Products");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
@@ -243,7 +243,7 @@ public class MEdicalEquipmentAdminJPanel extends javax.swing.JPanel {
 
         jButton3.setBackground(new java.awt.Color(0, 102, 102));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("UPLOAD IMAGE");
+        jButton3.setText("Upload Image");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
