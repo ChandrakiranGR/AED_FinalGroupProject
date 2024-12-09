@@ -1,6 +1,8 @@
+
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package UI.EquipmentEnterpriseRole;
 import Business.Customer.Customer;
@@ -16,15 +18,16 @@ import java.awt.CardLayout;
 import javax.swing.JPanel;
 /**
  *
- * @author chandrkiran
+ * @author chandrakiran
  */
 public class EquipmentEnterpriseWorkAreaJPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form EquipmentEnterpriseWorkAreaJPanel
      */
-    
-     JPanel userProcessContainer;
+
+
+    JPanel userProcessContainer;
      Ecosystem ecosystem;
      UserAccount account;
      UserAccountDirectory useraccountdirectory;
@@ -32,7 +35,8 @@ public class EquipmentEnterpriseWorkAreaJPanel extends javax.swing.JPanel {
      Customer customer;
      Organization organization;
      Network network;
-     
+
+
     public EquipmentEnterpriseWorkAreaJPanel(JPanel userProcessContainer, UserAccount account,Network network,Organization organization, Enterprise enterprise,Ecosystem ecosystem) {
         initComponents();
         this.userProcessContainer=userProcessContainer;
@@ -56,8 +60,13 @@ public class EquipmentEnterpriseWorkAreaJPanel extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        btnmanageorders = new javax.swing.JButton();
         btndeliveryagents = new javax.swing.JButton();
+        btnmanageorders = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
+
+        setPreferredSize(new java.awt.Dimension(1500, 1000));
+
+        jPanel1.setBackground(new java.awt.Color(253, 252, 249));
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 102, 102));
@@ -68,27 +77,19 @@ public class EquipmentEnterpriseWorkAreaJPanel extends javax.swing.JPanel {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1500, Short.MAX_VALUE)
-                .addContainerGap())
+            .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1500, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(35, 35, 35)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(40, Short.MAX_VALUE)
                 .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(48, Short.MAX_VALUE))
+                .addGap(31, 31, 31))
         );
 
-        btnmanageorders.setBackground(new java.awt.Color(0, 102, 102));
-        btnmanageorders.setForeground(new java.awt.Color(255, 255, 255));
-        btnmanageorders.setText("Manage Orders");
-        btnmanageorders.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnmanageordersActionPerformed(evt);
-            }
-        });
+        jPanel2.setBackground(new java.awt.Color(253, 252, 249));
+        jPanel2.setPreferredSize(new java.awt.Dimension(1530, 690));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         btndeliveryagents.setBackground(new java.awt.Color(0, 102, 102));
         btndeliveryagents.setForeground(new java.awt.Color(255, 255, 255));
@@ -98,45 +99,57 @@ public class EquipmentEnterpriseWorkAreaJPanel extends javax.swing.JPanel {
                 btndeliveryagentsActionPerformed(evt);
             }
         });
+        jPanel2.add(btndeliveryagents, new org.netbeans.lib.awtextra.AbsoluteConstraints(830, 90, 200, 39));
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(507, 507, 507)
-                .addComponent(btnmanageorders, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(35, 35, 35)
-                .addComponent(btndeliveryagents, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(57, 57, 57)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnmanageorders, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btndeliveryagents, javax.swing.GroupLayout.PREFERRED_SIZE, 39, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(518, Short.MAX_VALUE))
-        );
+        btnmanageorders.setBackground(new java.awt.Color(0, 102, 102));
+        btnmanageorders.setForeground(new java.awt.Color(255, 255, 255));
+        btnmanageorders.setText("Manage Orders");
+        btnmanageorders.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnmanageordersActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnmanageorders, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 90, 200, 39));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/resources/Healthcare-equipment-tracking.jpeg"))); // NOI18N
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 1230, 500));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 1500, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addContainerGap()))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addGap(132, 132, 132)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 1000, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addContainerGap()
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap(1012, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btndeliveryagentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndeliveryagentsActionPerformed
+        // TODO add your handling code here:
+        ManageEquipmentDeliveryAgentJPanel manageDeliveryAgentJPanel=new ManageEquipmentDeliveryAgentJPanel(userProcessContainer, ecosystem,network,account,useraccountdirectory,enterprise);
+        userProcessContainer.add("manageDeliveryAgentJPanel",manageDeliveryAgentJPanel);
+        CardLayout layout=(CardLayout)userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+
+    }//GEN-LAST:event_btndeliveryagentsActionPerformed
 
     private void btnmanageordersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnmanageordersActionPerformed
         // TODO add your handling code here:
@@ -145,21 +158,15 @@ public class EquipmentEnterpriseWorkAreaJPanel extends javax.swing.JPanel {
         userProcessContainer.add("manageMEOrdersJPanel",manageMEOrdersJPanel);
         CardLayout layout=(CardLayout)userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-    }//GEN-LAST:event_btnmanageordersActionPerformed
 
-    private void btndeliveryagentsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndeliveryagentsActionPerformed
-        // TODO add your handling code here:
-        ManageEquipmentDeliveryAgentJPanel manageDeliveryAgentJPanel=new ManageEquipmentDeliveryAgentJPanel(userProcessContainer, ecosystem,network,account,useraccountdirectory,enterprise);
-        userProcessContainer.add("manageDeliveryAgentJPanel",manageDeliveryAgentJPanel);
-        CardLayout layout=(CardLayout)userProcessContainer.getLayout();
-        layout.next(userProcessContainer);
-    }//GEN-LAST:event_btndeliveryagentsActionPerformed
+    }//GEN-LAST:event_btnmanageordersActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btndeliveryagents;
     private javax.swing.JButton btnmanageorders;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables

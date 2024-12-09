@@ -1,6 +1,7 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package UI.OrganizationAdminPanels;
 
@@ -75,7 +76,9 @@ public class PharmacyPrescriptionJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        jTable1 = new javax.swing.JTable();
+        jLabel10 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
@@ -94,11 +97,26 @@ public class PharmacyPrescriptionJPanel extends javax.swing.JPanel {
         btnGo = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
 
-        jPanel1.setBackground(new java.awt.Color(253, 252, 249));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(jTable1);
+
+        jLabel10.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        setBackground(new java.awt.Color(253, 252, 249));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("PHARMACIST'S PRESCRIPTION WORK AREA");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(453, 26, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(453, 26, -1, -1));
 
         jTable2.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -125,39 +143,39 @@ public class PharmacyPrescriptionJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(jTable2);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(526, 347, -1, 304));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(526, 347, -1, 304));
 
-        jPanel1.add(dropdownPrescription, new org.netbeans.lib.awtextra.AbsoluteConstraints(566, 106, 180, -1));
+        add(dropdownPrescription, new org.netbeans.lib.awtextra.AbsoluteConstraints(566, 106, 180, -1));
 
         jLabel2.setText("CUSTOMER NAME");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(549, 175, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(549, 175, -1, -1));
 
         jLabel3.setText("NETWORK");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(549, 207, -1, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(549, 207, -1, -1));
 
         jLabel4.setText("DOCTOR SIGNATURE");
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(549, 239, -1, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(549, 239, -1, -1));
 
         jLabel5.setText("ORDER ID");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(549, 271, -1, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(549, 271, -1, -1));
 
         jLabel6.setText("ORDER STATUS");
-        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(549, 304, -1, -1));
+        add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(549, 304, -1, -1));
 
         labelCustomerName.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(labelCustomerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(734, 169, 229, 20));
+        add(labelCustomerName, new org.netbeans.lib.awtextra.AbsoluteConstraints(734, 169, 229, 20));
 
         labelNetwork.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(labelNetwork, new org.netbeans.lib.awtextra.AbsoluteConstraints(734, 201, 229, 20));
+        add(labelNetwork, new org.netbeans.lib.awtextra.AbsoluteConstraints(734, 201, 229, 20));
 
         labelDoctorSign.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(labelDoctorSign, new org.netbeans.lib.awtextra.AbsoluteConstraints(734, 233, 229, 20));
+        add(labelDoctorSign, new org.netbeans.lib.awtextra.AbsoluteConstraints(734, 233, 229, 20));
 
         labelOrderId.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(labelOrderId, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 264, 229, 20));
+        add(labelOrderId, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 264, 229, 20));
 
         labelOrderStatus.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(labelOrderStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 300, 229, 20));
+        add(labelOrderStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(740, 300, 229, 20));
 
         createOrderbttn.setBackground(new java.awt.Color(0, 102, 102));
         createOrderbttn.setForeground(new java.awt.Color(255, 255, 255));
@@ -167,7 +185,7 @@ public class PharmacyPrescriptionJPanel extends javax.swing.JPanel {
                 createOrderbttnActionPerformed(evt);
             }
         });
-        jPanel1.add(createOrderbttn, new org.netbeans.lib.awtextra.AbsoluteConstraints(173, 645, -1, -1));
+        add(createOrderbttn, new org.netbeans.lib.awtextra.AbsoluteConstraints(173, 645, -1, -1));
 
         btnGo.setBackground(new java.awt.Color(0, 102, 102));
         btnGo.setForeground(new java.awt.Color(255, 255, 255));
@@ -177,37 +195,36 @@ public class PharmacyPrescriptionJPanel extends javax.swing.JPanel {
                 btnGoActionPerformed(evt);
             }
         });
-        jPanel1.add(btnGo, new org.netbeans.lib.awtextra.AbsoluteConstraints(784, 105, -1, -1));
+        add(btnGo, new org.netbeans.lib.awtextra.AbsoluteConstraints(784, 105, -1, -1));
 
         jLabel7.setBorder(javax.swing.BorderFactory.createEtchedBorder());
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(55, 79, 368, 507));
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1500, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1500, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1000, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1000, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(55, 79, 368, 507));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnGoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGoActionPerformed
+        // TODO add your handling code here:
+
+        for (PrescriptionUploadWorkRequest wq : this.workrequest) {
+            if (wq.getRequestId() == (int) dropdownPrescription.getSelectedItem()) {
+                labelCustomerName.setText(wq.getCustomer().getName());
+                labelDoctorSign.setText(wq.getSignature());
+                labelNetwork.setText(wq.getCustomer().getLocation());
+                this.currentWorkingRequest = wq;
+
+                if (wq.getPresecription() != null) {
+                    ImageIcon ii = new ImageIcon(wq.getPresecription().getAbsolutePath());
+                    jLabel7.setIcon(ii);
+                }
+                break;
+            }
+        }
+
+    }//GEN-LAST:event_btnGoActionPerformed
 
     private void createOrderbttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_createOrderbttnActionPerformed
         // TODO add your handling code here:
 
-        //        Create an order
+//        Create an order
         ArrayList<Order> customerorder = this.currentWorkingRequest.getCustomer().getOrderlist();
 
         Order o = new Order();
@@ -264,27 +281,10 @@ public class PharmacyPrescriptionJPanel extends javax.swing.JPanel {
         } catch (Exception e) {
             System.out.println(e + " In Prescription Pharmacy");
         }
+
     }//GEN-LAST:event_createOrderbttnActionPerformed
 
-    private void btnGoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGoActionPerformed
-        // TODO add your handling code here:
-
-        for (PrescriptionUploadWorkRequest wq : this.workrequest) {
-            if (wq.getRequestId() == (int) dropdownPrescription.getSelectedItem()) {
-                labelCustomerName.setText(wq.getCustomer().getName());
-                labelDoctorSign.setText(wq.getSignature());
-                labelNetwork.setText(wq.getCustomer().getLocation());
-                this.currentWorkingRequest = wq;
-
-                if (wq.getPresecription() != null) {
-                    ImageIcon ii = new ImageIcon(wq.getPresecription().getAbsolutePath());
-                    jLabel7.setIcon(ii);
-                }
-                break;
-            }
-        }
-    }//GEN-LAST:event_btnGoActionPerformed
-public void populatePres() {
+    public void populatePres() {
         try {
             for (PrescriptionUploadWorkRequest pu : this.workrequest) {
                 if (pu.getReceiver().getUsername().equals(user.getUsername())) {
@@ -326,14 +326,16 @@ public void populatePres() {
     private javax.swing.JButton createOrderbttn;
     private javax.swing.JComboBox dropdownPrescription;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JTable jTable1;
     private javax.swing.JTable jTable2;
     private javax.swing.JLabel labelCustomerName;
     private javax.swing.JLabel labelDoctorSign;
