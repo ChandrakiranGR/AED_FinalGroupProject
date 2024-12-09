@@ -159,7 +159,7 @@ public class VaccinationAdminJPanel extends javax.swing.JPanel {
 
         jButton2.setBackground(new java.awt.Color(0, 102, 102));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("ACCEPT ORDER");
+        jButton2.setText("Accept Order");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
@@ -169,7 +169,7 @@ public class VaccinationAdminJPanel extends javax.swing.JPanel {
 
         jButton3.setBackground(new java.awt.Color(255, 153, 0));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("REJECT ORDER");
+        jButton3.setText("Reject Order");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);
@@ -211,7 +211,7 @@ public class VaccinationAdminJPanel extends javax.swing.JPanel {
 
         addBt.setBackground(new java.awt.Color(0, 102, 102));
         addBt.setForeground(new java.awt.Color(255, 255, 255));
-        addBt.setText("ADD PRODUCTS");
+        addBt.setText("Add Products");
         addBt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addBtActionPerformed(evt);
@@ -233,7 +233,7 @@ public class VaccinationAdminJPanel extends javax.swing.JPanel {
 
         jButton1.setBackground(new java.awt.Color(0, 102, 102));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("UPDATE PRODUCTS");
+        jButton1.setText("Update Products");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -255,7 +255,7 @@ public class VaccinationAdminJPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1065, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 11, Short.MAX_VALUE))
+                .addGap(0, 0, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

@@ -103,7 +103,7 @@ public class PharmacyProductJPanel extends javax.swing.JPanel {
 
         addBt.setBackground(new java.awt.Color(0, 102, 102));
         addBt.setForeground(new java.awt.Color(255, 255, 255));
-        addBt.setText("ADD PRODUCTS");
+        addBt.setText("Add Products");
         addBt.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 addBtActionPerformed(evt);
@@ -125,7 +125,7 @@ public class PharmacyProductJPanel extends javax.swing.JPanel {
 
         jButton1.setBackground(new java.awt.Color(0, 102, 102));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("UPDATE PRODUCTS");
+        jButton1.setText("Update Products");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -133,9 +133,9 @@ public class PharmacyProductJPanel extends javax.swing.JPanel {
         });
         add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 570, -1, -1));
 
-        jButton3.setBackground(new java.awt.Color(0, 204, 204));
+        jButton3.setBackground(new java.awt.Color(0, 102, 102));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("UPLOAD IMAGE");
+        jButton3.setText("Upload Image");
         jButton3.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton3ActionPerformed(evt);

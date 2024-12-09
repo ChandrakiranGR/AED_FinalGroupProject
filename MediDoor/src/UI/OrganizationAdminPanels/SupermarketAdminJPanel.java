@@ -122,7 +122,7 @@ public class SupermarketAdminJPanel extends javax.swing.JPanel {
 
         btnAccept.setBackground(new java.awt.Color(0, 102, 102));
         btnAccept.setForeground(new java.awt.Color(255, 255, 255));
-        btnAccept.setText("ACCEPT ORDER");
+        btnAccept.setText("Accept Order");
         btnAccept.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAcceptActionPerformed(evt);
@@ -132,7 +132,7 @@ public class SupermarketAdminJPanel extends javax.swing.JPanel {
 
         btnreject.setBackground(new java.awt.Color(255, 153, 51));
         btnreject.setForeground(new java.awt.Color(255, 255, 255));
-        btnreject.setText("REJECT ORDER");
+        btnreject.setText("Reject Order");
         btnreject.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnrejectActionPerformed(evt);
@@ -140,9 +140,9 @@ public class SupermarketAdminJPanel extends javax.swing.JPanel {
         });
         jPanel1.add(btnreject, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 400, -1, -1));
 
-        btnreqPrescription.setBackground(new java.awt.Color(102, 102, 102));
+        btnreqPrescription.setBackground(new java.awt.Color(0, 102, 102));
         btnreqPrescription.setForeground(new java.awt.Color(255, 255, 255));
-        btnreqPrescription.setText("REQUEST PRESCRIPTION");
+        btnreqPrescription.setText("Request Prescription");
         btnreqPrescription.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnreqPrescriptionActionPerformed(evt);

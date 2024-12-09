@@ -197,13 +197,13 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
 
         jButton2.setBackground(new java.awt.Color(0, 102, 102));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("APPROVE");
+        jButton2.setText("Approve");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 610, -1, -1));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 610, 90, 30));
 
         orderComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { }));
         orderComboBox.addActionListener(new java.awt.event.ActionListener() {
@@ -214,7 +214,8 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         jPanel1.add(orderComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 40, 175, -1));
 
         jButton6.setBackground(new java.awt.Color(0, 102, 102));
-        jButton6.setText("GO");
+        jButton6.setForeground(new java.awt.Color(255, 255, 255));
+        jButton6.setText("Go");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -236,13 +237,13 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
 
         jButton7.setBackground(new java.awt.Color(0, 102, 102));
         jButton7.setForeground(new java.awt.Color(255, 255, 255));
-        jButton7.setText("REJECT");
+        jButton7.setText("Reject");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 610, -1, -1));
+        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 610, 100, 30));
 
         jLabel14.setText("ORDER STATUS :");
         jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 370, -1, 10));
@@ -250,7 +251,9 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
 
         jTabbedPane1.addTab("MY REQUESTS", jPanel1);
 
-        jPanel2.setBackground(new java.awt.Color(253, 252, 249));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setForeground(new java.awt.Color(0, 102, 102));
+        jPanel2.setAutoscrolls(true);
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -260,13 +263,14 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         jPanel2.add(fieldNewCheckBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 580, -1, -1));
 
         btnCreateACustomerPresc.setBackground(new java.awt.Color(0, 102, 102));
-        btnCreateACustomerPresc.setText("CREATE ");
+        btnCreateACustomerPresc.setForeground(new java.awt.Color(255, 255, 255));
+        btnCreateACustomerPresc.setText("Create");
         btnCreateACustomerPresc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCreateACustomerPrescActionPerformed(evt);
             }
         });
-        jPanel2.add(btnCreateACustomerPresc, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 610, -1, -1));
+        jPanel2.add(btnCreateACustomerPresc, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 610, 100, 30));
 
         jTextField1.setText("Search Customer");
         jTextField1.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -277,7 +281,9 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 50, 510, -1));
 
         searchACustomerBtn.setBackground(new java.awt.Color(0, 102, 102));
-        searchACustomerBtn.setText("GO");
+        searchACustomerBtn.setForeground(new java.awt.Color(255, 255, 255));
+        searchACustomerBtn.setText("Go");
+        searchACustomerBtn.setAutoscrolls(true);
         searchACustomerBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 searchACustomerBtnActionPerformed(evt);
@@ -351,7 +357,9 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 390, -1, -1));
 
         uploadFileBtn.setBackground(new java.awt.Color(0, 102, 102));
-        uploadFileBtn.setText("UPLOAD PRESCRIPTION");
+        uploadFileBtn.setForeground(new java.awt.Color(255, 255, 255));
+        uploadFileBtn.setText("Upload Prescription");
+        uploadFileBtn.setAutoscrolls(true);
         uploadFileBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 uploadFileBtnActionPerformed(evt);
