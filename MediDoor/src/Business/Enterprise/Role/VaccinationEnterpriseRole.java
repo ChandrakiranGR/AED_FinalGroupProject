@@ -17,7 +17,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Nidhi Raghavendra
+ * @author shivanisugurushetty
  */
 public class VaccinationEnterpriseRole extends EnterpriseRole {
     public JPanel createWorkArea(JPanel userProcessContainer, UserAccount account,  Network network,Organization organization, Enterprise enterprise, Ecosystem business) {

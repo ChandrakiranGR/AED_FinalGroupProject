@@ -1,13 +1,12 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package UI.AdminRole;
 
 /**
  *
- * @author vachanabelgavi
+ * @author antaradeshmukh
  */
 public class AdminWorkAreaJPanel extends javax.swing.JPanel {
 
@@ -29,16 +28,14 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        jLabel2 = new javax.swing.JLabel();
         btnOrganization = new javax.swing.JButton();
         btnOrgAdmin = new javax.swing.JButton();
-        btnBloodBank = new javax.swing.JButton();
+        btnInventory = new javax.swing.JButton();
         btnEnterprise = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        btnInventory1 = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
 
-        setBackground(new java.awt.Color(253, 252, 249));
-        setPreferredSize(new java.awt.Dimension(1500, 1000));
-        setSize(new java.awt.Dimension(1500, 1000));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel1.setBackground(new java.awt.Color(253, 252, 249));
@@ -48,29 +45,33 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Admin Work Area");
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+        jPanel2.setBackground(new java.awt.Color(253, 252, 249));
+
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(0, 102, 102));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Admin Work Area");
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(342, Short.MAX_VALUE)
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 814, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 814, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(340, 340, 340))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(56, Short.MAX_VALUE)
-                .addComponent(jLabel1)
+                .addComponent(jLabel2)
                 .addGap(48, 48, 48))
         );
-
-        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         btnOrganization.setBackground(new java.awt.Color(0, 102, 102));
         btnOrganization.setForeground(new java.awt.Color(255, 255, 255));
         btnOrganization.setText("Manage Organization");
-        add(btnOrganization, new org.netbeans.lib.awtextra.AbsoluteConstraints(657, 237, 210, 44));
 
         btnOrgAdmin.setBackground(new java.awt.Color(0, 102, 102));
         btnOrgAdmin.setForeground(new java.awt.Color(255, 255, 255));
@@ -80,17 +81,10 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
                 btnOrgAdminActionPerformed(evt);
             }
         });
-        add(btnOrgAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(657, 299, 210, 42));
 
-        btnBloodBank.setBackground(new java.awt.Color(0, 102, 102));
-        btnBloodBank.setForeground(new java.awt.Color(255, 255, 255));
-        btnBloodBank.setText("Blood Bank Inventory");
-        btnBloodBank.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBloodBankActionPerformed(evt);
-            }
-        });
-        add(btnBloodBank, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 130, 210, 40));
+        btnInventory.setBackground(new java.awt.Color(0, 102, 102));
+        btnInventory.setForeground(new java.awt.Color(255, 255, 255));
+        btnInventory.setText("Manage Inventory");
 
         btnEnterprise.setBackground(new java.awt.Color(0, 102, 102));
         btnEnterprise.setForeground(new java.awt.Color(255, 255, 255));
@@ -100,15 +94,61 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
                 btnEnterpriseActionPerformed(evt);
             }
         });
-        add(btnEnterprise, new org.netbeans.lib.awtextra.AbsoluteConstraints(657, 179, 210, 46));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/resources/Admin_gif.gif"))); // NOI18N
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 420, 580, 380));
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(342, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 814, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(340, 340, 340))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(657, 657, 657)
+                            .addComponent(btnEnterprise, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(657, 657, 657)
+                            .addComponent(btnOrganization, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(657, 657, 657)
+                            .addComponent(btnOrgAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(657, 657, 657)
+                            .addComponent(btnInventory, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createSequentialGroup()
+                            .addGap(480, 480, 480)
+                            .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 580, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(722, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(48, 48, 48))
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(45, 45, 45)
+                    .addComponent(btnEnterprise, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(12, 12, 12)
+                    .addComponent(btnOrganization, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(18, 18, 18)
+                    .addComponent(btnOrgAdmin, javax.swing.GroupLayout.PREFERRED_SIZE, 42, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(12, 12, 12)
+                    .addComponent(btnInventory, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(27, 27, 27)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 380, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
 
-        btnInventory1.setBackground(new java.awt.Color(0, 102, 102));
-        btnInventory1.setForeground(new java.awt.Color(255, 255, 255));
-        btnInventory1.setText("Manage Inventory");
-        add(btnInventory1, new org.netbeans.lib.awtextra.AbsoluteConstraints(657, 353, 210, 40));
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnOrgAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrgAdminActionPerformed
@@ -119,19 +159,16 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnEnterpriseActionPerformed
 
-    private void btnBloodBankActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBloodBankActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnBloodBankActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBloodBank;
     private javax.swing.JButton btnEnterprise;
-    private javax.swing.JButton btnInventory1;
+    private javax.swing.JButton btnInventory;
     private javax.swing.JButton btnOrgAdmin;
     private javax.swing.JButton btnOrganization;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables
 }

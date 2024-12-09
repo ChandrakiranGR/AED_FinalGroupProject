@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package UI.OrganizationAdminPanels;
 
@@ -23,7 +22,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Nidhi Raghavendra
+ * @author shivanisugurushetty
  */
 public class VaccinationAdminJPanel extends javax.swing.JPanel {
 
@@ -68,15 +67,16 @@ public class VaccinationAdminJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jTabbedPane1 = new javax.swing.JTabbedPane();
         jPanel1 = new javax.swing.JPanel();
+        jTabbedPane1 = new javax.swing.JTabbedPane();
+        jPanel2 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         ordeTable = new javax.swing.JTable();
         jScrollPane3 = new javax.swing.JScrollPane();
         prodTable1 = new javax.swing.JTable();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jPanel2 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         prodTable = new javax.swing.JTable();
         addBt = new javax.swing.JButton();
@@ -88,15 +88,15 @@ public class VaccinationAdminJPanel extends javax.swing.JPanel {
         jLabel3 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
 
-        setBackground(new java.awt.Color(253, 252, 249));
-        setPreferredSize(new java.awt.Dimension(1500, 1000));
+        jPanel1.setBackground(new java.awt.Color(253, 252, 249));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1500, 1000));
 
         jTabbedPane1.setBackground(new java.awt.Color(253, 252, 249));
         jTabbedPane1.setMinimumSize(new java.awt.Dimension(1500, 1000));
         jTabbedPane1.setPreferredSize(new java.awt.Dimension(1500, 1000));
 
-        jPanel1.setBackground(new java.awt.Color(253, 252, 249));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel2.setBackground(new java.awt.Color(253, 252, 249));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         ordeTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -128,7 +128,7 @@ public class VaccinationAdminJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(ordeTable);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, -1, 276));
+        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 120, -1, 276));
 
         prodTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -155,7 +155,7 @@ public class VaccinationAdminJPanel extends javax.swing.JPanel {
         });
         jScrollPane3.setViewportView(prodTable1);
 
-        jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 120, -1, 280));
+        jPanel2.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 120, -1, 280));
 
         jButton2.setBackground(new java.awt.Color(0, 102, 102));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
@@ -165,7 +165,7 @@ public class VaccinationAdminJPanel extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 460, -1, -1));
+        jPanel2.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 460, -1, -1));
 
         jButton3.setBackground(new java.awt.Color(255, 153, 0));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
@@ -175,12 +175,12 @@ public class VaccinationAdminJPanel extends javax.swing.JPanel {
                 jButton3ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 460, -1, -1));
+        jPanel2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 460, -1, -1));
 
-        jTabbedPane1.addTab("MANAGE ORDERS", jPanel1);
+        jTabbedPane1.addTab("MANAGE ORDERS", jPanel2);
 
-        jPanel2.setBackground(new java.awt.Color(253, 252, 249));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel3.setBackground(new java.awt.Color(253, 252, 249));
+        jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         prodTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -207,7 +207,7 @@ public class VaccinationAdminJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(prodTable);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 310, 519, 241));
+        jPanel3.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 310, 519, 241));
 
         addBt.setBackground(new java.awt.Color(0, 102, 102));
         addBt.setForeground(new java.awt.Color(255, 255, 255));
@@ -217,19 +217,19 @@ public class VaccinationAdminJPanel extends javax.swing.JPanel {
                 addBtActionPerformed(evt);
             }
         });
-        jPanel2.add(addBt, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 570, -1, -1));
-        jPanel2.add(fieldProductName, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 110, 263, -1));
+        jPanel3.add(addBt, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 570, -1, -1));
+        jPanel3.add(fieldProductName, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 110, 263, -1));
 
         jLabel1.setText("PRODUCT NAME");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 80, -1, -1));
-        jPanel2.add(fieldProductPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 170, 263, -1));
+        jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 80, -1, -1));
+        jPanel3.add(fieldProductPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 170, 263, -1));
 
         jLabel2.setText("PRODUCT PRICE");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 140, -1, -1));
-        jPanel2.add(fieldStock, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 230, 263, -1));
+        jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 140, -1, -1));
+        jPanel3.add(fieldStock, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 230, 263, -1));
 
         jLabel3.setText("STOCK");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 200, -1, -1));
+        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 200, -1, -1));
 
         jButton1.setBackground(new java.awt.Color(0, 102, 102));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -239,25 +239,81 @@ public class VaccinationAdminJPanel extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 570, -1, -1));
+        jPanel3.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 570, -1, -1));
 
-        jTabbedPane1.addTab("MANAGE PRODUCTS", jPanel2);
+        jTabbedPane1.addTab("MANAGE PRODUCTS", jPanel3);
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 2007, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1065, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 2007, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addGap(0, 1500, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1065, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 11, Short.MAX_VALUE))
+            .addGap(0, 1000, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ordeTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ordeTableMouseClicked
+        // TODO add your handling code here:
+
+        JTable source = (JTable) evt.getSource();
+        int row = source.rowAtPoint(evt.getPoint());
+        int column = source.columnAtPoint(evt.getPoint());
+
+        this.orderid = Integer.valueOf((Integer) source.getModel().getValueAt(row, column));
+        fetchOrderObject();
+        populateItems();
+        populateOrders();
+    }//GEN-LAST:event_ordeTableMouseClicked
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        try {
+
+            this.currentOrder.setStatus("ACCEPTED");
+            populateOrders();
+        } catch (Exception e) {
+
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+        try {
+
+            this.currentOrder.setStatus("REJECTED");
+            populateOrders();
+        } catch (Exception e) {
+
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     private void addBtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBtActionPerformed
         // TODO add your handling code here:
@@ -325,41 +381,6 @@ public class VaccinationAdminJPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void ordeTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ordeTableMouseClicked
-        // TODO add your handling code here:
-
-        JTable source = (JTable) evt.getSource();
-        int row = source.rowAtPoint(evt.getPoint());
-        int column = source.columnAtPoint(evt.getPoint());
-
-        this.orderid = Integer.valueOf((Integer) source.getModel().getValueAt(row, column));
-        fetchOrderObject();
-        populateItems();
-        populateOrders();
-    }//GEN-LAST:event_ordeTableMouseClicked
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        try {
-
-            this.currentOrder.setStatus("ACCEPTED");
-            populateOrders();
-        } catch (Exception e) {
-
-        }
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-        try {
-
-            this.currentOrder.setStatus("REJECTED");
-            populateOrders();
-        } catch (Exception e) {
-
-        }
-    }//GEN-LAST:event_jButton3ActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addBt;
@@ -374,6 +395,7 @@ public class VaccinationAdminJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
@@ -382,8 +404,7 @@ public class VaccinationAdminJPanel extends javax.swing.JPanel {
     private javax.swing.JTable prodTable;
     private javax.swing.JTable prodTable1;
     // End of variables declaration//GEN-END:variables
-
-    private void populateProducts() {
+private void populateProducts() {
         tableModel.setRowCount(0);
         for (Product p : this.organization.getOrganizationProducts()) {
 
@@ -450,5 +471,5 @@ public class VaccinationAdminJPanel extends javax.swing.JPanel {
             }
         }
     }
-
+    
 }

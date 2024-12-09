@@ -1,7 +1,6 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package UI.VaccinationEnterpriseRole;
 
@@ -37,10 +36,9 @@ import Business.Network.Network;
 import Business.Orders.Order;
 import Business.Orders.OrderItem;
 import Business.Organization.Organization;
-
 /**
  *
- * @author pannaga
+ * @author vish
  */
 public class ManageVaccinationOrdersJPanel extends javax.swing.JPanel {
 
@@ -99,6 +97,7 @@ public class ManageVaccinationOrdersJPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         VaccineOrderTable = new javax.swing.JTable();
         btnBack = new javax.swing.JButton();
@@ -109,11 +108,11 @@ public class ManageVaccinationOrdersJPanel extends javax.swing.JPanel {
         orderscmb = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
 
-        setPreferredSize(new java.awt.Dimension(1500, 1000));
-
-        jPanel1.setBackground(new java.awt.Color(253, 252, 249));
         jPanel1.setPreferredSize(new java.awt.Dimension(1500, 1000));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jPanel2.setBackground(new java.awt.Color(253, 252, 249));
+        jPanel2.setPreferredSize(new java.awt.Dimension(1500, 1000));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         VaccineOrderTable.setBackground(new java.awt.Color(204, 255, 204));
         VaccineOrderTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -134,7 +133,7 @@ public class ManageVaccinationOrdersJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(VaccineOrderTable);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 60, 803, 120));
+        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 60, 803, 120));
 
         btnBack.setBackground(new java.awt.Color(0, 102, 102));
         btnBack.setForeground(new java.awt.Color(255, 255, 255));
@@ -144,7 +143,7 @@ public class ManageVaccinationOrdersJPanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
-        jPanel1.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
+        jPanel2.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 10, -1, -1));
 
         deliverycmb.setForeground(new java.awt.Color(0, 102, 102));
         deliverycmb.addActionListener(new java.awt.event.ActionListener() {
@@ -152,12 +151,12 @@ public class ManageVaccinationOrdersJPanel extends javax.swing.JPanel {
                 deliverycmbActionPerformed(evt);
             }
         });
-        jPanel1.add(deliverycmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 650, 148, 20));
+        jPanel2.add(deliverycmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(750, 650, 148, 20));
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 102, 102));
         jLabel1.setText("Assign Delivery agent");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 650, -1, -1));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 650, -1, -1));
 
         assignbtn.setBackground(new java.awt.Color(0, 102, 102));
         assignbtn.setForeground(new java.awt.Color(255, 255, 255));
@@ -167,7 +166,7 @@ public class ManageVaccinationOrdersJPanel extends javax.swing.JPanel {
                 assignbtnActionPerformed(evt);
             }
         });
-        jPanel1.add(assignbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 680, 105, -1));
+        jPanel2.add(assignbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 680, 105, -1));
 
         btnshoworders.setBackground(new java.awt.Color(0, 102, 102));
         btnshoworders.setForeground(new java.awt.Color(255, 255, 255));
@@ -177,7 +176,7 @@ public class ManageVaccinationOrdersJPanel extends javax.swing.JPanel {
                 btnshowordersActionPerformed(evt);
             }
         });
-        jPanel1.add(btnshoworders, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 20, 130, -1));
+        jPanel2.add(btnshoworders, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 20, 130, -1));
 
         orderscmb.setForeground(new java.awt.Color(0, 102, 102));
         orderscmb.addActionListener(new java.awt.event.ActionListener() {
@@ -185,10 +184,27 @@ public class ManageVaccinationOrdersJPanel extends javax.swing.JPanel {
                 orderscmbActionPerformed(evt);
             }
         });
-        jPanel1.add(orderscmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 20, 110, -1));
+        jPanel2.add(orderscmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 20, 110, -1));
+        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 1200, 460));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/resources/order_management_gif.gif"))); // NOI18N
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 1200, 460));
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1500, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 1500, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1000, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createSequentialGroup()
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 1000, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -197,7 +213,8 @@ public class ManageVaccinationOrdersJPanel extends javax.swing.JPanel {
             .addGap(0, 1500, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1500, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
@@ -205,7 +222,8 @@ public class ManageVaccinationOrdersJPanel extends javax.swing.JPanel {
             .addGap(0, 1000, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1000, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
@@ -220,125 +238,121 @@ public class ManageVaccinationOrdersJPanel extends javax.swing.JPanel {
 
     private void deliverycmbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deliverycmbActionPerformed
         // TODO add your handling code here:
-
     }//GEN-LAST:event_deliverycmbActionPerformed
 
     private void assignbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignbtnActionPerformed
         // TODO add your handling code here:
-       String agent = deliverycmb.getSelectedItem().toString();
+        String agent = deliverycmb.getSelectedItem().toString();
         boolean emailsend = true;
         System.out.println("Inside assign button");
         dtm.setRowCount(0);
-         ArrayList<Customer> customerdir = this.network.getCustomerDirectory().getCustomerList();
+        ArrayList<Customer> customerdir = this.network.getCustomerDirectory().getCustomerList();
         String recipients = null;
 
+        System.out.println("Inside table after assigning");
+        try{
+            for(Customer cust: customerdir){
+                for (Order o : cust.getOrderlist()) {
+                    if(o.getOrganizationname().equals("Immunization"))
+                    {
+                        ArrayList<OrderItem> oi = o.getItemsOrdered();
+                        ArrayList<String> pr = new ArrayList<>();
+                        //  Order o : this.customer.getOrderlist()//              populate items
+                        for (int i = 0; i < oi.size(); i++) {
 
-             System.out.println("Inside table after assigning");
-             try{
-           for(Customer cust: customerdir){
-                    for (Order o : cust.getOrderlist()) {
-                        if(o.getOrganizationname().equals("Immunization"))
-                      {
-                    ArrayList<OrderItem> oi = o.getItemsOrdered();
-                    ArrayList<String> pr = new ArrayList<>();
-                //  Order o : this.customer.getOrderlist()//              populate items
-                for (int i = 0; i < oi.size(); i++) {
+                            pr.add(oi.get(i).getProductName());
+                        }
 
-                    pr.add(oi.get(i).getProductName());
-                }
+                        if("ACCEPTED".equals(o.getStatus()) && orderscmb.getSelectedItem().toString().equals(String.valueOf(o.getOrderId()))){
+                            System.out.println(" "+agent);
+                            ArrayList<DeliveryAgent> del = enterprise.getDeliveryAgentsInEnterpiselist();
+                            for(DeliveryAgent d: del){
+                                if(d.getUseraccount().getUsername().equals(agent)){
+                                    d.setActive(false);
+                                    o.setDeliveryAgent(d);
+                                    System.out.println(" "+ o.getDeliveryAgent().getUseraccount().getUsername());
+                                    System.out.println(" "+ d.getActive());
+                                    //  o.getDeliveryAgent().getUseraccount().getUsername();
+                                    //d.getUseraccount().getUsername();
 
-                if("ACCEPTED".equals(o.getStatus()) && orderscmb.getSelectedItem().toString().equals(String.valueOf(o.getOrderId()))){
-                     System.out.println(" "+agent);
-                     ArrayList<DeliveryAgent> del = enterprise.getDeliveryAgentsInEnterpiselist();
-                     for(DeliveryAgent d: del){
-                     if(d.getUseraccount().getUsername().equals(agent)){
-                      d.setActive(false);
-                      o.setDeliveryAgent(d);
-                      System.out.println(" "+ o.getDeliveryAgent().getUseraccount().getUsername());
-                      System.out.println(" "+ d.getActive());
-                    //  o.getDeliveryAgent().getUseraccount().getUsername();
-                      //d.getUseraccount().getUsername();
+                                    System.out.println("cmae hre ");
+                                }
+                            }
+                            populateTable();
 
-                    System.out.println("cmae hre ");
-                     }
-                     }
-                     populateTable();
+                            ArrayList<String> agentslist = new ArrayList<>();
+                            agentslist.add(agent);
 
-                    ArrayList<String> agentslist = new ArrayList<>();
-                    agentslist.add(agent);
+                            System.out.println(o.getDeliveryAgent().getUseraccount().getUsername());
 
-                    System.out.println(o.getDeliveryAgent().getUseraccount().getUsername());
+                            if(emailsend = true){
 
-        if(emailsend = true){
+                                JOptionPane.showMessageDialog(null, "Delivery agent assigned successful");
+                                int dialogueb = JOptionPane.INFORMATION_MESSAGE;
+                                System.out.println(""+dialogueb);
+                                int dialoguer = JOptionPane.showConfirmDialog(this, "SENDING EMAIL\n"
+                                    + "If yes please wait","DELIVERY AGENT ASSIGNMENT", dialogueb);
+                                if(dialoguer == 0){
+                                    recipients = cust.getEmail();
+                                    System.out.println("Entering assign for email ==========");
+                                    String subjects = "Delivery";
+                                    String messaget = "Delivered agent assigned successfully";
 
-        JOptionPane.showMessageDialog(null, "Delivery agent assigned successful");
-        int dialogueb = JOptionPane.INFORMATION_MESSAGE;
-        System.out.println(""+dialogueb);
-        int dialoguer = JOptionPane.showConfirmDialog(this, "SENDING EMAIL\n"
-                + "If yes please wait","DELIVERY AGENT ASSIGNMENT", dialogueb);
-        if(dialoguer == 0){
-         recipients = cust.getEmail();
-         System.out.println("Entering assign for email ==========");
-         String subjects = "Delivery";
-         String messaget = "Delivered agent assigned successfully";
+                                    System.out.println("Start");
+                                    final String username = "pannagaveeramohan@gmail.com";
+                                    final String password = "9686300037";
 
+                                    Properties p = new Properties();
+                                    p.put("mail.smtp.auth", "true");
+                                    p.put("mail.smtp.host", "smtp.gmail.com");
+                                    p.put("mail.smtp.port", "465");
+                                    p.put("mail.transport.protocol", "smtp");
+                                    p.put("mail.smtp.starttls.enable", "true");
+                                    p.put("mail.smtp.starttls.enable", "true");
+                                    p.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
 
-        System.out.println("Start");
-        final String username = "pannagaveeramohan@gmail.com";
-        final String password = "9686300037";
+                                    Session session = Session.getInstance(p,
+                                        new javax.mail.Authenticator() {
+                                            protected PasswordAuthentication getPasswordAuthentication() {
+                                                return new PasswordAuthentication(username, password);
+                                            }
+                                        });
 
-        Properties p = new Properties();
-        p.put("mail.smtp.auth", "true");
-        p.put("mail.smtp.host", "smtp.gmail.com");
-        p.put("mail.smtp.port", "465");
-        p.put("mail.transport.protocol", "smtp");
-        p.put("mail.smtp.starttls.enable", "true");
-        p.put("mail.smtp.starttls.enable", "true");
-        p.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+                                        try {
 
-         Session session = Session.getInstance(p,
-                  new javax.mail.Authenticator() {
-                    protected PasswordAuthentication getPasswordAuthentication() {
-                        return new PasswordAuthentication(username, password);
+                                            Transport transport=session.getTransport();
+                                            Message message = new MimeMessage(session);
+                                            message.setFrom(new InternetAddress("pannagaveeramohan@gmail.com"));//formBean.getString("fromEmail")
+
+                                            final Address[] recipientAddresses = InternetAddress.parse(recipients);
+                                            message.setRecipients(Message.RecipientType.TO,recipientAddresses);
+                                            message.setSubject(subjects);//formBean.getString(
+                                                message.setText(messaget);
+                                                transport.connect();
+                                                transport.send(message, recipientAddresses);//(message);
+
+                                                System.out.println("Done");
+
+                                            } catch (MessagingException e) {
+                                                System.out.println("e="+e);
+                                                e.printStackTrace();
+                                                throw new RuntimeException(e);
+
+                                            }
+
+                                            JOptionPane.showMessageDialog(null, "Email sent to customer successful");
+                                        }else{
+                                            JOptionPane.showMessageDialog(null, "Email sending cancelled");
+                                        }
+
+                                    }
+                                }
+                            }
+                        }
                     }
-                  });
-
-
-        try {
-
-            Transport transport=session.getTransport();
-            Message message = new MimeMessage(session);
-            message.setFrom(new InternetAddress("pannagaveeramohan@gmail.com"));//formBean.getString("fromEmail")
-
-            final Address[] recipientAddresses = InternetAddress.parse(recipients);
-            message.setRecipients(Message.RecipientType.TO,recipientAddresses);
-            message.setSubject(subjects);//formBean.getString(
-            message.setText(messaget);
-            transport.connect();
-            transport.send(message, recipientAddresses);//(message);
-
-            System.out.println("Done");
-
-        } catch (MessagingException e) {
-            System.out.println("e="+e);
-            e.printStackTrace();
-            throw new RuntimeException(e);
-
-        }
-
-    JOptionPane.showMessageDialog(null, "Email sent to customer successful");
-  }else{
-         JOptionPane.showMessageDialog(null, "Email sending cancelled");
-        }
-
-    }
-    }
-    }
-    }
-    }
-             }catch(Exception ex){
-                 System.out.println(" "+ex);
-             }
+                }catch(Exception ex){
+                    System.out.println(" "+ex);
+                }
     }//GEN-LAST:event_assignbtnActionPerformed
 
     private void btnshowordersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnshowordersActionPerformed
@@ -355,7 +369,6 @@ public class ManageVaccinationOrdersJPanel extends javax.swing.JPanel {
                 }
             }
         }
-
     }//GEN-LAST:event_btnshowordersActionPerformed
 
     private void orderscmbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_orderscmbActionPerformed
@@ -370,7 +383,6 @@ public class ManageVaccinationOrdersJPanel extends javax.swing.JPanel {
 
     }
 
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable VaccineOrderTable;
     private javax.swing.JButton assignbtn;
@@ -380,10 +392,10 @@ public class ManageVaccinationOrdersJPanel extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JComboBox<String> orderscmb;
     // End of variables declaration//GEN-END:variables
-
     private void populateDp() {
        ArrayList<Customer> customerdir = this.network.getCustomerDirectory().getCustomerList();
          System.out.println("Inside combo box");

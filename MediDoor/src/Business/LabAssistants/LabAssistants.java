@@ -10,7 +10,7 @@ import Business.UserAccount.UserAccount;
 
 /**
  *
- * @author vachanabelgavi
+ * @author shivanisugurushetty
  */
 public class LabAssistants {
     
@@ -28,7 +28,7 @@ public class LabAssistants {
     public LabAssistants(){
         
         this.labAssistantId = this.count++;
-        this.useraccount = new UserAccount("admin", "adminpass123");
+        this.useraccount = new UserAccount();
 
     }
 

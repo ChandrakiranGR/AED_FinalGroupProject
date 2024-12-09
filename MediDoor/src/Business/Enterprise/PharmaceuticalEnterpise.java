@@ -12,11 +12,11 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Nidhi Raghavendra
+ * @author shivanisugurushetty
  */
 public class PharmaceuticalEnterpise extends Enterprise {
     public PharmaceuticalEnterpise(String name, String location){
-        super(EnterpriseType.Pharmaceutical, name, location);
+        super(Enterprise.EnterpriseType.Pharmaceutical, name, location);
     }
 
     public ArrayList<EnterpriseRole> getSupportedRole() {

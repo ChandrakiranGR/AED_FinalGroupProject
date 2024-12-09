@@ -1,12 +1,11 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
 package Business.Organization;
 
+
 import Business.Employee.EmployeeDirectory;
-//import Business.Orders.Order;
 import Business.Products.Product;
 import Business.Role.Role;
 import Business.UserAccount.UserAccountDirectory;
@@ -14,10 +13,9 @@ import Business.WorkQueue.PrescriptionUploadWorkRequest;
 import Business.WorkQueue.ReportUploadWorkRequest;
 import java.util.ArrayList;
 import java.util.Random;
-
 /**
  *
- * @author Nidhi Raghavendra
+ * @author chandrkiran
  */
 public abstract class Organization {
 
@@ -156,6 +154,7 @@ public abstract class Organization {
         } 
         return null;
     }
+    
 
     public ArrayList<PrescriptionUploadWorkRequest> getPrescriptionWorkList() {
         return prescriptionWorkList;
@@ -175,3 +174,4 @@ public abstract class Organization {
     
     
 }
+

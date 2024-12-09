@@ -1,10 +1,9 @@
-
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
 package UI.LabEnterpriseRole;
+
 import Business.Customer.Customer;
 import Business.DeliveryAgent.DeliveryAgent;
 import Business.Employee.Employee;
@@ -25,10 +24,9 @@ import java.util.ArrayList;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
-
 /**
  *
- * @author pannaga
+ * @author chandrkiran
  */
 public class ManageLabDeliveryAgentJPanel extends javax.swing.JPanel {
 JPanel userProcessContainer;
@@ -41,7 +39,6 @@ JPanel userProcessContainer;
     ArrayList<DeliveryAgent> del;
     ArrayList<Integer> z;
     Network network;
-
     /**
      * Creates new form ManageLabDeliveryAgentJPanel
      */
@@ -78,8 +75,8 @@ JPanel userProcessContainer;
 
 
     }
-
-    private void displaycombo() {
+    
+        private void displaycombo() {
 
          del = enterprise.getDeliveryAgentsInEnterpiselist();
 
@@ -88,6 +85,7 @@ JPanel userProcessContainer;
               cmbzipcode.addItem(z.get(i).toString());
               }
     }
+
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -98,8 +96,9 @@ JPanel userProcessContainer;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel3 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
+        jPanel3 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
@@ -119,13 +118,13 @@ JPanel userProcessContainer;
         cmbzipcode = new javax.swing.JComboBox<>();
         jLabel4 = new javax.swing.JLabel();
 
-        setPreferredSize(new java.awt.Dimension(1500, 1000));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1500, 1000));
 
         jPanel3.setBackground(new java.awt.Color(253, 252, 249));
         jPanel3.setPreferredSize(new java.awt.Dimension(1500, 1000));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel1.setBackground(new java.awt.Color(253, 252, 249));
+        jPanel2.setBackground(new java.awt.Color(253, 252, 249));
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 102, 102));
@@ -141,19 +140,19 @@ JPanel userProcessContainer;
             }
         });
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+            .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(btnBack)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(13, Short.MAX_VALUE)
                 .addComponent(btnBack)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -161,7 +160,7 @@ JPanel userProcessContainer;
                 .addGap(42, 42, 42))
         );
 
-        jPanel3.add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1500, -1));
+        jPanel3.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1500, -1));
 
         jLabel2.setText("Name");
         jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 155, -1, -1));
@@ -235,25 +234,45 @@ JPanel userProcessContainer;
         cmbzipcode.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
         jPanel3.add(cmbzipcode, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 200, 200, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/resources/delivery-man-parcel-handover-to-customer-online-delivery-service-smartphone-cartoon-art-illustration-vector.jpeg"))); // NOI18N
         jLabel4.setText("jLabel4");
         jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-300, 100, 1880, 1040));
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 1500, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 1000, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(38, 38, 38))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 1500, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
+            .addGap(0, 1500, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 1000, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(38, 38, 38))
+            .addGap(0, 1000, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -270,7 +289,6 @@ JPanel userProcessContainer;
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
-
     }//GEN-LAST:event_btnBackActionPerformed
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
@@ -300,10 +318,10 @@ JPanel userProcessContainer;
             JOptionPane.showMessageDialog(null, "Please fill the empty fields", "Warining", JOptionPane.WARNING_MESSAGE);
             return;
         }
-//        if(txtZipcode.getText().length() < 5 || txtZipcode.getText().length() > 6){
-//            JOptionPane.showMessageDialog(null, "Zip code must be 5 or 6 digits", "Warining", JOptionPane.WARNING_MESSAGE);
-//            return;
-//        }
+        //        if(txtZipcode.getText().length() < 5 || txtZipcode.getText().length() > 6){
+            //            JOptionPane.showMessageDialog(null, "Zip code must be 5 or 6 digits", "Warining", JOptionPane.WARNING_MESSAGE);
+            //            return;
+            //        }
         System.out.println("Inside loop");
         boolean flag = business.getUserAccountDirectory().checkIfUsernameIsUnique(username);
         if(flag == false){
@@ -324,7 +342,7 @@ JPanel userProcessContainer;
             u.setPassword(password);
             u.setRole(new DeliveryAgentRole());
             u.setEmployee(em);
-           // d.setUseraccount(u);
+            // d.setUseraccount(u);
             d.setZipcodes(zipcodes);
             d.setEnterprisename(enterprise);
 
@@ -346,7 +364,6 @@ JPanel userProcessContainer;
         txtPassword.setText("");
         jcheckyes.setSelected(false);
         jcheckno.setSelected(false);
-
 
     }//GEN-LAST:event_btnAddActionPerformed
 
@@ -425,6 +442,7 @@ JPanel userProcessContainer;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JCheckBox jcheckno;

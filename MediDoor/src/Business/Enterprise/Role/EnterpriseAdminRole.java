@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Nidhi Raghavendra
+ * @authorshivanisugurushetty
  */
 public class EnterpriseAdminRole extends EnterpriseRole {
     @Override
