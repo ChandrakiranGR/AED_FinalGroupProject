@@ -146,6 +146,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         setBackground(new java.awt.Color(253, 252, 249));
 
         jTabbedPane1.setBackground(new java.awt.Color(253, 252, 249));
+        jTabbedPane1.setPreferredSize(new java.awt.Dimension(1500, 900));
 
         jPanel1.setBackground(new java.awt.Color(253, 252, 249));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -203,7 +204,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 610, 90, 30));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 610, 90, 30));
 
         orderComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { }));
         orderComboBox.addActionListener(new java.awt.event.ActionListener() {
@@ -243,7 +244,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
                 jButton7ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 610, 100, 30));
+        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 610, 100, 30));
 
         jLabel14.setText("ORDER STATUS :");
         jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 370, -1, 10));

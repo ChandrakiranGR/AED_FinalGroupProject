@@ -54,6 +54,8 @@ public class OrdersJPanel extends javax.swing.JPanel {
         orderhistoryTable = new javax.swing.JTable();
 
         jPanel1.setBackground(new java.awt.Color(253, 252, 249));
+        jPanel1.setFocusTraversalPolicyProvider(true);
+        jPanel1.setPreferredSize(new java.awt.Dimension(1500, 900));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(

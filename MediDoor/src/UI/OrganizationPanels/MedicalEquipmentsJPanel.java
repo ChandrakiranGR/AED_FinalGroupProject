@@ -151,6 +151,7 @@ public class MedicalEquipmentsJPanel extends javax.swing.JPanel {
         jButton2 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(253, 252, 249));
+        setPreferredSize(new java.awt.Dimension(1500, 900));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         medTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -184,6 +185,8 @@ public class MedicalEquipmentsJPanel extends javax.swing.JPanel {
         jLabel1.setText("OUT OF STOCK :(");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 110, -1, -1));
 
+        jButton2.setBackground(new java.awt.Color(0, 102, 102));
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Refresh");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

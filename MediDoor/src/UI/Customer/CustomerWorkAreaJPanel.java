@@ -139,7 +139,7 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(253, 252, 249));
         setMinimumSize(new java.awt.Dimension(1500, 900));
-        setPreferredSize(new java.awt.Dimension(1500, 1000));
+        setPreferredSize(new java.awt.Dimension(1500, 900));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         pane.setDividerSize(1);

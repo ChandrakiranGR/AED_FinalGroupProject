@@ -72,6 +72,7 @@ public class ManageOrganizationAdminsJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(253, 252, 249));
+        setPreferredSize(new java.awt.Dimension(1500, 900));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         Table.setModel(new javax.swing.table.DefaultTableModel(

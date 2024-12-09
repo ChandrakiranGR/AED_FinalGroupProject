@@ -129,19 +129,17 @@ public class DeliveryAgentWorkAreaJPanel extends javax.swing.JPanel {
         DeliveryOrderTable = new javax.swing.JTable();
         orderPicked_btn = new javax.swing.JButton();
         orderDelivered_btn = new javax.swing.JButton();
-        jLabel4 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabel_DelMan1 = new javax.swing.JLabel();
         orderscmb = new javax.swing.JComboBox();
         btnshoworders = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
 
         jPanel1.setBackground(new java.awt.Color(253, 252, 249));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1500, 900));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        DeliveryOrderTable.setBackground(new java.awt.Color(204, 255, 204));
         DeliveryOrderTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null, null},
@@ -173,7 +171,7 @@ public class DeliveryAgentWorkAreaJPanel extends javax.swing.JPanel {
                 orderPicked_btnActionPerformed(evt);
             }
         });
-        jPanel1.add(orderPicked_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 470, 190, 44));
+        jPanel1.add(orderPicked_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 390, 190, 44));
 
         orderDelivered_btn.setBackground(new java.awt.Color(0, 102, 102));
         orderDelivered_btn.setForeground(new java.awt.Color(255, 255, 255));
@@ -191,11 +189,7 @@ public class DeliveryAgentWorkAreaJPanel extends javax.swing.JPanel {
                 orderDelivered_btnActionPerformed(evt);
             }
         });
-        jPanel1.add(orderDelivered_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 520, 190, 44));
-
-        jLabel4.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/resources/home-delivery-service-3897224-3243194.png"))); // NOI18N
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 130, 520, 700));
+        jPanel1.add(orderDelivered_btn, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 460, 190, 44));
 
         jLabel3.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 102, 102));
@@ -224,9 +218,6 @@ public class DeliveryAgentWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         jPanel1.add(btnshoworders, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 80, 130, 30));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/resources/delivery_running_gif.gif"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 70, 720, 480));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -471,9 +462,7 @@ public class DeliveryAgentWorkAreaJPanel extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTable DeliveryOrderTable;
     private javax.swing.JButton btnshoworders;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel_DelMan1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;

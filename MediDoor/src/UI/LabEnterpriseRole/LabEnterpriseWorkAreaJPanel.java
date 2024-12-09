@@ -64,9 +64,8 @@ public class LabEnterpriseWorkAreaJPanel extends javax.swing.JPanel {
         btndeliveryagents = new javax.swing.JButton();
         btnmanageorders = new javax.swing.JButton();
         btnLabcenters = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
 
-        setPreferredSize(new java.awt.Dimension(1500, 1000));
+        setPreferredSize(new java.awt.Dimension(1500, 900));
 
         jPanel1.setBackground(new java.awt.Color(253, 252, 249));
 
@@ -121,9 +120,6 @@ public class LabEnterpriseWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         jPanel2.add(btnLabcenters, new org.netbeans.lib.awtextra.AbsoluteConstraints(882, 40, 200, 40));
-
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/resources/lab-researcher-microscope-tools-laboratory-studying-new-virus-186082028.jpeg"))); // NOI18N
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 90, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -188,7 +184,6 @@ public class LabEnterpriseWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btndeliveryagents;
     private javax.swing.JButton btnmanageorders;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables

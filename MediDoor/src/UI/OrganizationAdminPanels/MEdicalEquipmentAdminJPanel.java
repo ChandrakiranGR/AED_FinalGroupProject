@@ -94,6 +94,7 @@ public class MEdicalEquipmentAdminJPanel extends javax.swing.JPanel {
         jButton3 = new javax.swing.JButton();
 
         jTabbedPane1.setBackground(new java.awt.Color(253, 252, 249));
+        jTabbedPane1.setPreferredSize(new java.awt.Dimension(1500, 900));
 
         jPanel1.setBackground(new java.awt.Color(253, 252, 249));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());

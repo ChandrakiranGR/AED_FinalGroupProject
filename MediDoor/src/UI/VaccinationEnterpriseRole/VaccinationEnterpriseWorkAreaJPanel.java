@@ -75,9 +75,9 @@ public class VaccinationEnterpriseWorkAreaJPanel extends javax.swing.JPanel {
         btndeliveryagents = new javax.swing.JButton();
         btnmanageorders = new javax.swing.JButton();
 
-        setPreferredSize(new java.awt.Dimension(1500, 1000));
+        setPreferredSize(new java.awt.Dimension(1500, 900));
 
-        jPanel1.setBackground(new java.awt.Color(253, 252, 249));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 102, 102));

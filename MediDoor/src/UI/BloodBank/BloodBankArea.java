@@ -64,6 +64,10 @@ public class BloodBankArea extends javax.swing.JPanel {
 
         setLayout(new java.awt.CardLayout());
 
+        jPanel1.setPreferredSize(new java.awt.Dimension(1500, 900));
+
+        btnViewRequest.setBackground(new java.awt.Color(0, 102, 102));
+        btnViewRequest.setForeground(new java.awt.Color(255, 255, 255));
         btnViewRequest.setText("View requests");
         btnViewRequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -71,13 +75,17 @@ public class BloodBankArea extends javax.swing.JPanel {
             }
         });
 
-        btnMngrequest.setText("manage requst");
+        btnMngrequest.setBackground(new java.awt.Color(0, 102, 102));
+        btnMngrequest.setForeground(new java.awt.Color(255, 255, 255));
+        btnMngrequest.setText("Manage Request");
         btnMngrequest.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnMngrequestActionPerformed(evt);
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 102, 102));
         jLabel1.setText("Blood Bank work area");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -88,13 +96,13 @@ public class BloodBankArea extends javax.swing.JPanel {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(244, 244, 244)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(btnMngrequest)
-                            .addComponent(btnViewRequest)))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(btnMngrequest, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(btnViewRequest, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(306, 306, 306)
+                        .addGap(224, 224, 224)
                         .addComponent(jLabel1)))
-                .addContainerGap(240, Short.MAX_VALUE))
+                .addContainerGap(273, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -105,7 +113,7 @@ public class BloodBankArea extends javax.swing.JPanel {
                 .addComponent(btnViewRequest)
                 .addGap(69, 69, 69)
                 .addComponent(btnMngrequest)
-                .addContainerGap(282, Short.MAX_VALUE))
+                .addContainerGap(276, Short.MAX_VALUE))
         );
 
         add(jPanel1, "card2");

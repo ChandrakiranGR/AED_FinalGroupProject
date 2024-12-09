@@ -94,7 +94,7 @@ public class VaccineJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(prodTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 100, 830, 360));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 30, 830, 360));
 
         jButton1.setBackground(new java.awt.Color(0, 102, 102));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -104,15 +104,17 @@ public class VaccineJPanel extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 490, -1, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 440, -1, -1));
 
+        jButton2.setBackground(new java.awt.Color(0, 102, 102));
+        jButton2.setForeground(new java.awt.Color(255, 255, 255));
         jButton2.setText("Refresh");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 540, 100, -1));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 440, 100, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed

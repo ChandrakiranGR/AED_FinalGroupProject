@@ -66,6 +66,7 @@ public class PaymentsJPanel extends javax.swing.JPanel {
         PAYtABLE = new javax.swing.JTable();
 
         setBackground(new java.awt.Color(253, 252, 249));
+        setPreferredSize(new java.awt.Dimension(1500, 900));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("SWIFT PAYMENT");
@@ -73,7 +74,7 @@ public class PaymentsJPanel extends javax.swing.JPanel {
 
         add(comboOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 140, 210, -1));
 
-        jPanel1.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         jPanel1.setForeground(new java.awt.Color(0, 102, 102));
         jPanel1.setFont(new java.awt.Font("Times New Roman", 1, 11)); // NOI18N

@@ -114,7 +114,7 @@ JPanel userProcessContainer;
 
         jPanel1.setBackground(new java.awt.Color(253, 252, 249));
         jPanel1.setMinimumSize(new java.awt.Dimension(1500, 1000));
-        jPanel1.setPreferredSize(new java.awt.Dimension(1290, 1190));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1500, 900));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setText("Name");

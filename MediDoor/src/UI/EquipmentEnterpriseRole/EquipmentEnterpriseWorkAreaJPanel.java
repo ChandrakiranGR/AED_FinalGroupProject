@@ -62,11 +62,10 @@ public class EquipmentEnterpriseWorkAreaJPanel extends javax.swing.JPanel {
         jPanel2 = new javax.swing.JPanel();
         btndeliveryagents = new javax.swing.JButton();
         btnmanageorders = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
 
-        setPreferredSize(new java.awt.Dimension(1500, 1000));
+        setPreferredSize(new java.awt.Dimension(1500, 900));
 
-        jPanel1.setBackground(new java.awt.Color(253, 252, 249));
+        jPanel1.setBackground(new java.awt.Color(204, 204, 255));
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 102, 102));
@@ -110,9 +109,6 @@ public class EquipmentEnterpriseWorkAreaJPanel extends javax.swing.JPanel {
             }
         });
         jPanel2.add(btnmanageorders, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 90, 200, 39));
-
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/resources/Healthcare-equipment-tracking.jpeg"))); // NOI18N
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 180, 1230, 500));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -166,7 +162,6 @@ public class EquipmentEnterpriseWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton btndeliveryagents;
     private javax.swing.JButton btnmanageorders;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     // End of variables declaration//GEN-END:variables

@@ -66,6 +66,7 @@ public class ManageLabCentersJPanel extends javax.swing.JPanel {
         jButton2 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(255, 255, 255));
+        setPreferredSize(new java.awt.Dimension(1500, 900));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         labTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -86,7 +87,7 @@ public class ManageLabCentersJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(labTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 730, 200));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 90, 730, 200));
 
         btnAdd.setBackground(new java.awt.Color(0, 102, 102));
         btnAdd.setForeground(new java.awt.Color(255, 255, 255));
@@ -96,7 +97,7 @@ public class ManageLabCentersJPanel extends javax.swing.JPanel {
                 btnAddActionPerformed(evt);
             }
         });
-        add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(221, 448, 110, 30));
+        add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 330, 110, 30));
 
         btnView.setBackground(new java.awt.Color(0, 102, 102));
         btnView.setForeground(new java.awt.Color(255, 255, 255));
@@ -106,15 +107,17 @@ public class ManageLabCentersJPanel extends javax.swing.JPanel {
                 btnViewActionPerformed(evt);
             }
         });
-        add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(412, 448, 100, 30));
+        add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 330, 100, 30));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Images/icons8-back-50.png"))); // NOI18N
+        jButton1.setBackground(new java.awt.Color(0, 102, 102));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Back");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 100, 30));
 
         jButton2.setBackground(new java.awt.Color(0, 102, 102));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
@@ -124,7 +127,7 @@ public class ManageLabCentersJPanel extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 450, 90, 30));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 330, 90, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed

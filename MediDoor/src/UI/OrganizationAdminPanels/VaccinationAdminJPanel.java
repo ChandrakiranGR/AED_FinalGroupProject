@@ -93,9 +93,10 @@ public class VaccinationAdminJPanel extends javax.swing.JPanel {
 
         jTabbedPane1.setBackground(new java.awt.Color(253, 252, 249));
         jTabbedPane1.setMinimumSize(new java.awt.Dimension(1500, 1000));
-        jTabbedPane1.setPreferredSize(new java.awt.Dimension(1500, 1000));
+        jTabbedPane1.setPreferredSize(new java.awt.Dimension(1500, 900));
 
         jPanel1.setBackground(new java.awt.Color(253, 252, 249));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1500, 900));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         ordeTable.setModel(new javax.swing.table.DefaultTableModel(

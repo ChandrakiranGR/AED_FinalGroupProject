@@ -72,6 +72,7 @@ public class PharmacyProductJPanel extends javax.swing.JPanel {
         jButton3 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(253, 252, 249));
+        setPreferredSize(new java.awt.Dimension(1500, 900));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         prodTable.setModel(new javax.swing.table.DefaultTableModel(

@@ -75,6 +75,7 @@ public class LabAssistantJPanel extends javax.swing.JPanel {
         productsJTable = new javax.swing.JTable();
 
         setBackground(new java.awt.Color(255, 255, 255));
+        setPreferredSize(new java.awt.Dimension(1500, 900));
 
         btnProcess.setBackground(new java.awt.Color(0, 102, 102));
         btnProcess.setForeground(new java.awt.Color(255, 255, 255));
@@ -152,9 +153,11 @@ public class LabAssistantJPanel extends javax.swing.JPanel {
                 .addGap(87, 87, 87)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createSequentialGroup()
+                        .addGap(46, 46, 46)
                         .addComponent(btnItems)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(btnProcess))
+                        .addComponent(btnProcess)
+                        .addGap(69, 69, 69))
                     .addComponent(jScrollPane2)
                     .addComponent(jScrollPane3))
                 .addContainerGap(259, Short.MAX_VALUE))

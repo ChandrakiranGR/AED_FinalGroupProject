@@ -83,6 +83,7 @@ public class PharmacyAdminJPanel extends javax.swing.JPanel {
         jButton5 = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
 
+        setPreferredSize(new java.awt.Dimension(1500, 900));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jSplitPane1.setDividerSize(1);
@@ -91,6 +92,8 @@ public class PharmacyAdminJPanel extends javax.swing.JPanel {
         jPanel1.setBackground(new java.awt.Color(253, 252, 249));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jButton3.setBackground(new java.awt.Color(0, 102, 102));
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setText("Refresh");
         jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(690, 420, -1, -1));
 
@@ -168,7 +171,7 @@ public class PharmacyAdminJPanel extends javax.swing.JPanel {
                 jButton4ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 190, 60));
+        jPanel2.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 340, 190, 50));
 
         jButton5.setBackground(new java.awt.Color(0, 102, 102));
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
@@ -178,7 +181,7 @@ public class PharmacyAdminJPanel extends javax.swing.JPanel {
                 jButton5ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 190, 60));
+        jPanel2.add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 220, 190, 50));
 
         jButton6.setBackground(new java.awt.Color(0, 102, 102));
         jButton6.setForeground(new java.awt.Color(255, 255, 255));
@@ -188,7 +191,7 @@ public class PharmacyAdminJPanel extends javax.swing.JPanel {
                 jButton6ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 190, 60));
+        jPanel2.add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 190, 50));
 
         jSplitPane1.setLeftComponent(jPanel2);
 

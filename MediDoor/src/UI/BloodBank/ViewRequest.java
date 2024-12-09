@@ -67,6 +67,8 @@ public class ViewRequest extends javax.swing.JPanel {
 
         setLayout(new java.awt.CardLayout());
 
+        jPanel1.setPreferredSize(new java.awt.Dimension(1500, 900));
+
         tblbloodRequest.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null},
@@ -80,6 +82,8 @@ public class ViewRequest extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(tblbloodRequest);
 
+        btnAccept.setBackground(new java.awt.Color(0, 102, 102));
+        btnAccept.setForeground(new java.awt.Color(255, 255, 255));
         btnAccept.setText("Accept");
         btnAccept.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -87,6 +91,8 @@ public class ViewRequest extends javax.swing.JPanel {
             }
         });
 
+        btnReject.setBackground(new java.awt.Color(0, 102, 102));
+        btnReject.setForeground(new java.awt.Color(255, 255, 255));
         btnReject.setText("Reject");
         btnReject.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,7 +100,9 @@ public class ViewRequest extends javax.swing.JPanel {
             }
         });
 
-        jButton1.setText("<<<Back");
+        jButton1.setBackground(new java.awt.Color(0, 102, 102));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Back");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -117,7 +125,7 @@ public class ViewRequest extends javax.swing.JPanel {
                         .addComponent(btnAccept)
                         .addGap(121, 121, 121)
                         .addComponent(btnReject)))
-                .addContainerGap(206, Short.MAX_VALUE))
+                .addContainerGap(218, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)

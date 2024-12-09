@@ -47,6 +47,7 @@ public class PrescriptionHistoryJPanel extends javax.swing.JPanel {
         jTable1 = new javax.swing.JTable();
 
         setBackground(new java.awt.Color(253, 252, 249));
+        setPreferredSize(new java.awt.Dimension(1500, 900));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
@@ -74,7 +75,7 @@ public class PrescriptionHistoryJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(jTable1);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 160, 791, 349));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, 791, 349));
     }// </editor-fold>//GEN-END:initComponents
 
     public void populateOrders() {

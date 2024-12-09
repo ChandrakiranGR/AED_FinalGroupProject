@@ -127,7 +127,7 @@ public class ManagePharmaOrdersJPanel extends javax.swing.JPanel {
         orderscmb = new javax.swing.JComboBox<>();
 
         setBackground(new java.awt.Color(253, 252, 249));
-        setPreferredSize(new java.awt.Dimension(1500, 1000));
+        setPreferredSize(new java.awt.Dimension(1500, 900));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         pharmaOrderTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -166,12 +166,12 @@ public class ManagePharmaOrdersJPanel extends javax.swing.JPanel {
                 deliverycmbActionPerformed(evt);
             }
         });
-        add(deliverycmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 670, 148, -1));
+        add(deliverycmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 440, 148, -1));
 
-        jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
+        jLabel1.setFont(new java.awt.Font("Helvetica Neue", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 102, 102));
         jLabel1.setText("Assign Delivery agent");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 670, -1, 20));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 440, -1, 20));
 
         assignbtn.setBackground(new java.awt.Color(0, 102, 102));
         assignbtn.setForeground(new java.awt.Color(255, 255, 255));
@@ -181,7 +181,7 @@ public class ManagePharmaOrdersJPanel extends javax.swing.JPanel {
                 assignbtnActionPerformed(evt);
             }
         });
-        add(assignbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 700, 105, -1));
+        add(assignbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 490, 105, -1));
 
         btnshoworders.setBackground(new java.awt.Color(0, 102, 102));
         btnshoworders.setForeground(new java.awt.Color(255, 255, 255));

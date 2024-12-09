@@ -71,7 +71,7 @@ public class CustomerCartJPanel extends javax.swing.JPanel {
 
         setBackground(new java.awt.Color(253, 252, 249));
         setMinimumSize(new java.awt.Dimension(1500, 1000));
-        setPreferredSize(new java.awt.Dimension(1500, 1000));
+        setPreferredSize(new java.awt.Dimension(1500, 900));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         cartTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -99,7 +99,7 @@ public class CustomerCartJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(cartTable);
 
-        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 230, 770, 290));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, 770, 290));
 
         jButton2.setBackground(new java.awt.Color(0, 102, 102));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
@@ -109,7 +109,7 @@ public class CustomerCartJPanel extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 560, -1, -1));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 360, -1, -1));
 
         jButton3.setBackground(new java.awt.Color(0, 102, 102));
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
@@ -119,15 +119,17 @@ public class CustomerCartJPanel extends javax.swing.JPanel {
                 jButton3ActionPerformed(evt);
             }
         });
-        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 560, 100, -1));
+        add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 360, 100, -1));
 
+        jButton1.setBackground(new java.awt.Color(0, 102, 102));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("REFRESH");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 560, -1, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 360, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed

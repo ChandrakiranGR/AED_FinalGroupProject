@@ -62,6 +62,7 @@ public class ManageCustomersJPanel extends javax.swing.JPanel {
         jButton1 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(253, 252, 249));
+        setPreferredSize(new java.awt.Dimension(1500, 900));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         customerJTable.setModel(new javax.swing.table.DefaultTableModel(

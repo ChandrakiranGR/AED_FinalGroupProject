@@ -70,6 +70,7 @@ public class ManageEnterpriseAdminsJPanel extends javax.swing.JPanel {
         comboNetwork = new javax.swing.JComboBox();
 
         setBackground(new java.awt.Color(253, 252, 249));
+        setPreferredSize(new java.awt.Dimension(1500, 900));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setText("Network");

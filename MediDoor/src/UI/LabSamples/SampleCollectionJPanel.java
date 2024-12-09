@@ -157,7 +157,7 @@ public class SampleCollectionJPanel extends javax.swing.JPanel {
                         .addGap(26, 26, 26)
                         .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 582, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(329, 329, 329)
+                        .addGap(243, 243, 243)
                         .addComponent(btnDelivery)))
                 .addContainerGap(192, Short.MAX_VALUE))
         );
@@ -166,9 +166,9 @@ public class SampleCollectionJPanel extends javax.swing.JPanel {
             .addGroup(layout.createSequentialGroup()
                 .addGap(113, 113, 113)
                 .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 225, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(118, 118, 118)
+                .addGap(34, 34, 34)
                 .addComponent(btnDelivery, javax.swing.GroupLayout.PREFERRED_SIZE, 35, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 109, Short.MAX_VALUE))
+                .addGap(0, 193, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 

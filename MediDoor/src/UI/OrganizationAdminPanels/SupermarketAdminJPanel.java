@@ -79,6 +79,7 @@ public class SupermarketAdminJPanel extends javax.swing.JPanel {
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTabbedPane1.setBackground(new java.awt.Color(253, 252, 249));
+        jTabbedPane1.setPreferredSize(new java.awt.Dimension(1500, 900));
         jTabbedPane1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jTabbedPane1MouseClicked(evt);
