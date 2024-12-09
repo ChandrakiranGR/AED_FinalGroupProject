@@ -89,7 +89,7 @@ public class ConfigureASystem {
         String password = "cust";
 
         CustomerDirectory cdri = n.getCustomerDirectory();
-        Customer myCustomer = cdri.createCustomer(name, "pannaga3009@gmail.com", username, password, 90014, "", "addd", 1234567890);
+        Customer myCustomer = cdri.createCustomer(name, "chandrakiran.gr25@gmail.com", username, password, 90014, "", "addd", 1234567890);
 
         Employee enterpriseEmployeeAdmin = system.getEmployeeDirectory().createEmployee("enterpriseadmin");
         UserAccount ua2 = system.getUserAccountDirectory().createEnterpriseUser("enterpriseadmin", "enterpriseadmin", enterpriseEmployeeAdmin, new EnterpriseAdminRole());

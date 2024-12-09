@@ -333,10 +333,16 @@ public class VaccinationAdminJPanel extends javax.swing.JPanel {
         int row = source.rowAtPoint(evt.getPoint());
         int column = source.columnAtPoint(evt.getPoint());
 
-        this.orderid = Integer.valueOf((Integer) source.getModel().getValueAt(row, column));
-        fetchOrderObject();
-        populateItems();
-        populateOrders();
+//        this.orderid = Integer.valueOf((Integer) source.getModel().getValueAt(row, column));
+//        fetchOrderObject();
+//        populateItems();
+//        populateOrders();
+try {
+        this.orderid = (Integer) source.getModel().getValueAt(row, 0); // Column 0 for Order ID
+        fetchOrderObject(); // Fetch the full order object
+    } catch (Exception e) {
+        System.out.println("Error retrieving order ID: " + e.getMessage());
+    }
     }//GEN-LAST:event_ordeTableMouseClicked
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed

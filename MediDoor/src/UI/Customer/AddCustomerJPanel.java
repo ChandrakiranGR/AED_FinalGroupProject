@@ -248,6 +248,7 @@ public class AddCustomerJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Email Address must be in format of username@email.com");
             return;
         }
+       // comboLoc = new JComboBox();
 
         for (Network n : business.getNetworks()) {
             if (n.getNetworkName().equals(comboLoc.getSelectedItem().toString())) {

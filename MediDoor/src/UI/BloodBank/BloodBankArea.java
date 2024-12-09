@@ -149,7 +149,7 @@ public class BloodBankArea extends javax.swing.JPanel {
     // Switch to the ViewRequest panel
     CardLayout layout = (CardLayout) userProcessContainer.getLayout();
     layout.show(userProcessContainer, "manageRequest");
-        
+        System.out.println("Manage Request Panel");
     }//GEN-LAST:event_btnMngrequestActionPerformed
 
 

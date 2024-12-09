@@ -91,7 +91,7 @@ public class ManageEnterpriseAdminsJPanel extends javax.swing.JPanel {
                 {null, null, null, null}
             },
             new String [] {
-                "Network", "Enterprise Name", "Username", "Password"
+                "Enterprise Name", "Network", "Username", "Password"
             }
         ) {
             boolean[] canEdit = new boolean [] {
