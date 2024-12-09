@@ -1,6 +1,7 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package UI.OrganizationAdminPanels;
 
@@ -88,6 +89,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
 
         populateNetworks();
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -141,6 +143,8 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         fieldSignature = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
 
+        setBackground(new java.awt.Color(253, 252, 249));
+
         jTabbedPane1.setBackground(new java.awt.Color(253, 252, 249));
 
         jPanel1.setBackground(new java.awt.Color(253, 252, 249));
@@ -193,13 +197,13 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
 
         jButton2.setBackground(new java.awt.Color(0, 102, 102));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("APPROVE");
+        jButton2.setText("Approve");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 610, -1, -1));
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 610, 90, 30));
 
         orderComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { }));
         orderComboBox.addActionListener(new java.awt.event.ActionListener() {
@@ -210,7 +214,8 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         jPanel1.add(orderComboBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 40, 175, -1));
 
         jButton6.setBackground(new java.awt.Color(0, 102, 102));
-        jButton6.setText("GO");
+        jButton6.setForeground(new java.awt.Color(255, 255, 255));
+        jButton6.setText("Go");
         jButton6.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton6ActionPerformed(evt);
@@ -232,13 +237,13 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
 
         jButton7.setBackground(new java.awt.Color(0, 102, 102));
         jButton7.setForeground(new java.awt.Color(255, 255, 255));
-        jButton7.setText("REJECT");
+        jButton7.setText("Reject");
         jButton7.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton7ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 610, -1, -1));
+        jPanel1.add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 610, 100, 30));
 
         jLabel14.setText("ORDER STATUS :");
         jPanel1.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 370, -1, 10));
@@ -246,7 +251,9 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
 
         jTabbedPane1.addTab("MY REQUESTS", jPanel1);
 
-        jPanel2.setBackground(new java.awt.Color(253, 252, 249));
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setForeground(new java.awt.Color(0, 102, 102));
+        jPanel2.setAutoscrolls(true);
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setBorder(javax.swing.BorderFactory.createEtchedBorder());
@@ -256,13 +263,14 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         jPanel2.add(fieldNewCheckBox, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 580, -1, -1));
 
         btnCreateACustomerPresc.setBackground(new java.awt.Color(0, 102, 102));
-        btnCreateACustomerPresc.setText("CREATE ");
+        btnCreateACustomerPresc.setForeground(new java.awt.Color(255, 255, 255));
+        btnCreateACustomerPresc.setText("Create");
         btnCreateACustomerPresc.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnCreateACustomerPrescActionPerformed(evt);
             }
         });
-        jPanel2.add(btnCreateACustomerPresc, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 610, -1, -1));
+        jPanel2.add(btnCreateACustomerPresc, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 610, 100, 30));
 
         jTextField1.setText("Search Customer");
         jTextField1.addFocusListener(new java.awt.event.FocusAdapter() {
@@ -273,7 +281,9 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         jPanel2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 50, 510, -1));
 
         searchACustomerBtn.setBackground(new java.awt.Color(0, 102, 102));
-        searchACustomerBtn.setText("GO");
+        searchACustomerBtn.setForeground(new java.awt.Color(255, 255, 255));
+        searchACustomerBtn.setText("Go");
+        searchACustomerBtn.setAutoscrolls(true);
         searchACustomerBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 searchACustomerBtnActionPerformed(evt);
@@ -347,7 +357,9 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 390, -1, -1));
 
         uploadFileBtn.setBackground(new java.awt.Color(0, 102, 102));
-        uploadFileBtn.setText("UPLOAD PRESCRIPTION");
+        uploadFileBtn.setForeground(new java.awt.Color(255, 255, 255));
+        uploadFileBtn.setText("Upload Prescription");
+        uploadFileBtn.setAutoscrolls(true);
         uploadFileBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 uploadFileBtnActionPerformed(evt);
@@ -380,31 +392,183 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 1565, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jTabbedPane1)
+            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 718, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void fieldNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldNameActionPerformed
         // TODO add your handling code here:
-        if (this.currentRequest != null && fieldSign.getText().trim().length() > 0) {
-            this.currentRequest.setComments(fieldComment.getText());
-            this.currentRequest.setSignature(fieldSign.getText());
-            this.currentOrder.setStatus("PRESCRIPTION APPROVED");
-            this.currentRequest.setStatus("PRESCRIPTION APPROVED");
 
-            JOptionPane.showMessageDialog(null, "Your request is closed!");
-            fieldName.setEnabled(true);
-            fieldEmail.setEnabled(true);
-            fieldPhone.setEnabled(true);
-            fieldAddress.setEnabled(true);
-        } else {
-            JOptionPane.showMessageDialog(null, "Please provide a signature for the request.");
+    }//GEN-LAST:event_fieldNameActionPerformed
+
+    private void uploadFileBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uploadFileBtnActionPerformed
+        // TODO add your handling code here:
+
+        JFileChooser chooser = new JFileChooser();
+        chooser.showOpenDialog(null);
+        FileNameExtensionFilter filter = new FileNameExtensionFilter("png", "jpg", "jpeg", "pdf");
+        chooser.addChoosableFileFilter(filter);
+        this.chosenFile = chooser.getSelectedFile();
+
+        try {
+            ImageIcon ii = new ImageIcon(this.chosenFile.getAbsolutePath());
+            jLabel4.setIcon(ii);
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, "Looks like you missed an attachment!");
         }
-    }//GEN-LAST:event_jButton2ActionPerformed
+
+
+    }//GEN-LAST:event_uploadFileBtnActionPerformed
+
+    private void btnCreateACustomerPrescActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateACustomerPrescActionPerformed
+        // TODO add your handling code here:
+
+        try {
+            if (chosenFile == null) {
+                JOptionPane.showMessageDialog(null, "PRESCRIPTION REQUIRED!");
+            } else {
+                if (fieldSignature.getText().trim().length() > 0) {
+//        CHECK IF ITS A NEW CUSTOMER
+                    if (fieldNewCheckBox.isSelected() == true) {
+                        Network selectedNetwork = (Network) networkCombo.getSelectedItem();
+                        System.out.println("SELECTED NETWORK ------------ " + selectedNetwork + selectedNetwork.getNetworkName());
+                        Boolean b = checkIfCustomerExists();
+
+                        if (!b) {
+                            System.out.println("CAME INTO CREATING NEW CUSTOMER");
+                            int min = 1;
+                            int max = 100;
+
+                            //Generate random int value from 50 to 100
+                            System.out.println("Random value in int from " + min + " to " + max + ":");
+                            int random_int = (int) Math.floor(Math.random() * (max - min + 1) + min);
+                            System.out.println(random_int);
+
+                            String username = "newcustomer" + String.valueOf(random_int);
+                            String password = "newcustomer" + String.valueOf(random_int);
+                            Customer newCustoemr = selectedNetwork.getCustomerDirectory().createCustomer(fieldName.getText(), fieldEmail.getText(), username, password, (int) zipcodeCombo.getSelectedItem(), selectedNetwork.getNetworkName(), fieldAddress.getText(), Integer.valueOf(fieldPhone.getText()));
+
+//           Create order for customer in pharmacy admin panel
+//           Prescription work request is at the system level
+// get the pharmacist in this  network's pharmacy organization
+                            Enterprise e = selectedNetwork.getEnterpriseDirectory().getEnterprise("Pharmaceutical");
+                            this.customerOrganization = e.getOrganizationDirectory().getOrganizationByName("Pharmacy");
+                            this.toPharmacist = this.customerOrganization.getUserAccountDirectory().getUserAccountList().get(0);
+                            try {
+
+                                System.out.println("CAME TO DOCTOR PANEL  ---------- " + this.toPharmacist.getUsername());
+                                PrescriptionUploadWorkRequest pq = new PrescriptionUploadWorkRequest();
+                                pq.setSender(user);
+        
+                                pq.setCustomer(newCustoemr);
+                                pq.setReceiver(this.toPharmacist);
+                                pq.setPresecription(chosenFile);
+                                pq.setSignature(fieldSignature.getText());
+                                pq.setComments(fieldNotes.getText());
+                                pq.setStatus("INCOMING PRESCRIPTION");
+                                pq.generateRequestId();
+                                this.workRequest.add(pq);
+                                // MAILING SERVICE
+                                JOptionPane.showMessageDialog(null, "PRESCRIPTION SENT TO " + this.toPharmacist.getEmployee().getName());
+                                int dialogueb = JOptionPane.INFORMATION_MESSAGE;
+                                System.out.println("" + dialogueb);
+                                int dialoguer = JOptionPane.showConfirmDialog(this, "SENDING EMAIL\n"
+                                        + "If yes please wait", "Mailing .........", dialogueb);
+                                if (dialoguer == 0) {
+                                    String recipients = fieldEmail.getText();
+                                    System.out.println("Entering assign for email ==========");
+                                    String subjects = "New Credentials";
+                                    String messaget = "Hello" + fieldName.getText() + " ! Welcome to Door Delivery. Your doctor has a prescription prepared for you. Please login with the below credentials. \n Username: " + username + "\nPassword " + password;
+
+                                    System.out.println("Start");
+                                    final String usernamesender = "pannagaveeramohan@gmail.com";
+                                    final String passwordsender = "9686300037";
+
+                                    Properties p = new Properties();
+                                    p.put("mail.smtp.auth", "true");
+                                    p.put("mail.smtp.host", "smtp.gmail.com");
+                                    p.put("mail.smtp.port", "465");
+                                    p.put("mail.transport.protocol", "smtp");
+                                    p.put("mail.smtp.starttls.enable", "true");
+                                    p.put("mail.smtp.starttls.enable", "true");
+                                    p.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+
+                                    Session session = Session.getInstance(p,
+                                            new javax.mail.Authenticator() {
+                                        protected PasswordAuthentication getPasswordAuthentication() {
+                                            return new PasswordAuthentication(usernamesender, passwordsender);
+                                        }
+                                    });
+
+                                    try {
+
+                                        Transport transport = session.getTransport();
+                                        Message message = new MimeMessage(session);
+                                        message.setFrom(new InternetAddress("pannagaveeramohan@gmail.com"));//formBean.getString("fromEmail")
+
+                                        final Address[] recipientAddresses = InternetAddress.parse(recipients);
+                                        message.setRecipients(Message.RecipientType.TO, recipientAddresses);
+                                        message.setSubject(subjects);//formBean.getString(
+                                        message.setText(messaget);
+                                        transport.connect();
+                                        transport.send(message, recipientAddresses);//(message);
+
+                                        System.out.println("Done");
+
+                                    } catch (MessagingException ex) {
+                                        System.out.println("e=" + ex);
+                                        ex.printStackTrace();
+                                        throw new RuntimeException(ex);
+
+                                    }
+                                    JOptionPane.showMessageDialog(null, "Email sent to customer successful");
+                                } else {
+                                    JOptionPane.showMessageDialog(null, "Email sending cancelled");
+                                }
+
+                            } catch (Exception err) {
+                                System.out.println("error --- " + err);
+                                JOptionPane.showMessageDialog(null, "Looks like there is no pharmacy admin for the organization!");
+                            }
+
+                        } else {
+                            JOptionPane.showMessageDialog(null, "CUSTOMER EXISTS.");
+                        }
+
+//
+                    } else {
+
+                        System.out.println(this.toPharmacist + " 888888888888888 PHARMACIST OBJECT");
+                        PrescriptionUploadWorkRequest pq = new PrescriptionUploadWorkRequest();
+                        pq.setSender(user);
+                        pq.setCustomer(this.currentCustomer);
+                        pq.setReceiver(this.toPharmacist);
+                        pq.setPresecription(chosenFile);
+                        pq.setSignature(fieldSignature.getText());
+                        pq.setComments(fieldNotes.getText());
+                        pq.setStatus("INCOMING PRESCRIPTION");
+                        pq.generateRequestId();
+                        this.workRequest.add(pq);
+
+                        JOptionPane.showMessageDialog(null, "PRESCRIPTION SENT TO " + this.toPharmacist.getEmployee().getName());
+                    }
+                } else {
+                    JOptionPane.showMessageDialog(null, "Signature required.");
+                }
+            }
+        } catch (Exception e) {
+            System.out.println("EXCEPTION --------------- " + e);
+        }
+        fieldName.setEnabled(true);
+        fieldEmail.setEnabled(true);
+        fieldPhone.setEnabled(true);
+        fieldAddress.setEnabled(true);
+
+    }//GEN-LAST:event_btnCreateACustomerPrescActionPerformed
 
     private void orderComboBoxActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_orderComboBoxActionPerformed
         // TODO add your handling code here:
@@ -412,12 +576,12 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
 
     private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
         // TODO add your handling code here:
-        //        GET ORDER BUTTON
+//        GET ORDER BUTTON
         try {
             for (PrescriptionUploadWorkRequest work : this.workRequest) {
                 if (work.getOrderId() == Integer.valueOf((int) orderComboBox.getSelectedItem())) {
-                    //            once order is found in the request
-                    //      Get customer info
+//            once order is found in the request
+//      Get customer info
                     this.currentRequest = work;
                     labelCustomer.setText(work.getCustomer().getName());
                     Order o = work.getCustomer().findOrderById(work.getOrderId());
@@ -447,18 +611,27 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         } catch (Exception e) {
 
         }
+
     }//GEN-LAST:event_jButton6ActionPerformed
 
-    private void fieldSignFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_fieldSignFocusLost
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        if (fieldSign.getText().trim().length() != 0 && validate.validateName(fieldSign.getText()) == false) {
-            fieldSign.setBorder(new JTextField().getBorder());
-        } else {
-            Border border = BorderFactory.createLineBorder(Color.red);
+        if (this.currentRequest != null && fieldSign.getText().trim().length() > 0) {
+            this.currentRequest.setComments(fieldComment.getText());
+            this.currentRequest.setSignature(fieldSign.getText());
+            this.currentOrder.setStatus("PRESCRIPTION APPROVED");
+            this.currentRequest.setStatus("PRESCRIPTION APPROVED");
 
-            fieldSign.setBorder(border);
+            JOptionPane.showMessageDialog(null, "Your request is closed!");
+            fieldName.setEnabled(true);
+            fieldEmail.setEnabled(true);
+            fieldPhone.setEnabled(true);
+            fieldAddress.setEnabled(true);
+        } else {
+            JOptionPane.showMessageDialog(null, "Please provide a signature for the request.");
         }
-    }//GEN-LAST:event_fieldSignFocusLost
+
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton7ActionPerformed
         // TODO add your handling code here:
@@ -478,151 +651,6 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_jButton7ActionPerformed
 
-    private void btnCreateACustomerPrescActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateACustomerPrescActionPerformed
-        // TODO add your handling code here:
-
-        try {
-            if (chosenFile == null) {
-                JOptionPane.showMessageDialog(null, "PRESCRIPTION REQUIRED!");
-            } else {
-                if (fieldSignature.getText().trim().length() > 0) {
-                    //        CHECK IF ITS A NEW CUSTOMER
-                    if (fieldNewCheckBox.isSelected() == true) {
-                        Network selectedNetwork = (Network) networkCombo.getSelectedItem();
-                        System.out.println("SELECTED NETWORK ------------ " + selectedNetwork + selectedNetwork.getNetworkName());
-                        Boolean b = checkIfCustomerExists();
-
-                        if (!b) {
-                            System.out.println("CAME INTO CREATING NEW CUSTOMER");
-                            int min = 1;
-                            int max = 100;
-
-                            //Generate random int value from 50 to 100
-                            System.out.println("Random value in int from " + min + " to " + max + ":");
-                            int random_int = (int) Math.floor(Math.random() * (max - min + 1) + min);
-                            System.out.println(random_int);
-
-                            String username = "newcustomer" + String.valueOf(random_int);
-                            String password = "newcustomer" + String.valueOf(random_int);
-                            Customer newCustoemr = selectedNetwork.getCustomerDirectory().createCustomer(fieldName.getText(), fieldEmail.getText(), username, password, (int) zipcodeCombo.getSelectedItem(), selectedNetwork.getNetworkName(), fieldAddress.getText(), Integer.valueOf(fieldPhone.getText()));
-
-                            //           Create order for customer in pharmacy admin panel
-                            //           Prescription work request is at the system level
-                            // get the pharmacist in this  network's pharmacy organization
-                            Enterprise e = selectedNetwork.getEnterpriseDirectory().getEnterprise("Pharmaceutical");
-                            this.customerOrganization = e.getOrganizationDirectory().getOrganizationByName("Pharmacy");
-                            this.toPharmacist = this.customerOrganization.getUserAccountDirectory().getUserAccountList().get(0);
-                            try {
-
-                                System.out.println("CAME TO DOCTOR PANEL  ---------- " + this.toPharmacist.getUsername());
-                                PrescriptionUploadWorkRequest pq = new PrescriptionUploadWorkRequest();
-                                pq.setSender(user);
-
-                                pq.setCustomer(newCustoemr);
-                                pq.setReceiver(this.toPharmacist);
-                                pq.setPresecription(chosenFile);
-                                pq.setSignature(fieldSignature.getText());
-                                pq.setComments(fieldNotes.getText());
-                                pq.setStatus("INCOMING PRESCRIPTION");
-                                pq.generateRequestId();
-                                this.workRequest.add(pq);
-                                // MAILING SERVICE
-                                JOptionPane.showMessageDialog(null, "PRESCRIPTION SENT TO " + this.toPharmacist.getEmployee().getName());
-                                int dialogueb = JOptionPane.INFORMATION_MESSAGE;
-                                System.out.println("" + dialogueb);
-                                int dialoguer = JOptionPane.showConfirmDialog(this, "SENDING EMAIL\n"
-                                    + "If yes please wait", "Mailing .........", dialogueb);
-                                if (dialoguer == 0) {
-                                    String recipients = fieldEmail.getText();
-                                    System.out.println("Entering assign for email ==========");
-                                    String subjects = "New Credentials";
-                                    String messaget = "Hello" + fieldName.getText() + " ! Welcome to Door Delivery. Your doctor has a prescription prepared for you. Please login with the below credentials. \n Username: " + username + "\nPassword " + password;
-
-                                    System.out.println("Start");
-                                    final String usernamesender = "pannagaveeramohan@gmail.com";
-                                    final String passwordsender = "9686300037";
-
-                                    Properties p = new Properties();
-                                    p.put("mail.smtp.auth", "true");
-                                    p.put("mail.smtp.host", "smtp.gmail.com");
-                                    p.put("mail.smtp.port", "465");
-                                    p.put("mail.transport.protocol", "smtp");
-                                    p.put("mail.smtp.starttls.enable", "true");
-                                    p.put("mail.smtp.starttls.enable", "true");
-                                    p.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
-
-                                    Session session = Session.getInstance(p,
-                                        new javax.mail.Authenticator() {
-                                            protected PasswordAuthentication getPasswordAuthentication() {
-                                                return new PasswordAuthentication(usernamesender, passwordsender);
-                                            }
-                                        });
-
-                                        try {
-
-                                            Transport transport = session.getTransport();
-                                            Message message = new MimeMessage(session);
-                                            message.setFrom(new InternetAddress("pannagaveeramohan@gmail.com"));//formBean.getString("fromEmail")
-
-                                            final Address[] recipientAddresses = InternetAddress.parse(recipients);
-                                            message.setRecipients(Message.RecipientType.TO, recipientAddresses);
-                                            message.setSubject(subjects);//formBean.getString(
-                                                message.setText(messaget);
-                                                transport.connect();
-                                                transport.send(message, recipientAddresses);//(message);
-
-                                                System.out.println("Done");
-
-                                            } catch (MessagingException ex) {
-                                                System.out.println("e=" + ex);
-                                                ex.printStackTrace();
-                                                throw new RuntimeException(ex);
-
-                                            }
-                                            JOptionPane.showMessageDialog(null, "Email sent to customer successful");
-                                        } else {
-                                            JOptionPane.showMessageDialog(null, "Email sending cancelled");
-                                        }
-
-                                    } catch (Exception err) {
-                                        System.out.println("error --- " + err);
-                                        JOptionPane.showMessageDialog(null, "Looks like there is no pharmacy admin for the organization!");
-                                    }
-
-                                } else {
-                                    JOptionPane.showMessageDialog(null, "CUSTOMER EXISTS.");
-                                }
-
-                                //
-                            } else {
-
-                                System.out.println(this.toPharmacist + " 888888888888888 PHARMACIST OBJECT");
-                                PrescriptionUploadWorkRequest pq = new PrescriptionUploadWorkRequest();
-                                pq.setSender(user);
-                                pq.setCustomer(this.currentCustomer);
-                                pq.setReceiver(this.toPharmacist);
-                                pq.setPresecription(chosenFile);
-                                pq.setSignature(fieldSignature.getText());
-                                pq.setComments(fieldNotes.getText());
-                                pq.setStatus("INCOMING PRESCRIPTION");
-                                pq.generateRequestId();
-                                this.workRequest.add(pq);
-
-                                JOptionPane.showMessageDialog(null, "PRESCRIPTION SENT TO " + this.toPharmacist.getEmployee().getName());
-                            }
-                        } else {
-                            JOptionPane.showMessageDialog(null, "Signature required.");
-                        }
-                    }
-                } catch (Exception e) {
-                    System.out.println("EXCEPTION --------------- " + e);
-                }
-                fieldName.setEnabled(true);
-                fieldEmail.setEnabled(true);
-                fieldPhone.setEnabled(true);
-                fieldAddress.setEnabled(true);
-    }//GEN-LAST:event_btnCreateACustomerPrescActionPerformed
-
     private void jTextField1FocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTextField1FocusGained
         // TODO add your handling code here:
         jTextField1.setText("");
@@ -636,7 +664,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
 
             Customer customer = new Customer();
 
-            //            CROSS NETWORK REQUEST
+//            CROSS NETWORK REQUEST
             for (Network network : this.ecosystem.getNetworks()) {
                 customer = network.getCustomerDirectory().searchCustomer(jTextField1.getText());
                 System.out.println("NETWORK --- " + network.getNetworkName());
@@ -648,7 +676,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
                     networkCombo.setSelectedItem(network);
                     zipcodeCombo.setSelectedItem(customer.getZipcode());
 
-                    //                    DISABLE FIELDS
+//                    DISABLE FIELDS
                     fieldName.setEnabled(false);
                     fieldEmail.setEnabled(false);
                     fieldPhone.setEnabled(false);
@@ -656,7 +684,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
 
                     this.currentCustomer = customer;
 
-                    //                    Registering the customer's network, pharmacy organization
+//                    Registering the customer's network, pharmacy organization
                     this.customerNetwork = network;
                     this.customerOrganization = network.getEnterpriseDirectory().getEnterprise("Pharmaceutical").getOrganizationDirectory().getOrganizationByName("Pharmacy");
 
@@ -678,7 +706,13 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
 
         }
 
+
     }//GEN-LAST:event_searchACustomerBtnActionPerformed
+
+    private void networkComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_networkComboActionPerformed
+        // TODO add your handling code here:
+        populateZipcodes();
+    }//GEN-LAST:event_networkComboActionPerformed
 
     private void fieldNameFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_fieldNameFocusLost
         // TODO add your handling code here:
@@ -692,15 +726,6 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_fieldNameFocusLost
 
-    private void fieldNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldNameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_fieldNameActionPerformed
-
-    private void networkComboActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_networkComboActionPerformed
-        // TODO add your handling code here:
-        populateZipcodes();
-    }//GEN-LAST:event_networkComboActionPerformed
-
     private void fieldEmailFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_fieldEmailFocusLost
         // TODO add your handling code here:
         if (fieldEmail.getText().trim().length() != 0 && validate.validateEmail(fieldEmail.getText()) == false) {
@@ -710,6 +735,7 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
 
             fieldEmail.setBorder(border);
         }
+
     }//GEN-LAST:event_fieldEmailFocusLost
 
     private void fieldPhoneFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_fieldPhoneFocusLost
@@ -741,28 +767,6 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_fieldAddressFocusLost
 
-    private void fieldAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldAddressActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_fieldAddressActionPerformed
-
-    private void uploadFileBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_uploadFileBtnActionPerformed
-        // TODO add your handling code here:
-
-        JFileChooser chooser = new JFileChooser();
-        chooser.showOpenDialog(null);
-        FileNameExtensionFilter filter = new FileNameExtensionFilter("png", "jpg", "jpeg", "pdf");
-        chooser.addChoosableFileFilter(filter);
-        this.chosenFile = chooser.getSelectedFile();
-
-        try {
-            ImageIcon ii = new ImageIcon(this.chosenFile.getAbsolutePath());
-            jLabel4.setIcon(ii);
-        } catch (Exception e) {
-            JOptionPane.showMessageDialog(null, "Looks like you missed an attachment!");
-        }
-
-    }//GEN-LAST:event_uploadFileBtnActionPerformed
-
     private void fieldSignatureFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_fieldSignatureFocusLost
         // TODO add your handling code here:
         if (fieldSignature.getText().trim().length() != 0 && validate.validateName(fieldSignature.getText()) == false) {
@@ -773,7 +777,23 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
             fieldSignature.setBorder(border);
         }
     }//GEN-LAST:event_fieldSignatureFocusLost
-public void populateZipcodes() {
+
+    private void fieldSignFocusLost(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_fieldSignFocusLost
+        // TODO add your handling code here:
+        if (fieldSign.getText().trim().length() != 0 && validate.validateName(fieldSign.getText()) == false) {
+            fieldSign.setBorder(new JTextField().getBorder());
+        } else {
+            Border border = BorderFactory.createLineBorder(Color.red);
+
+            fieldSign.setBorder(border);
+        }
+    }//GEN-LAST:event_fieldSignFocusLost
+
+    private void fieldAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldAddressActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_fieldAddressActionPerformed
+
+    public void populateZipcodes() {
 
         try {
             zipcodeCombo.removeAllItems();

@@ -8,33 +8,41 @@ import Business.Customer.Customer;
 import Business.DB4OUtil.DB4OUtil;
 import Business.DeliveryAgent.DeliveryAgent;
 import Business.Ecosystem;
+import Business.Enterprise.BloodBank;
 import Business.Enterprise.Enterprise;
 import Business.Network.Network;
 import Business.Organization.Organization;
 import Business.Role.CustomerRole;
 import Business.UserAccount.UserAccount;
+import UI.BloodBank.BloodBankArea;
 import java.awt.CardLayout;
 import java.awt.Dimension;
 import java.awt.Toolkit;
 import java.util.ArrayList;
+import javax.swing.ImageIcon;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+
 
 /**
  *
- * @author antaradeshmukh
+ * @author chandrkiran
  */
 public class MainJFrame extends javax.swing.JFrame {
 
     
-    Ecosystem business;
+      Ecosystem business;
     UserAccount userAccount;
     Customer c;
+    JPanel BloodBankArea;
     private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
     /**
-     * Creates new form MainJFrame
+     * Creates new form MainJFrame1
      */
     public MainJFrame() {
         initComponents();
+        
         this.business = dB4OUtil.retrieveSystem();
         this.setSize(1500, 900);
 //        this.setExtendedState(JFrame.MAXIMIZED_BOTH);
@@ -58,18 +66,16 @@ public class MainJFrame extends javax.swing.JFrame {
         btnLogin = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         container = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
-        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jSplitPane1.setDividerLocation(0);
         jSplitPane1.setDividerSize(1);
@@ -132,10 +138,13 @@ public class MainJFrame extends javax.swing.JFrame {
 
         jLabel2.setText("USERNAME");
         jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 310, 100, 20));
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 190, 770, 550));
         jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Images/icons8-password-50.png"))); // NOI18N
         jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 420, 50, 40));
         jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Images/icons8-user-50.png"))); // NOI18N
         jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 330, -1, -1));
 
         container.setBackground(new java.awt.Color(255, 255, 255));
@@ -143,30 +152,53 @@ public class MainJFrame extends javax.swing.JFrame {
         container.setOpaque(false);
         container.setVerifyInputWhenFocusTarget(false);
         container.setLayout(new java.awt.CardLayout());
+
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/resources/UI Main.png"))); // NOI18N
+        container.add(jLabel3, "card2");
+
         jPanel1.add(container, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1530, 870));
 
         jSplitPane1.setRightComponent(jPanel1);
 
-        getContentPane().add(jSplitPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 140, 1500, 910));
-
-        jPanel2.setBackground(new java.awt.Color(0, 102, 102));
+        jPanel2.setBackground(new java.awt.Color(204, 204, 255));
         jPanel2.setMinimumSize(new java.awt.Dimension(1500, 1000));
         jPanel2.setPreferredSize(new java.awt.Dimension(1500, 900));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/resources/pill.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 20, 150, 90));
+        jPanel2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(1200, 10, 290, 110));
 
-        jLabel5.setFont(new java.awt.Font("Helvetica Neue", 0, 48)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("MediDoor...");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 40, 270, 50));
-
-        getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1500, 900));
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1500, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jSplitPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1050, Short.MAX_VALUE)
+            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(layout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(layout.createSequentialGroup()
+                            .addGap(140, 140, 140)
+                            .addComponent(jSplitPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 910, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGap(0, 0, Short.MAX_VALUE)))
+        );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -198,6 +230,11 @@ public class MainJFrame extends javax.swing.JFrame {
         // Get Password
         char[] passwordCharArray = txtPassword.getPassword();
         String password = String.valueOf(passwordCharArray);
+
+        String Admin1Username = "bloodbank1";
+        String Admin1Password = "bloodbank1";
+        String Admin2Username = "bloodbank2";
+        String Admin2Password = "bloodbank2";
 
         //Step1: Check in the system admin user account directory if you have the user
         this.userAccount = business.getUserAccountDirectory().authenticateUser(userName, password);
@@ -247,6 +284,50 @@ public class MainJFrame extends javax.swing.JFrame {
                                     layout.next(container);
                                     jSplitPane1.setRightComponent(container);
                                     break;
+                                }
+                                if (userAccount == null) {
+                                    // Step 1: Hardcoded Blood Bank Admin Authentication
+                                    if (userName.equals(Admin1Username) && password.equals(Admin1Password)) {
+                                        JOptionPane.showMessageDialog(null, "Blood Bank Admin 1 login successful!");
+
+                                        // Navigate to Blood Bank Area
+                                        jSplitPane1.setLeftComponent(null);
+                                        jSplitPane1.setRightComponent(null);
+                                        container.removeAll();
+                                        container.setVisible(true);
+                                        container.setLayout(new CardLayout());
+                                        CardLayout layout = (CardLayout) container.getLayout();
+                                        container.setSize(1500, 1000);
+
+                                        // Create and add the BloodBankArea panel
+                                        BloodBankArea bloodBankArea = new BloodBankArea(container);
+                                        container.add("BloodBankArea", bloodBankArea);
+
+                                        // Switch to BloodBankArea panel
+                                        layout.next(container);
+                                        jSplitPane1.setRightComponent(container);
+                                        return;
+                                    } else if (userName.equals(Admin2Username) && password.equals(Admin2Password)) {
+                                        JOptionPane.showMessageDialog(null, "Blood Bank Admin 2 login successful!");
+
+                                        // Navigate to Blood Bank Area
+                                        jSplitPane1.setLeftComponent(null);
+                                        jSplitPane1.setRightComponent(null);
+                                        container.removeAll();
+                                        container.setVisible(true);
+                                        container.setLayout(new CardLayout());
+                                        CardLayout layout = (CardLayout) container.getLayout();
+                                        container.setSize(1500, 1000);
+
+                                        // Create and add the BloodBankArea panel
+                                        BloodBankArea bloodBankArea = new BloodBankArea(container);
+                                        container.add("BloodBankArea", bloodBankArea);
+
+                                        // Switch to BloodBankArea panel
+                                        layout.next(container);
+                                        jSplitPane1.setRightComponent(container);
+                                        return;
+                                    }
                                 }
 
                                 if (userAccount == null) {
@@ -341,6 +422,7 @@ public class MainJFrame extends javax.swing.JFrame {
             //logoutJButton1.setEnabled(true);
             txtUsername.setText("");
             txtPassword.setText("");
+
     }//GEN-LAST:event_btnLoginActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
@@ -377,6 +459,7 @@ public class MainJFrame extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(MainJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
+        //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -394,7 +477,6 @@ public class MainJFrame extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;

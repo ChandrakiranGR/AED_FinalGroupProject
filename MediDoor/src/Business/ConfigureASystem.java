@@ -1,6 +1,7 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package Business;
 
@@ -33,19 +34,19 @@ import Business.UserAccount.UserAccount;
 import java.io.FileInputStream;
 import java.util.ArrayList;
 
-
 /**
  *
  * @author antaradeshmukh
  */
 public class ConfigureASystem {
+
     public static Ecosystem configure() {
 
         System.out.println("CAME HERE");
         Ecosystem system = Ecosystem.getInstance();
 
         Employee employee = system.getEmployeeDirectory().createEmployee("sysadmin");
-        
+
         UserAccount ua = system.getUserAccountDirectory().createUserAccount("sysadmin", "sysadmin", employee, new SystemAdminRole());
 
         Network n = system.createNetwork();

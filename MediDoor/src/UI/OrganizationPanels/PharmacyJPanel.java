@@ -1,6 +1,7 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package UI.OrganizationPanels;
 
@@ -87,7 +88,6 @@ public class PharmacyJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         prodTable = new javax.swing.JTable();
         jButton1 = new javax.swing.JButton();
@@ -95,11 +95,10 @@ public class PharmacyJPanel extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         stockList = new javax.swing.JList<>();
         jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
 
-        jPanel1.setBackground(new java.awt.Color(253, 252, 249));
-        jPanel1.setPreferredSize(new java.awt.Dimension(1500, 900));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setBackground(new java.awt.Color(253, 252, 249));
+        setPreferredSize(new java.awt.Dimension(1500, 900));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         prodTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -126,25 +125,25 @@ public class PharmacyJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(prodTable);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 170, 690, 380));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 170, 690, 380));
 
         jButton1.setBackground(new java.awt.Color(0, 102, 102));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("ADD TO CART");
+        jButton1.setText("Add to Cart");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 610, -1, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 610, -1, -1));
 
-        jButton2.setText("REFRESH");
+        jButton2.setText("Refresh");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 610, 100, -1));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 610, 100, -1));
 
         stockList.setBackground(new java.awt.Color(239, 239, 254));
         stockList.setModel(new javax.swing.AbstractListModel<String>() {
@@ -154,40 +153,20 @@ public class PharmacyJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(stockList);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 220, 200, 310));
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(950, 220, 200, 310));
 
-        jLabel2.setFont(new java.awt.Font("Comic Sans MS", 0, 18)); // NOI18N
+        jLabel2.setFont(new java.awt.Font("Helvetica Neue", 0, 18)); // NOI18N
         jLabel2.setText("OUT OF STOCK :(");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(960, 160, -1, 20));
-
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/resources/pharmacy.png"))); // NOI18N
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(900, 100, 510, 640));
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1394, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1394, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 708, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 708, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(970, 180, -1, 20));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        //        Customer adds to cart
+//        Customer adds to cart
 
         int rows = tableModel.getRowCount();
         Cart custoemrcart = this.customer.getCustomerCart();
@@ -199,7 +178,7 @@ public class PharmacyJPanel extends javax.swing.JPanel {
                 if ((Boolean) tableModel.getValueAt(i, 5)) {
 
                     System.out.println(custoemrcart.getCartId() + " :: THIS IS HIS CART ID");
-                    //                    Look for an already existing order in the cart
+//                    Look for an already existing order in the cart
                     if (customerCartItems.size() > 0) {
                         System.out.println("CART IS > 0 ");
                         Boolean found = false;
@@ -242,12 +221,10 @@ public class PharmacyJPanel extends javax.swing.JPanel {
         } catch (Exception e) {
             System.out.println(e + " CART PROBLEM ");
         }
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-public void populateTable() {
+    public void populateTable() {
 //        populate pharmacy products
         tableModel.setRowCount(0);
         prodTable.setRowHeight(50);
@@ -309,9 +286,7 @@ public void populateTable() {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable prodTable;

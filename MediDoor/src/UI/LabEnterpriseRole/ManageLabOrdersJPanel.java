@@ -1,8 +1,10 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package UI.LabEnterpriseRole;
+
 
 import Business.Customer.Customer;
 import Business.Customer.CustomerDirectory;
@@ -37,11 +39,15 @@ import javax.mail.Address;
 
 /**
  *
- * @author chandrkiran
+ * @author chandrakiran
  */
 public class ManageLabOrdersJPanel extends javax.swing.JPanel {
 
-    private JPanel userProcessContainer;
+    /**
+     * Creates new form ManageLabOrdersJPanel
+     */
+
+     private JPanel userProcessContainer;
     private Ecosystem business;
     private CustomerDirectory customerDirectory;
     UserAccount ua;
@@ -58,11 +64,10 @@ public class ManageLabOrdersJPanel extends javax.swing.JPanel {
     Network network;
     ArrayList<DeliveryAgent> del;
     ArrayList<Integer> z;
-    /**
-     * Creates new form ManageLabOrdersJPanel
-     */
-public ManageLabOrdersJPanel(JPanel userProcessContainer, Ecosystem business,Network network,UserAccountDirectory userdir, Enterprise enterprise, Customer customer, Organization organization, UserAccount ua) {
+
+    public ManageLabOrdersJPanel(JPanel userProcessContainer, Ecosystem business,Network network,UserAccountDirectory userdir, Enterprise enterprise, Customer customer, Organization organization, UserAccount ua) {
         initComponents();
+        //initComponents();
         this.userProcessContainer = userProcessContainer;
         this.business = business;
         this.userdir = userdir;
@@ -76,16 +81,28 @@ public ManageLabOrdersJPanel(JPanel userProcessContainer, Ecosystem business,Net
 
         System.out.println("CAME INTO LAB ORDER PANEL");
         dtm = (DefaultTableModel) LabOrderTable.getModel();
+
+//        if (order.getItemsOrdered() != null){
+//
+//            }
+//            else{
+////                this.itemsdir = new ItemsDirectory();
+////                enterprise.setItemsDirectory(itemsdir);
+//            }
+
+
+       // displaycombobox();
+        //populateTable();
+
         populateDp();
+        //Lab Center
+        //Testing Center
         for(Network n : business.getNetworks()){
             this.customerDirectory = n.getCustomerDirectory();
         }
 
 
     }
-
-
-
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -105,12 +122,12 @@ public ManageLabOrdersJPanel(JPanel userProcessContainer, Ecosystem business,Net
         assignbtn = new javax.swing.JButton();
         btnshoworders = new javax.swing.JButton();
         orderscmb = new javax.swing.JComboBox<>();
-        jLabel2 = new javax.swing.JLabel();
+
+        setPreferredSize(new java.awt.Dimension(1500, 1000));
 
         jPanel1.setBackground(new java.awt.Color(253, 252, 249));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        LabOrderTable.setBackground(new java.awt.Color(204, 255, 204));
         LabOrderTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
 
@@ -129,17 +146,17 @@ public ManageLabOrdersJPanel(JPanel userProcessContainer, Ecosystem business,Net
         });
         jScrollPane1.setViewportView(LabOrderTable);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 90, 803, 100));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 803, 100));
 
         btnBack.setBackground(new java.awt.Color(0, 102, 102));
         btnBack.setForeground(new java.awt.Color(255, 255, 255));
-        btnBack.setText("<< Back");
+        btnBack.setText(" Back");
         btnBack.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnBackActionPerformed(evt);
             }
         });
-        jPanel1.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
+        jPanel1.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, 80, 30));
 
         deliverycmb.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -171,17 +188,14 @@ public ManageLabOrdersJPanel(JPanel userProcessContainer, Ecosystem business,Net
                 btnshowordersActionPerformed(evt);
             }
         });
-        jPanel1.add(btnshoworders, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 60, 130, 30));
+        jPanel1.add(btnshoworders, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 70, 130, 30));
 
         orderscmb.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 orderscmbActionPerformed(evt);
             }
         });
-        jPanel1.add(orderscmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 60, 110, -1));
-
-        jLabel2.setText("jLabel2");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 190, 1170, 460));
+        jPanel1.add(orderscmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 70, 110, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -203,12 +217,17 @@ public ManageLabOrdersJPanel(JPanel userProcessContainer, Ecosystem business,Net
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
+
+
     public void populateDp() {
+      //  dtm.setRowCount(0);
+       // int selectrow = pharmaOrderTable.getSelectedRow();
          ArrayList<Customer> customerdir = this.network.getCustomerDirectory().getCustomerList();
          System.out.println("Inside combo box");
 
             for(Customer cust: customerdir){
                     for (Order o : cust.getOrderlist()) {
+                //  Order o : this.customer.getOrderlist()//              populate items
                 if(("ACCEPTED".equalsIgnoreCase(o.getStatus())) || ("REQUEST COLLECTION".equalsIgnoreCase(o.getStatus())) && ((o.getOrganizationname().equals("Lab Center") || o.getOrganizationname().equals("Testing Center"))) ){
                 orderscmb.addItem(String.valueOf(o.getOrderId()));
             }
@@ -216,6 +235,8 @@ public ManageLabOrdersJPanel(JPanel userProcessContainer, Ecosystem business,Net
 
     }
     }
+
+
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
 
@@ -226,6 +247,7 @@ public ManageLabOrdersJPanel(JPanel userProcessContainer, Ecosystem business,Net
 
     private void deliverycmbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deliverycmbActionPerformed
         // TODO add your handling code here:
+
     }//GEN-LAST:event_deliverycmbActionPerformed
 
     private void assignbtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_assignbtnActionPerformed
@@ -239,31 +261,36 @@ public ManageLabOrdersJPanel(JPanel userProcessContainer, Ecosystem business,Net
         boolean emailsend = true;
         System.out.println("Inside table after assigning");
 
-        try{
-            for(Customer cust: customerdir){
-                for (Order o : cust.getOrderlist()) {
-                    if((o.getOrganizationname().equals("Lab Center") || o.getOrganizationname().equals("Testing Center")))
-                    {
-                        ArrayList<OrderItem> oi = o.getItemsOrdered();
-                        ArrayList<String> pr = new ArrayList<>();
-                        for (int i = 0; i < oi.size(); i++) {
+               try{
+               for(Customer cust: customerdir){
+                    for (Order o : cust.getOrderlist()) {
+                        if((o.getOrganizationname().equals("Lab Center") || o.getOrganizationname().equals("Testing Center")))
+                      {
+                    ArrayList<OrderItem> oi = o.getItemsOrdered();
+                    ArrayList<String> pr = new ArrayList<>();
+                //  Order o : this.customer.getOrderlist()//              populate items
+                for (int i = 0; i < oi.size(); i++) {
 
-                            pr.add(oi.get(i).getProductName());
-                        }
+                    pr.add(oi.get(i).getProductName());
+                }
 
-                        if(("ACCEPTED".equalsIgnoreCase(o.getStatus())) || ("REQUEST COLLECTION".equalsIgnoreCase(o.getStatus())) && orderscmb.getSelectedItem().toString().equals(String.valueOf(o.getOrderId()))){
-                            System.out.println(" "+agent);
-                            ArrayList<DeliveryAgent> del = enterprise.getDeliveryAgentsInEnterpiselist();
-                            for(DeliveryAgent d: del){
-                                if(d.getUseraccount().getUsername().equals(agent)){
-                                    d.setActive(false);
-                                    o.setDeliveryAgent(d);
-                                    System.out.println(" "+ o.getDeliveryAgent().getUseraccount().getUsername());
-                                    System.out.println(" "+ d.getActive());
-                                    System.out.println("cmae hre ");
-                                }
-                            }
-                            populateTable();
+                if(("ACCEPTED".equalsIgnoreCase(o.getStatus())) || ("REQUEST COLLECTION".equalsIgnoreCase(o.getStatus())) && orderscmb.getSelectedItem().toString().equals(String.valueOf(o.getOrderId()))){
+                     System.out.println(" "+agent);
+                    ArrayList<DeliveryAgent> del = enterprise.getDeliveryAgentsInEnterpiselist();
+                     for(DeliveryAgent d: del){
+                     if(d.getUseraccount().getUsername().equals(agent)){
+                      d.setActive(false);
+                      o.setDeliveryAgent(d);
+                      System.out.println(" "+ o.getDeliveryAgent().getUseraccount().getUsername());
+                      System.out.println(" "+ d.getActive());
+                    //  o.getDeliveryAgent().getUseraccount().getUsername();
+                      //d.getUseraccount().getUsername();
+
+                    System.out.println("cmae hre ");
+                     }
+                     }
+                    populateTable();
+
 
 
         if(emailsend = true){
@@ -352,7 +379,9 @@ public ManageLabOrdersJPanel(JPanel userProcessContainer, Ecosystem business,Net
                 }
             }
         }
+
     }//GEN-LAST:event_btnshowordersActionPerformed
+
      private void populateTable() {
         System.out.println("Inside populate Table");
         dtm.setRowCount(0);
@@ -390,14 +419,16 @@ public ManageLabOrdersJPanel(JPanel userProcessContainer, Ecosystem business,Net
                  deliverycmb.addItem(dd.getUseraccount().getUsername());
                 }
                 }
-                }
+                }//closing delivery agent assignment
                }
-               }
+               }//closing if statement
             }
      }
 
                System.out.println("Done with populate table");
    }
+
+
     private void orderscmbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_orderscmbActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_orderscmbActionPerformed
@@ -410,9 +441,10 @@ public ManageLabOrdersJPanel(JPanel userProcessContainer, Ecosystem business,Net
     private javax.swing.JButton btnshoworders;
     private javax.swing.JComboBox<String> deliverycmb;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JComboBox<String> orderscmb;
     // End of variables declaration//GEN-END:variables
+
+
 }

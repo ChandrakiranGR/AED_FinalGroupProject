@@ -1,6 +1,7 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package UI.SystemAdmin;
 
@@ -52,7 +53,6 @@ public class ManageCustomersJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         customerJTable = new javax.swing.JTable();
         btnAdd = new javax.swing.JButton();
@@ -61,8 +61,8 @@ public class ManageCustomersJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
 
-        jPanel1.setBackground(new java.awt.Color(253, 252, 249));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setBackground(new java.awt.Color(253, 252, 249));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         customerJTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -82,68 +82,53 @@ public class ManageCustomersJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(customerJTable);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 230, 780, 270));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 180, 780, 270));
 
+        btnAdd.setBackground(new java.awt.Color(0, 102, 102));
+        btnAdd.setForeground(new java.awt.Color(255, 255, 255));
         btnAdd.setText("Add Customer");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddActionPerformed(evt);
             }
         });
-        jPanel1.add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 540, 220, -1));
+        add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 490, 160, 30));
 
-        btnView.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Images/icons8-user-50.png"))); // NOI18N
+        btnView.setBackground(new java.awt.Color(0, 102, 102));
+        btnView.setForeground(new java.awt.Color(255, 255, 255));
         btnView.setText("View Customer");
         btnView.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnViewActionPerformed(evt);
             }
         });
-        jPanel1.add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 540, 230, 80));
+        add(btnView, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 490, 160, 30));
 
+        btnSearch.setBackground(new java.awt.Color(0, 102, 102));
+        btnSearch.setForeground(new java.awt.Color(255, 255, 255));
         btnSearch.setText("Search Customer");
         btnSearch.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnSearchActionPerformed(evt);
             }
         });
-        jPanel1.add(btnSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 550, 200, 70));
+        add(btnSearch, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 490, 170, 30));
 
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Manage Customers");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 120, 770, 70));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, 770, 70));
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Images/icons8-back-50.png"))); // NOI18N
+        jButton1.setBackground(new java.awt.Color(0, 102, 102));
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Back");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 120, -1));
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1000, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1000, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1000, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1000, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, 110, 30));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         // TODO add your handling code here:
-
+        
         AddCustomerJPanel createCustomer = new AddCustomerJPanel(userProcessContainer, business);
         userProcessContainer.add("CreateCustomersJPanel",createCustomer);
         CardLayout layout=(CardLayout)userProcessContainer.getLayout();
@@ -152,29 +137,37 @@ public class ManageCustomersJPanel extends javax.swing.JPanel {
 
     private void btnViewActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewActionPerformed
         // TODO add your handling code here:
-
+        
         int selectedRow = customerJTable.getSelectedRow();
         if(selectedRow < 0) {
             JOptionPane.showMessageDialog(null,"Please Select a row from table first", "Warining", JOptionPane.WARNING_MESSAGE);
             return;
         }
         Customer customer = (Customer)customerJTable.getValueAt(selectedRow,0);
-
+        
         ViewCustomerJPanel modifyCustomer = new ViewCustomerJPanel(userProcessContainer, business, customerDirectory, customer);
         userProcessContainer.add("ModifyCustomersJPanel",modifyCustomer);
         CardLayout layout=(CardLayout)userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-
+        
     }//GEN-LAST:event_btnViewActionPerformed
 
     private void btnSearchActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSearchActionPerformed
         // TODO add your handling code here:
-
+        
         SearchCustomersJPanel createCustomer = new SearchCustomersJPanel(userProcessContainer, business, customerDirectory);
         userProcessContainer.add("SearchCustomersJPanel",createCustomer);
         CardLayout layout=(CardLayout)userProcessContainer.getLayout();
         layout.next(userProcessContainer);
     }//GEN-LAST:event_btnSearchActionPerformed
+
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+        // TODO add your handling code here:
+        
+        userProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
+    }//GEN-LAST:event_btnBackActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -184,9 +177,9 @@ public class ManageCustomersJPanel extends javax.swing.JPanel {
     private javax.swing.JTable customerJTable;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
+
     public void populateTable(){
         
         DefaultTableModel dtm = (DefaultTableModel) customerJTable.getModel();
