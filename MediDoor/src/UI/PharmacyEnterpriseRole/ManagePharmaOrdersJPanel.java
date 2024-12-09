@@ -1,6 +1,8 @@
+
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package UI.PharmacyEnterpriseRole;
 
@@ -76,12 +78,22 @@ public class ManagePharmaOrdersJPanel extends javax.swing.JPanel {
         System.out.println("CAME INTO PHARMA ORDER PANEL");
         dtm = (DefaultTableModel) pharmaOrderTable.getModel();
 
+//        if (order.getItemsOrdered() != null){
+//
+//            }
+//            else{
+////                this.itemsdir = new ItemsDirectory();
+////                enterprise.setItemsDirectory(itemsdir);
+//            }
+        // displaycombobox();
+        //populateTable();
         populateDp();
 
     }
 
     public void populateDp() {
-        
+        //  dtm.setRowCount(0);
+        // int selectrow = pharmaOrderTable.getSelectedRow();
         ArrayList<Customer> customerdir = this.network.getCustomerDirectory().getCustomerList();
         System.out.println("Inside combo box");
 
@@ -95,6 +107,7 @@ public class ManagePharmaOrdersJPanel extends javax.swing.JPanel {
 
         }
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -104,7 +117,6 @@ public class ManagePharmaOrdersJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         pharmaOrderTable = new javax.swing.JTable();
         btnBack = new javax.swing.JButton();
@@ -115,9 +127,9 @@ public class ManagePharmaOrdersJPanel extends javax.swing.JPanel {
         orderscmb = new javax.swing.JComboBox<>();
         jLabel2 = new javax.swing.JLabel();
 
-        jPanel1.setBackground(new java.awt.Color(253, 252, 249));
-        jPanel1.setPreferredSize(new java.awt.Dimension(1500, 1000));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setBackground(new java.awt.Color(253, 252, 249));
+        setPreferredSize(new java.awt.Dimension(1500, 1000));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         pharmaOrderTable.setBackground(new java.awt.Color(204, 255, 204));
         pharmaOrderTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -138,7 +150,7 @@ public class ManagePharmaOrdersJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(pharmaOrderTable);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 90, 740, 110));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 90, 740, 110));
 
         btnBack.setBackground(new java.awt.Color(0, 102, 102));
         btnBack.setForeground(new java.awt.Color(255, 255, 255));
@@ -148,7 +160,7 @@ public class ManagePharmaOrdersJPanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
-        jPanel1.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, -1, -1));
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 60, -1, -1));
 
         deliverycmb.setForeground(new java.awt.Color(0, 102, 102));
         deliverycmb.addActionListener(new java.awt.event.ActionListener() {
@@ -156,12 +168,12 @@ public class ManagePharmaOrdersJPanel extends javax.swing.JPanel {
                 deliverycmbActionPerformed(evt);
             }
         });
-        jPanel1.add(deliverycmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 670, 148, -1));
+        add(deliverycmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 670, 148, -1));
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 14)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 102, 102));
         jLabel1.setText("Assign Delivery agent");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 670, -1, 20));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 670, -1, 20));
 
         assignbtn.setBackground(new java.awt.Color(0, 102, 102));
         assignbtn.setForeground(new java.awt.Color(255, 255, 255));
@@ -171,7 +183,7 @@ public class ManagePharmaOrdersJPanel extends javax.swing.JPanel {
                 assignbtnActionPerformed(evt);
             }
         });
-        jPanel1.add(assignbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 700, 105, -1));
+        add(assignbtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 700, 105, -1));
 
         btnshoworders.setBackground(new java.awt.Color(0, 102, 102));
         btnshoworders.setForeground(new java.awt.Color(255, 255, 255));
@@ -181,7 +193,7 @@ public class ManagePharmaOrdersJPanel extends javax.swing.JPanel {
                 btnshowordersActionPerformed(evt);
             }
         });
-        jPanel1.add(btnshoworders, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 60, 130, 30));
+        add(btnshoworders, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 60, 130, 30));
 
         orderscmb.setForeground(new java.awt.Color(0, 102, 102));
         orderscmb.addActionListener(new java.awt.event.ActionListener() {
@@ -189,29 +201,10 @@ public class ManagePharmaOrdersJPanel extends javax.swing.JPanel {
                 orderscmbActionPerformed(evt);
             }
         });
-        jPanel1.add(orderscmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 60, 120, 30));
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 1120, 460));
+        add(orderscmb, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 60, 120, 30));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1472, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1472, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 984, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 984, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/resources/order_management_gif.gif"))); // NOI18N
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 200, 1120, 460));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
@@ -224,6 +217,7 @@ public class ManagePharmaOrdersJPanel extends javax.swing.JPanel {
 
     private void deliverycmbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deliverycmbActionPerformed
         // TODO add your handling code here:
+
 
     }//GEN-LAST:event_deliverycmbActionPerformed
 
@@ -241,125 +235,129 @@ public class ManagePharmaOrdersJPanel extends javax.swing.JPanel {
         System.out.println("Inside table after assigning");
 
         try{
-            for (Customer cust : customerdir) {
-                for (Order o : cust.getOrderlist()) {
-                    if (("Supermarket".equals(o.getOrganizationname()) || "Pharmacy".equals(o.getOrganizationname()))) {
-                        ArrayList<OrderItem> oi = o.getItemsOrdered();
-                        ArrayList<String> pr = new ArrayList<>();
-                        //  Order o : this.customer.getOrderlist()//              populate items
-                        for (int i = 0; i < oi.size(); i++) {
+        for (Customer cust : customerdir) {
+            for (Order o : cust.getOrderlist()) {
+                if (("Supermarket".equals(o.getOrganizationname()) || "Pharmacy".equals(o.getOrganizationname()))) {
+                    ArrayList<OrderItem> oi = o.getItemsOrdered();
+                    ArrayList<String> pr = new ArrayList<>();
+                    //  Order o : this.customer.getOrderlist()//              populate items
+                    for (int i = 0; i < oi.size(); i++) {
 
-                            pr.add(oi.get(i).getProductName());
+                        pr.add(oi.get(i).getProductName());
+                    }
+
+                    if ("ACCEPTED".equals(o.getStatus()) && orderscmb.getSelectedItem().toString().equals(String.valueOf(o.getOrderId()))) {
+                        System.out.println(" " + agent);
+
+                        for (DeliveryAgent d : del) {
+                            if (d.getUseraccount().getUsername().equals(agent)) {
+                                d.setActive(false);
+                                o.setDeliveryAgent(d);
+                                System.out.println(" " + o.getDeliveryAgent().getUseraccount().getUsername());
+                                System.out.println(" " + d.getActive());
+                                //  o.getDeliveryAgent().getUseraccount().getUsername();
+                                //d.getUseraccount().getUsername();
+
+                                System.out.println("cmae hre ");
+                            }
                         }
+                        populateTable();
 
-                        if ("ACCEPTED".equals(o.getStatus()) && orderscmb.getSelectedItem().toString().equals(String.valueOf(o.getOrderId()))) {
-                            System.out.println(" " + agent);
+                        System.out.println(o.getDeliveryAgent().getUseraccount().getUsername());
 
-                            for (DeliveryAgent d : del) {
-                                if (d.getUseraccount().getUsername().equals(agent)) {
-                                    d.setActive(false);
-                                    o.setDeliveryAgent(d);
-                                    System.out.println(" " + o.getDeliveryAgent().getUseraccount().getUsername());
-                                    System.out.println(" " + d.getActive());
-                                    //  o.getDeliveryAgent().getUseraccount().getUsername();
-                                    //d.getUseraccount().getUsername();
+//
+//                if(o.getDeliveryAgent().getUseraccount().getUsername() == agent){
+//                    //o.getDeliveryAgent().getUseraccount().getUsername()
+//                    //d.getUseraccount().getUsername() == dlvrymn.getUseraccount().getUsername() && d.getUseraccount().getEmployee().getName() == o.getDeliveryAgent().getUseraccount().getEmployee().getName()
+//                     System.out.println(" "+agent);
+//
+//
+//                   emailsend = true;
+//
+//                   break;
+//
+//                }else{
+//                    emailsend = false;
+//                    JOptionPane.showMessageDialog(null, "Delivery agent not available for now");
+////                 o.setDeliveryAgent(dlvrymn);
+////                dlvrymn.setUseraccount(ua);
+////                ua.setUsername(agent);
+//
+//
+// }
+                        if (emailsend = true) {
 
-                                    System.out.println("cmae hre ");
-                                }
-                            }
-                            populateTable();
-
-                            System.out.println(o.getDeliveryAgent().getUseraccount().getUsername());
-
-                            //
-                            //                if(o.getDeliveryAgent().getUseraccount().getUsername() == agent){
-                                //                    //o.getDeliveryAgent().getUseraccount().getUsername()
-                                //                    //d.getUseraccount().getUsername() == dlvrymn.getUseraccount().getUsername() && d.getUseraccount().getEmployee().getName() == o.getDeliveryAgent().getUseraccount().getEmployee().getName()
-                                //                     System.out.println(" "+agent);
-                                //
-                                //
-                                //                   emailsend = true;
-                                //
-                                //                   break;
-                                //
-                                //                }else{
-                                //                    emailsend = false;
-                                //                    JOptionPane.showMessageDialog(null, "Delivery agent not available for now");
-                                ////                 o.setDeliveryAgent(dlvrymn);
-                                ////                dlvrymn.setUseraccount(ua);
-                                ////                ua.setUsername(agent);
-                                //
-                                //
-                                // }
-                            if (emailsend = true) {
-
-                                JOptionPane.showMessageDialog(null, "Delivery agent assigned successful");
-                                int dialogueb = JOptionPane.INFORMATION_MESSAGE;
-                                System.out.println("" + dialogueb);
-                                int dialoguer = JOptionPane.showConfirmDialog(this, "SENDING EMAIL\n"
+                            JOptionPane.showMessageDialog(null, "Delivery agent assigned successful");
+                            int dialogueb = JOptionPane.INFORMATION_MESSAGE;
+                            System.out.println("" + dialogueb);
+                            int dialoguer = JOptionPane.showConfirmDialog(this, "SENDING EMAIL\n"
                                     + "If yes please wait", "DELIVERY AGENT ASSIGNMENT", dialogueb);
-                                if (dialoguer == 0) {
-                                    recipients = cust.getEmail();
-                                    System.out.println("Entering assign for email ==========");
-                                    String subjects = "Delivery";
-                                    String messaget = "Delivered agent assigned successfully";
+                            if (dialoguer == 0) {
+                                recipients = cust.getEmail();
+                                System.out.println("Entering assign for email ==========");
+                                String subjects = "Delivery";
+                                String messaget = "Delivered agent assigned successfully";
 
-                                    System.out.println("Start");
-                                    final String username = "pannagaveeramohan@gmail.com";
-                                    final String password = "9686300037";
+                                System.out.println("Start");
+                                final String username = "pannagaveeramohan@gmail.com";
+                                final String password = "9686300037";
 
-                                    Properties p = new Properties();
-                                    p.put("mail.smtp.auth", "true");
-                                    p.put("mail.smtp.host", "smtp.gmail.com");
-                                    p.put("mail.smtp.port", "465");
-                                    p.put("mail.transport.protocol", "smtp");
-                                    p.put("mail.smtp.starttls.enable", "true");
-                                    p.put("mail.smtp.starttls.enable", "true");
-                                    p.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
+                                Properties p = new Properties();
+                                p.put("mail.smtp.auth", "true");
+                                p.put("mail.smtp.host", "smtp.gmail.com");
+                                p.put("mail.smtp.port", "465");
+                                p.put("mail.transport.protocol", "smtp");
+                                p.put("mail.smtp.starttls.enable", "true");
+                                p.put("mail.smtp.starttls.enable", "true");
+                                p.put("mail.smtp.socketFactory.class", "javax.net.ssl.SSLSocketFactory");
 
-                                    Session session = Session.getInstance(p,
+                                Session session = Session.getInstance(p,
                                         new javax.mail.Authenticator() {
-                                            protected PasswordAuthentication getPasswordAuthentication() {
-                                                return new PasswordAuthentication(username, password);
-                                            }
-                                        });
-
-                                        try {
-
-                                            Transport transport = session.getTransport();
-                                            Message message = new MimeMessage(session);
-                                            message.setFrom(new InternetAddress("pannagaveeramohan@gmail.com"));//formBean.getString("fromEmail")
-
-                                            final Address[] recipientAddresses = InternetAddress.parse(recipients);
-                                            message.setRecipients(Message.RecipientType.TO, recipientAddresses);
-                                            message.setSubject(subjects);//formBean.getString(
-                                                message.setText(messaget);
-                                                transport.connect();
-                                                transport.send(message, recipientAddresses);//(message);
-
-                                                System.out.println("Done");
-
-                                            } catch (MessagingException e) {
-                                                System.out.println("e=" + e);
-                                                e.printStackTrace();
-                                                throw new RuntimeException(e);
-
-                                            }
-
-                                            JOptionPane.showMessageDialog(null, "Email sent to customer successful");
-                                        } else {
-                                            JOptionPane.showMessageDialog(null, "Email sending cancelled");
-                                        }
-
+                                    protected PasswordAuthentication getPasswordAuthentication() {
+                                        return new PasswordAuthentication(username, password);
                                     }
+                                });
+
+                                try {
+
+                                    Transport transport = session.getTransport();
+                                    Message message = new MimeMessage(session);
+                                    message.setFrom(new InternetAddress("pannagaveeramohan@gmail.com"));//formBean.getString("fromEmail")
+
+                                    final Address[] recipientAddresses = InternetAddress.parse(recipients);
+                                    message.setRecipients(Message.RecipientType.TO, recipientAddresses);
+                                    message.setSubject(subjects);//formBean.getString(
+                                    message.setText(messaget);
+                                    transport.connect();
+                                    transport.send(message, recipientAddresses);//(message);
+
+                                    System.out.println("Done");
+
+                                } catch (MessagingException e) {
+                                    System.out.println("e=" + e);
+                                    e.printStackTrace();
+                                    throw new RuntimeException(e);
+
                                 }
+
+                                JOptionPane.showMessageDialog(null, "Email sent to customer successful");
+                            } else {
+                                JOptionPane.showMessageDialog(null, "Email sending cancelled");
                             }
+
                         }
                     }
-                }catch(Exception ex){
-                    System.out.println(" "+ex);
                 }
+            }
+        }
+        }catch(Exception ex){
+            System.out.println(" "+ex);
+        }
     }//GEN-LAST:event_assignbtnActionPerformed
+
+    private void orderscmbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_orderscmbActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_orderscmbActionPerformed
 
     private void btnshowordersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnshowordersActionPerformed
         // TODO add your handling code here:
@@ -375,11 +373,8 @@ public class ManagePharmaOrdersJPanel extends javax.swing.JPanel {
                 }
             }
         }
-    }//GEN-LAST:event_btnshowordersActionPerformed
 
-    private void orderscmbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_orderscmbActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_orderscmbActionPerformed
+    }//GEN-LAST:event_btnshowordersActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -389,12 +384,12 @@ public class ManagePharmaOrdersJPanel extends javax.swing.JPanel {
     private javax.swing.JComboBox<String> deliverycmb;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JComboBox<String> orderscmb;
     private javax.swing.JTable pharmaOrderTable;
     // End of variables declaration//GEN-END:variables
-private void displaycombobox() {
+
+    private void displaycombobox() {
 
 //      d = enterprise.getDeliveryAgentsInEnterpiselist();
 //        for(DeliveryAgent dd : d ){

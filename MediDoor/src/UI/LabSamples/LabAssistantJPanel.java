@@ -1,6 +1,7 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package UI.LabSamples;
 
@@ -18,16 +19,17 @@ import java.io.File;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
+
 /**
  *
- * @author chandrkiran
+ * @author chandrakiran
  */
 public class LabAssistantJPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form LabAssistantJPanel
      */
-        private JPanel userProcessContainer;
+    private JPanel userProcessContainer;
     private Ecosystem business;
     private UserAccount userAccount;
     private Network network;
@@ -55,6 +57,7 @@ public class LabAssistantJPanel extends javax.swing.JPanel {
         System.out.println("Inside lab centre122222");
         populateTable();
     }
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -64,7 +67,6 @@ public class LabAssistantJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
         btnProcess = new javax.swing.JButton();
         btnItems = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
@@ -72,7 +74,7 @@ public class LabAssistantJPanel extends javax.swing.JPanel {
         jScrollPane3 = new javax.swing.JScrollPane();
         productsJTable = new javax.swing.JTable();
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        setBackground(new java.awt.Color(255, 255, 255));
 
         btnProcess.setText("Process");
         btnProcess.addActionListener(new java.awt.event.ActionListener() {
@@ -138,14 +140,14 @@ public class LabAssistantJPanel extends javax.swing.JPanel {
         });
         jScrollPane3.setViewportView(productsJTable);
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
                 .addGap(87, 87, 87)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(layout.createSequentialGroup()
                         .addComponent(btnItems)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(btnProcess))
@@ -153,52 +155,46 @@ public class LabAssistantJPanel extends javax.swing.JPanel {
                     .addComponent(jScrollPane3))
                 .addContainerGap(259, Short.MAX_VALUE))
         );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(layout.createSequentialGroup()
                 .addGap(59, 59, 59)
                 .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnProcess)
                     .addComponent(btnItems))
                 .addGap(18, 18, 18)
                 .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 200, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(88, Short.MAX_VALUE))
         );
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 798, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 594, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnProcessActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProcessActionPerformed
         // TODO add your handling code here:
-
+        /*
+        int selectedRow = workRequestJTable.getSelectedRow();
+        
+        if (selectedRow < 0){
+            return;
+        }
+        
+        //LabTestWorkRequest request = (LabTestWorkRequest)workRequestJTable.getValueAt(selectedRow, 0);
+     
+        request.setStatus("Processing");
+        
+        ProcessWorkRequestJPanel processWorkRequestJPanel = new ProcessWorkRequestJPanel(userProcessContainer, request);
+        userProcessContainer.add("processWorkRequestJPanel", processWorkRequestJPanel);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+*/
         int selectedRow = OrdersJTable.getSelectedRow();
         if (selectedRow < 0) {
             JOptionPane.showMessageDialog(null, "Please Select a row from table first", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
         int orderid = (int) OrdersJTable.getValueAt(selectedRow, 0);
-
+        
         DefaultTableModel model = (DefaultTableModel) OrdersJTable.getModel();
         model.setRowCount(0);
 
@@ -206,36 +202,37 @@ public class LabAssistantJPanel extends javax.swing.JPanel {
         userProcessContainer.add("manageCustomerJPanel",workRequestPanel);
         CardLayout layout=(CardLayout)userProcessContainer.getLayout();
         layout.next(userProcessContainer);
-
+        
     }//GEN-LAST:event_btnProcessActionPerformed
 
     private void btnItemsActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnItemsActionPerformed
         // TODO add your handling code here:
-
+        
         DefaultTableModel model = (DefaultTableModel) productsJTable.getModel();
         model.setRowCount(0);
-
+        
         int selectedRow = OrdersJTable.getSelectedRow();
         if(selectedRow < 0) {
             JOptionPane.showMessageDialog(null,"Please Select a row from table first", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
-
+        
         int orderid = (int) OrdersJTable.getValueAt(selectedRow, 0);
-
+        
         for(Customer c : network.getCustomerDirectory().getCustomerList()){
             for(Order o : c.getOrderlist()){
                 for(OrderItem i : o.getItemsOrdered()){
-
+                    
                     //Object[] ob = new Object[3];
                     model.insertRow(model.getRowCount(), new Object[]{
-                        i.getProductId(),
-                        i.getProductName(),
-                        i.getProductPrice()
-                    });
+                                i.getProductId(),
+                                i.getProductName(),
+                                i.getProductPrice()
+                            });
                 }
             }
-        }
+        }                                       
+
     }//GEN-LAST:event_btnItemsActionPerformed
 
 
@@ -243,11 +240,11 @@ public class LabAssistantJPanel extends javax.swing.JPanel {
     private javax.swing.JTable OrdersJTable;
     private javax.swing.JButton btnItems;
     private javax.swing.JButton btnProcess;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable productsJTable;
     // End of variables declaration//GEN-END:variables
+
     public void populateTable(){
         
         DefaultTableModel model = (DefaultTableModel) OrdersJTable.getModel();
