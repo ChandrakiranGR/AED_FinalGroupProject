@@ -21,7 +21,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Nidhi Raghavendra
+ * @author shivanisugurushetty
  */
 public class SupermarketAdminJPanel extends javax.swing.JPanel {
 

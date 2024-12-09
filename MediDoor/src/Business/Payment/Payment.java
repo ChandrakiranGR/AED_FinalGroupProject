@@ -10,7 +10,7 @@ import java.util.Date;
 
 /**
  *
- * @author Nidhi Raghavendra
+ * @author chandrakiran
  */
 public class Payment {
     private int paymentID;

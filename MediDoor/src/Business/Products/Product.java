@@ -10,7 +10,7 @@ import javax.imageio.ImageIO;
 
 /**
  *
- * @author Nidhi Raghavendra
+ * @author vish
  */
 public class Product {
     String name;

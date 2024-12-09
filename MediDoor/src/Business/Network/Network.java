@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Nidhi Raghavendra
+ * @author chandrakiran
  */
 public class Network {
     private String networkName;

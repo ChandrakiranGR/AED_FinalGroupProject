@@ -39,7 +39,7 @@ import javax.mail.Address;
 
 /**
  *
- * @author pannaga
+ * @author chandrakiran
  */
 public class ManageLabOrdersJPanel extends javax.swing.JPanel {
 
@@ -201,7 +201,7 @@ public class ManageLabOrdersJPanel extends javax.swing.JPanel {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/resources/orders11_trial.png"))); // NOI18N
         jLabel2.setText("jLabel2");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 190, 1170, 460));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 190, 1170, 460));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);

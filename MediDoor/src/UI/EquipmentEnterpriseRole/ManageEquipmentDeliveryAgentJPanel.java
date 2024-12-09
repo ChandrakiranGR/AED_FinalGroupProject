@@ -27,7 +27,7 @@ import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 /**
  *
- * @author pannaga
+ * @author chandrakiran
  */
 public class ManageEquipmentDeliveryAgentJPanel extends javax.swing.JPanel {
 JPanel userProcessContainer;

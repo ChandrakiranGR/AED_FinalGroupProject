@@ -14,7 +14,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Nidhi Raghavendra
+ * @author vish
  */
 public class PrescriberRole extends Role {
     @Override

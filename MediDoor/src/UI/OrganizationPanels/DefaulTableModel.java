@@ -7,7 +7,7 @@ package UI.OrganizationPanels;
 
 /**
  *
- * @author Nidhi Raghavendra
+ * @author shivanisugurushetty
  */
 class DefaulTableModel {
     

@@ -14,7 +14,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Nidhi Raghavendra
+ * @author antaradeshmukh
  */
 public class Customer {
     private String name;

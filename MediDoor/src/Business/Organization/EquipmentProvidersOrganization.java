@@ -11,7 +11,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Nidhi Raghavendra
+ * @author chandrakiran
  */
 public class EquipmentProvidersOrganization extends Organization {
     public EquipmentProvidersOrganization(String name, String location, int zipcode) {

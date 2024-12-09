@@ -13,9 +13,7 @@ import Business.Orders.Cart;
 import Business.Orders.OrderItem;
 import Business.Organization.Organization;
 import Business.Products.Product;
-import Business.WorkQueue.BloodRequestWorkRequest;
 import UI.Alert;
-import UI.BloodBankRole.BloodBankWorkAreaPanel;
 import UI.LabSamples.CustomerTestOrderJPanel;
 import UI.OrganizationPanels.CustomerPrescriptionJPanel;
 import UI.OrganizationPanels.MedicalEquipmentsJPanel;
@@ -34,18 +32,14 @@ import UI.OrganizationPanels.PharmacyJPanel;
 import UI.OrganizationPanels.VaccineJPanel;
 import java.awt.Image;
 import java.util.ArrayList;
-import java.util.Date;
-import java.util.List;
 import javax.imageio.ImageIO;
 import javax.swing.DefaultListModel;
 import javax.swing.ImageIcon;
-import javax.swing.JComboBox;
-import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Nidhi Raghavendra
+ * @author antaradeshmukh
  */
 public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
 
@@ -59,7 +53,6 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
     DefaultTableModel tableModel;
     DefaultTableModel model;
     private final Alert alert;
-    private List<BloodRequestWorkRequest> requestList = new ArrayList<>();
 
     public CustomerWorkAreaJPanel(JPanel userProcessContainer, Ecosystem system, Network network, Customer c) {
         initComponents();
@@ -96,8 +89,6 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
 
         supermarketTable.setModel(tableModel);
         populateTable();
-        populateBloodTypeComboBox();
-        
     }
 
     /**
@@ -133,18 +124,6 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
         jPanel3 = new javax.swing.JPanel();
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
-        jPanel6 = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        txtName = new javax.swing.JTextField();
-        txtQnty = new javax.swing.JTextField();
-        txtSpc = new javax.swing.JTextField();
-        btnSubmit = new javax.swing.JButton();
-        btnCancel = new javax.swing.JButton();
-        cmbType = new javax.swing.JComboBox<>();
-        jButton1 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(253, 252, 249));
         setMinimumSize(new java.awt.Dimension(1500, 900));
@@ -336,108 +315,6 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
         jPanel5.setBackground(new java.awt.Color(253, 252, 249));
         jTabbedPane2.addTab("LAB CENTER & DIAGNOSTICS", jPanel5);
 
-        jPanel6.setBackground(new java.awt.Color(253, 252, 249));
-
-        jLabel4.setText("RequestorName");
-
-        jLabel5.setText("Blood type");
-
-        jLabel6.setText("Quantity");
-
-        jLabel7.setText("Special Intructions");
-
-        btnSubmit.setText("Submit");
-        btnSubmit.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSubmitActionPerformed(evt);
-            }
-        });
-
-        btnCancel.setText("cancel");
-        btnCancel.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCancelActionPerformed(evt);
-            }
-        });
-
-        cmbType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        cmbType.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cmbTypeActionPerformed(evt);
-            }
-        });
-
-        jButton1.setText("Back");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(999, 999, 999)
-                .addComponent(jButton1))
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGap(408, 408, 408)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnSubmit)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel5))
-                        .addGap(22, 22, 22)
-                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtSpc)
-                            .addComponent(txtQnty)
-                            .addGroup(jPanel6Layout.createSequentialGroup()
-                                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(cmbType, javax.swing.GroupLayout.PREFERRED_SIZE, 118, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addContainerGap())))))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(btnCancel)
-                .addGap(528, 528, 528))
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGap(5, 5, 5)
-                        .addComponent(jButton1))
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addGap(94, 94, 94)
-                        .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel4)
-                            .addComponent(txtName, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addGap(35, 35, 35)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(cmbType, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(36, 36, 36)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(txtQnty, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(33, 33, 33)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel7)
-                    .addComponent(txtSpc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(btnSubmit)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(btnCancel)
-                .addContainerGap(365, Short.MAX_VALUE))
-        );
-
-        jTabbedPane2.addTab("REQUEST BLOOD ", jPanel6);
-
         pane.setRightComponent(jTabbedPane2);
 
         add(pane, new org.netbeans.lib.awtextra.AbsoluteConstraints(-1, 5, 1450, 750));
@@ -581,63 +458,6 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
         pane.setRightComponent(new PaymentsJPanel(this.customer));
     }//GEN-LAST:event_paymentBTn1ActionPerformed
 
-    private void btnSubmitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSubmitActionPerformed
-        // TODO add your handling code here:
-        handleSubmitRequest();
-        String selectedBloodType = (String) cmbType.getSelectedItem();
-    
-    // Generate a new unique request ID (or use a counter or UUID)
-    String requestId = "REQ" + System.currentTimeMillis();  // Example of unique ID based on time
-    
-    // Get current date
-    Date requestDate = new Date();  // Current date
-    
-    // Create a new BloodRequest object
-    BloodRequestWorkRequest newRequest = new BloodRequestWorkRequest(
-    requestId,  // Pass int for requestId
-    selectedBloodType,
-    "Pending",
-    requestDate  // Pass Date directly
-);
-    
-    // Add the request to the list
-    requestList.add(newRequest);
-    
-    // Optionally, display a message or update UI
-    JOptionPane.showMessageDialog(this, "Blood request submitted successfully!");
-    
-    // Clear or reset the combo box or form for the next request (optional)
-    cmbType.setSelectedIndex(-1);
-        
-        
-    }//GEN-LAST:event_btnSubmitActionPerformed
-
-    private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
-        // TODO add your handling code here:
-        handleCancelRequest();
-    }//GEN-LAST:event_btnCancelActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        BloodBankWorkAreaPanel mainPanel = new BloodBankWorkAreaPanel(userProcessContainer);
-
-        // Remove all components from the container and add the main panel
-        userProcessContainer.removeAll();
-        userProcessContainer.add("MainDashboardPanel", mainPanel);
-
-        // Perform a layout switch
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.next(userProcessContainer);  // Switch to the next panel (back to the main dashboard)
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void cmbTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cmbTypeActionPerformed
-        // TODO add your handling code here:
-        String selectedBloodType = (String) cmbType.getSelectedItem();
-    // Handle any action you want to take based on the selected blood type
-    System.out.println("Selected Blood Type: " + selectedBloodType);
-        
-    }//GEN-LAST:event_cmbTypeActionPerformed
-
     public void populateStocks(Organization o) {
          ArrayList<Product> products = o.getOrganizationProducts();
         DefaultListModel dlm = new DefaultListModel();
@@ -700,78 +520,21 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
         populateStocks(o);
 
     }
-    private void handleSubmitRequest() {
-      
-
-  // Make sure requestList is properly defined in this panel
-    
-    // Show success message
-    String requestorName = txtName.getText().trim();
-        String bloodType = (String) cmbType.getSelectedItem();
-        String quantity = txtQnty.getText().trim();
-        String specialInstructions = txtSpc.getText().trim();
-
-        if (requestorName.isEmpty() || quantity.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "Please fill out all required fields.", "Error", JOptionPane.ERROR_MESSAGE);
-            return;
-        }
-
-        // Create a new BloodRequestWorkRequest with the entered data
-        BloodRequestWorkRequest newRequest = new BloodRequestWorkRequest(
-            BloodRequestWorkRequest.generateRequestId(),  // Unique request ID
-            bloodType,
-            "Pending",  // Default status
-            quantity
-        );
-
-        // Add the new request to the requestList
-        requestList.add(newRequest);
-
-        // Show success message
-        JOptionPane.showMessageDialog(this, "Blood request submitted successfully!", "Success", JOptionPane.INFORMATION_MESSAGE);
-
-        // Reset form fields
-        resetForm();
-   
-    }
-    private void resetForm() {
-        txtName.setText("");
-        txtQnty.setText("");
-        txtSpc.setText("");
-        cmbType.setSelectedIndex(0);
-    }
-
-    private void handleCancelRequest() {
-        int option = JOptionPane.showConfirmDialog(this, "Are you sure you want to cancel the request?", 
-                                                   "Cancel Request", JOptionPane.YES_NO_OPTION);
-        if (option == JOptionPane.YES_OPTION) {
-            resetForm();
-        }
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton addCartButton;
     private javax.swing.JButton browseBtn1;
-    private javax.swing.JButton btnCancel;
-    private javax.swing.JButton btnSubmit;
     private javax.swing.JButton cartBtn1;
-    private javax.swing.JComboBox<String> cmbType;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
-    private javax.swing.JPanel jPanel6;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane2;
@@ -783,28 +546,5 @@ public class CustomerWorkAreaJPanel extends javax.swing.JPanel {
     private javax.swing.JButton prescriptionBtn;
     private javax.swing.JList<String> stockList;
     private javax.swing.JTable supermarketTable;
-    private javax.swing.JTextField txtName;
-    private javax.swing.JTextField txtQnty;
-    private javax.swing.JTextField txtSpc;
     // End of variables declaration//GEN-END:variables
-
-    private void populateBloodTypeComboBox() {
-       
-    // Define the list of blood types
-    String[] bloodTypes = {
-        "A+", "A-", "B+", "B-", "AB+", "AB-", "O+", "O-", "O"
-    };
-
-    // Clear the combo box before adding new items
-    cmbType.removeAllItems();
-
-    // Add each blood type to the combo box
-    for (String bloodType : bloodTypes) {
-        cmbType.addItem(bloodType);
-    }
-}
-
-
-//throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
-    
 }

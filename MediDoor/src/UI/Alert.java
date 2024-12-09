@@ -11,7 +11,7 @@ import javax.swing.UIManager;
 
 /**
  *
- * @author Nidhi Raghavendra
+ * @author antaradeshmukh
  */
 public class Alert {
 

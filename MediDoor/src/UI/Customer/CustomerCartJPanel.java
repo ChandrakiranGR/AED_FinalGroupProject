@@ -17,7 +17,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author Nidhi Raghavendra
+ * @author antaradeshmukh
  */
 public class CustomerCartJPanel extends javax.swing.JPanel {
 

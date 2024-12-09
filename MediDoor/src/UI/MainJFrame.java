@@ -5,7 +5,6 @@
  */
 package UI;
 
-import Business.BloodBank.BloodBank;
 import Business.Customer.Customer;
 import Business.DB4OUtil.DB4OUtil;
 import Business.DeliveryAgent.DeliveryAgent;
@@ -15,7 +14,6 @@ import Business.Network.Network;
 import Business.Organization.Organization;
 import Business.Role.CustomerRole;
 import Business.UserAccount.UserAccount;
-import UI.BloodBankRole.BloodBankWorkAreaPanel;
 import java.awt.CardLayout;
 import java.awt.Dimension;
 import java.awt.Toolkit;
@@ -23,11 +21,10 @@ import java.util.ArrayList;
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
-import javax.swing.JPanel;
 
 /**
  *
- * @author vachanabelgavi
+ * @author antaradeshmukh
  */
 public class MainJFrame extends javax.swing.JFrame {
 
@@ -37,7 +34,6 @@ public class MainJFrame extends javax.swing.JFrame {
     Ecosystem business;
     UserAccount userAccount;
     Customer c;
-    JPanel userProcessContainer;
     private DB4OUtil dB4OUtil = DB4OUtil.getInstance();
 
     public MainJFrame() {
@@ -177,6 +173,7 @@ public class MainJFrame extends javax.swing.JFrame {
         jPanel2.setPreferredSize(new java.awt.Dimension(1500, 900));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jButton1.setBackground(new java.awt.Color(255, 255, 255));
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Images/doortodoor.jpg"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -194,12 +191,6 @@ public class MainJFrame extends javax.swing.JFrame {
     private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
         // TODO add your handling code here:
         System.out.println("CAME TO CHECK LOGIN -- -------------- ");
-        
-         if (this.business == null) {
-        JOptionPane.showMessageDialog(null, "System is not initialized. Please restart the application.");
-        System.out.println("Ecosystem is null. Exiting login.");
-        return;
-    }
         String userName = txtUsername.getText();
         // Get Password
         char[] passwordCharArray = txtPassword.getPassword();
@@ -281,39 +272,6 @@ public class MainJFrame extends javax.swing.JFrame {
                                     }
                                 }
                             }
-                            
-                            if (userAccount == null) {
-                            // NEWLY ADDED PART: Check Blood Bank Role
-                            // Iterate through blood banks in the enterprise
-                            for (BloodBank bloodBank : enterprise.getBloodBankDirectory().getBloodBankList()) {
-                                if (bloodBank.getUserAccount().getUsername().equals(userName) && bloodBank.getUserAccount().getPassword().equals(password)) {
-                                    this.userAccount = bloodBank.getUserAccount();
-                                    inNetwork = network;
-                                    inEnterprise = enterprise;
-
-                                    JOptionPane.showMessageDialog(null, "Login successful as Blood Bank!");
-                                    System.out.print("Came to Blood Bank Work Area ");
-
-                                    jSplitPane1.setLeftComponent(null);
-                                    jSplitPane1.setRightComponent(null);
-                                    container.removeAll();
-                                    container.setVisible(true);
-                                    container.setLayout(new CardLayout());
-                                    CardLayout layout = (CardLayout) container.getLayout();
-                                    container.setSize(1500, 1000);
-                                    // Navigate to Blood Bank Work Area
-                                    
-                                    
-                                    
-                                   
-                                    
-//                                    container.add("bloodbank area", userAccount.getRole().createWorkArea(container, userAccount, inNetwork, inOrganization, inEnterprise, business));
-//                                    layout.next(container);
-                                    jSplitPane1.setRightComponent(container);
-                                    break;
-                                }
-                            }
-                        }
 
 //                        CHECK FOR THE ORGANIZATIONAL LEVEL
                             if (userAccount == null) {
@@ -370,7 +328,7 @@ public class MainJFrame extends javax.swing.JFrame {
 
         } catch (Exception exc) {
             System.out.println("An exception exc -------- " + exc);
-           JOptionPane.showMessageDialog(null, "User does not exist!");
+//            JOptionPane.showMessageDialog(null, "User does not exist!");
         }
         btnLogin.setEnabled(true);
 //        btnExit.setEnabled(true);

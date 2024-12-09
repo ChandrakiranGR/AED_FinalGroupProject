@@ -7,7 +7,7 @@ package UI.AdminRole;
 
 /**
  *
- * @author vachanabelgavi
+ * @author antaradeshmukh
  */
 public class AdminWorkAreaJPanel extends javax.swing.JPanel {
 
@@ -31,10 +31,9 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         btnOrganization = new javax.swing.JButton();
         btnOrgAdmin = new javax.swing.JButton();
-        btnBloodBank = new javax.swing.JButton();
+        btnInventory = new javax.swing.JButton();
         btnEnterprise = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
-        btnInventory1 = new javax.swing.JButton();
 
         setBackground(new java.awt.Color(253, 252, 249));
         setPreferredSize(new java.awt.Dimension(1500, 1000));
@@ -82,15 +81,10 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         });
         add(btnOrgAdmin, new org.netbeans.lib.awtextra.AbsoluteConstraints(657, 299, 210, 42));
 
-        btnBloodBank.setBackground(new java.awt.Color(0, 102, 102));
-        btnBloodBank.setForeground(new java.awt.Color(255, 255, 255));
-        btnBloodBank.setText("Blood Bank Inventory");
-        btnBloodBank.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBloodBankActionPerformed(evt);
-            }
-        });
-        add(btnBloodBank, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 130, 210, 40));
+        btnInventory.setBackground(new java.awt.Color(0, 102, 102));
+        btnInventory.setForeground(new java.awt.Color(255, 255, 255));
+        btnInventory.setText("Manage Inventory");
+        add(btnInventory, new org.netbeans.lib.awtextra.AbsoluteConstraints(657, 353, 210, 40));
 
         btnEnterprise.setBackground(new java.awt.Color(0, 102, 102));
         btnEnterprise.setForeground(new java.awt.Color(255, 255, 255));
@@ -104,11 +98,6 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/resources/Admin_gif.gif"))); // NOI18N
         add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(480, 420, 580, 380));
-
-        btnInventory1.setBackground(new java.awt.Color(0, 102, 102));
-        btnInventory1.setForeground(new java.awt.Color(255, 255, 255));
-        btnInventory1.setText("Manage Inventory");
-        add(btnInventory1, new org.netbeans.lib.awtextra.AbsoluteConstraints(657, 353, 210, 40));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnOrgAdminActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnOrgAdminActionPerformed
@@ -119,15 +108,10 @@ public class AdminWorkAreaJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnEnterpriseActionPerformed
 
-    private void btnBloodBankActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBloodBankActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnBloodBankActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBloodBank;
     private javax.swing.JButton btnEnterprise;
-    private javax.swing.JButton btnInventory1;
+    private javax.swing.JButton btnInventory;
     private javax.swing.JButton btnOrgAdmin;
     private javax.swing.JButton btnOrganization;
     private javax.swing.JLabel jLabel1;

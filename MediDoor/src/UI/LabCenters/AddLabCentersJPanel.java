@@ -23,7 +23,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author vachanabelgavi
+ * @author chandrakiran
  */
 public class AddLabCentersJPanel extends javax.swing.JPanel {
 
@@ -95,13 +95,15 @@ public class AddLabCentersJPanel extends javax.swing.JPanel {
         });
         add(txtPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 220, 180, -1));
 
+        btnAdd.setBackground(new java.awt.Color(0, 102, 102));
+        btnAdd.setForeground(new java.awt.Color(255, 255, 255));
         btnAdd.setText("Add");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAddActionPerformed(evt);
             }
         });
-        add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 300, 100, 49));
+        add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 270, 100, 30));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Images/icons8-back-50.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -109,7 +111,7 @@ public class AddLabCentersJPanel extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, -1, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 20, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed

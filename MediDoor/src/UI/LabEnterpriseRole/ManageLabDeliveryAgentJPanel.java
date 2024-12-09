@@ -28,7 +28,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author pannaga
+ * @author chandrakiran
  */
 public class ManageLabDeliveryAgentJPanel extends javax.swing.JPanel {
 JPanel userProcessContainer;

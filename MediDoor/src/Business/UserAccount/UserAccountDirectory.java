@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Nidhi Raghavendra
+ * @author vish
  */
 public class UserAccountDirectory {
 
@@ -37,7 +37,7 @@ public class UserAccountDirectory {
     }
 
     public UserAccount createEnterpriseUser(String username, String password, Employee employee, EnterpriseRole eRole) {
-        UserAccount userEaccount = new UserAccount("adminenterprise", "adminpass123");
+        UserAccount userEaccount = new UserAccount();
         userEaccount.setEmployee(employee);
         userEaccount.setEnterpriseRole(eRole);
         userEaccount.setUsername(username);
@@ -47,7 +47,7 @@ public class UserAccountDirectory {
     }
 
     public UserAccount createUserAccount(String username, String password, Employee employee, Role role) {
-        UserAccount useraccount = new UserAccount("admin", "adminpass123");
+        UserAccount useraccount = new UserAccount();
         useraccount.setEmployee(employee);
         useraccount.setRole(role);
         useraccount.setUsername(username);

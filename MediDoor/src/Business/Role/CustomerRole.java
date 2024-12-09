@@ -16,7 +16,7 @@ import UI.Customer.CustomerWorkAreaJPanel;
 
 /**
  *
- * @author Nidhi Raghavendra
+ * @author vish
  */
 public class CustomerRole {
     public JPanel createWorkArea(JPanel userProcessContainer, Ecosystem system, Network network, Customer customer) {

@@ -40,7 +40,7 @@ import Business.Organization.Organization;
 
 /**
  *
- * @author pannaga
+ * @author vish
  */
 public class ManageVaccinationOrdersJPanel extends javax.swing.JPanel {
 

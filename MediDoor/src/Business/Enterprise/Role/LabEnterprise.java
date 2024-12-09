@@ -17,7 +17,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Nidhi Raghavendra
+ * @author shivanisugurushetty
  */
 public class LabEnterprise extends EnterpriseRole {
     @Override

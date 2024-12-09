@@ -42,7 +42,7 @@ import javax.swing.border.Border;
 
 /**
  *
- * @author Nidhi Raghavendra
+ * @author shivanisugurushetty
  */
 public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
 
@@ -320,11 +320,6 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
         fieldPhone.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusLost(java.awt.event.FocusEvent evt) {
                 fieldPhoneFocusLost(evt);
-            }
-        });
-        fieldPhone.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                fieldPhoneActionPerformed(evt);
             }
         });
         jPanel2.add(fieldPhone, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 250, 250, -1));
@@ -789,10 +784,6 @@ public class DoctorWorkAreaJPanel extends javax.swing.JPanel {
     private void fieldAddressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldAddressActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_fieldAddressActionPerformed
-
-    private void fieldPhoneActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_fieldPhoneActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_fieldPhoneActionPerformed
 
     public void populateZipcodes() {
 

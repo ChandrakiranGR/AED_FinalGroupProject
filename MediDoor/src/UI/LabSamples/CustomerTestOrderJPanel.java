@@ -24,7 +24,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author vachanabelgavi
+ * @author chandrakiran
  */
 public class CustomerTestOrderJPanel extends javax.swing.JPanel {
 

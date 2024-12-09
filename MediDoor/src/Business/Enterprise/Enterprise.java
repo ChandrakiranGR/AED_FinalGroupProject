@@ -1,6 +1,5 @@
 package Business.Enterprise;
 
-import Business.BloodBank.BloodBankDirectory;
 import Business.DeliveryAgent.DeliveryAgent;
 import Business.Enterprise.Role.EnterpriseAdminRole;
 import Business.Enterprise.Role.EnterpriseRole;
@@ -15,7 +14,7 @@ import java.util.ArrayList;
  */
 /**
  *
- * @author Nidhi Raghavendra
+ * @author shivanisugurushetty
  */
 public class Enterprise {
 
@@ -25,15 +24,6 @@ public class Enterprise {
     private OrganizationDirectory organizationDirectory;
     private UserAccountDirectory enterpriseUserAccountDirectory;
     private ArrayList<DeliveryAgent> deliveryAgentsInEnterpiselist;
-     private BloodBankDirectory bloodBankDirectory;
-
-    public BloodBankDirectory getBloodBankDirectory() {
-        return bloodBankDirectory;
-    }
-
-    public void setBloodBankDirectory(BloodBankDirectory bloodBankDirectory) {
-        this.bloodBankDirectory = bloodBankDirectory;
-    }
 
 //    An enterprise has Orders
 //    An enterprise has its products
@@ -128,8 +118,6 @@ public class Enterprise {
         this.organizationDirectory = new OrganizationDirectory();
         this.enterpriseUserAccountDirectory = new UserAccountDirectory();
         this.deliveryAgentsInEnterpiselist = new ArrayList<>();
-        this.bloodBankDirectory = new BloodBankDirectory();
-
 
     }
 
