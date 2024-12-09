@@ -1,6 +1,7 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package UI.VaccinationEnterpriseRole;
 
@@ -26,9 +27,10 @@ import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 import javax.swing.JPanel;
+
 /**
  *
- * @author vish
+ * @author pannaga
  */
 public class ManageVaccinationDeliveryAgentJPanel extends javax.swing.JPanel {
 JPanel userProcessContainer;
@@ -79,6 +81,7 @@ JPanel userProcessContainer;
         }
     }
 
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -89,7 +92,6 @@ JPanel userProcessContainer;
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -109,27 +111,27 @@ JPanel userProcessContainer;
         btnBack = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
 
-        jPanel1.setPreferredSize(new java.awt.Dimension(1500, 1000));
+        setPreferredSize(new java.awt.Dimension(1500, 1000));
 
-        jPanel2.setBackground(new java.awt.Color(253, 252, 249));
-        jPanel2.setMinimumSize(new java.awt.Dimension(1500, 1000));
-        jPanel2.setPreferredSize(new java.awt.Dimension(1290, 1190));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.setBackground(new java.awt.Color(253, 252, 249));
+        jPanel1.setMinimumSize(new java.awt.Dimension(1500, 1000));
+        jPanel1.setPreferredSize(new java.awt.Dimension(1290, 1190));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setText("Name");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 155, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 155, -1, -1));
 
         jLabel7.setText("Zipcode");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, -1, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, -1, -1));
 
         jLabel8.setText("Username");
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, -1, -1));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, -1, -1));
 
         jLabel9.setText("Password");
-        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 330, -1, -1));
-        jPanel2.add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 150, 194, -1));
-        jPanel2.add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, 194, -1));
-        jPanel2.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, 194, -1));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 330, -1, -1));
+        jPanel1.add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 150, 194, -1));
+        jPanel1.add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, 194, -1));
+        jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, 194, -1));
 
         btnAdd.setBackground(new java.awt.Color(0, 102, 102));
         btnAdd.setForeground(new java.awt.Color(255, 255, 255));
@@ -139,7 +141,7 @@ JPanel userProcessContainer;
                 btnAddActionPerformed(evt);
             }
         });
-        jPanel2.add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 360, 100, -1));
+        jPanel1.add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 360, 100, -1));
 
         btndelete.setBackground(new java.awt.Color(0, 102, 102));
         btndelete.setForeground(new java.awt.Color(255, 255, 255));
@@ -149,7 +151,7 @@ JPanel userProcessContainer;
                 btndeleteActionPerformed(evt);
             }
         });
-        jPanel2.add(btndelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 430, -1, -1));
+        jPanel1.add(btndelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(710, 430, -1, -1));
 
         deliveryjTable.setBackground(new java.awt.Color(204, 255, 204));
         deliveryjTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -165,10 +167,10 @@ JPanel userProcessContainer;
         ));
         jScrollPane1.setViewportView(deliveryjTable);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 100, 477, 323));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 100, 477, 323));
 
         jLabel3.setText("Active");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, -1, -1));
 
         jcheckyes.setText("yes");
         jcheckyes.addActionListener(new java.awt.event.ActionListener() {
@@ -176,7 +178,7 @@ JPanel userProcessContainer;
                 jcheckyesActionPerformed(evt);
             }
         });
-        jPanel2.add(jcheckyes, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 240, -1, -1));
+        jPanel1.add(jcheckyes, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 240, -1, -1));
 
         jcheckno.setText("no");
         jcheckno.addActionListener(new java.awt.event.ActionListener() {
@@ -184,17 +186,17 @@ JPanel userProcessContainer;
                 jchecknoActionPerformed(evt);
             }
         });
-        jPanel2.add(jcheckno, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 240, -1, -1));
+        jPanel1.add(jcheckno, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 240, -1, -1));
 
         cmbzipcode.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { " " }));
-        jPanel2.add(cmbzipcode, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 200, 200, -1));
+        jPanel1.add(cmbzipcode, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 200, 200, -1));
 
         jLabel1.setBackground(new java.awt.Color(0, 102, 102));
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 102, 102));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Manage Delivery agent");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 40, 1006, -1));
+        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 40, 1006, -1));
 
         btnBack.setBackground(new java.awt.Color(0, 102, 102));
         btnBack.setForeground(new java.awt.Color(255, 255, 255));
@@ -204,45 +206,41 @@ JPanel userProcessContainer;
                 btnBackActionPerformed(evt);
             }
         });
-        jPanel2.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
+        jPanel1.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 20, -1, -1));
 
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/resources/delivery-man-parcel-handover-to-customer-online-delivery-service-smartphone-cartoon-art-illustration-vector.jpeg"))); // NOI18N
         jLabel4.setText("jLabel4");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-90, 100, 1620, 870));
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, 1494, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1000, Short.MAX_VALUE)
-        );
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-90, 100, 1620, 870));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1500, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1494, Short.MAX_VALUE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1000, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
+            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 1000, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
+        // TODO add your handling code here:
+
+        //        userProcessContainer.remove(this);
+        //        Component[] componentArray = userProcessContainer.getComponents();
+        //        Component component = componentArray[componentArray.length - 1];
+        //        PharmaceuticalEnterpriseJPanel sysAdminwjp = (PharmaceuticalEnterpriseJPanel) component;
+        //      populateTable();
+        //        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        //        layout.previous(userProcessContainer);
+        userProcessContainer.remove(this);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.previous(userProcessContainer);
+
+    }//GEN-LAST:event_btnBackActionPerformed
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         // TODO add your handling code here:
@@ -271,10 +269,10 @@ JPanel userProcessContainer;
             JOptionPane.showMessageDialog(null, "Please fill the empty fields", "Warining", JOptionPane.WARNING_MESSAGE);
             return;
         }
-        //        if(txtZipcode.getText().length() < 5 || txtZipcode.getText().length() > 6){
-            //            JOptionPane.showMessageDialog(null, "Zip code must be 5 or 6 digits", "Warining", JOptionPane.WARNING_MESSAGE);
-            //            return;
-            //        }
+//        if(txtZipcode.getText().length() < 5 || txtZipcode.getText().length() > 6){
+//            JOptionPane.showMessageDialog(null, "Zip code must be 5 or 6 digits", "Warining", JOptionPane.WARNING_MESSAGE);
+//            return;
+//        }
         System.out.println("Inside loop");
         boolean flag = business.getUserAccountDirectory().checkIfUsernameIsUnique(username);
         if(flag == false){
@@ -295,7 +293,7 @@ JPanel userProcessContainer;
             u.setPassword(password);
             u.setRole(new DeliveryAgentRole());
             u.setEmployee(em);
-            // d.setUseraccount(u);
+           // d.setUseraccount(u);
             d.setZipcodes(zipcodes);
             d.setEnterprisename(enterprise);
 
@@ -317,6 +315,7 @@ JPanel userProcessContainer;
         txtPassword.setText("");
         jcheckyes.setSelected(false);
         jcheckno.setSelected(false);
+
     }//GEN-LAST:event_btnAddActionPerformed
 
     private void btndeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndeleteActionPerformed
@@ -375,21 +374,6 @@ JPanel userProcessContainer;
         // TODO add your handling code here:
     }//GEN-LAST:event_jchecknoActionPerformed
 
-    private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
-        // TODO add your handling code here:
-
-        //        userProcessContainer.remove(this);
-        //        Component[] componentArray = userProcessContainer.getComponents();
-        //        Component component = componentArray[componentArray.length - 1];
-        //        PharmaceuticalEnterpriseJPanel sysAdminwjp = (PharmaceuticalEnterpriseJPanel) component;
-        //      populateTable();
-        //        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        //        layout.previous(userProcessContainer);
-        userProcessContainer.remove(this);
-        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
-        layout.previous(userProcessContainer);
-    }//GEN-LAST:event_btnBackActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdd;
@@ -405,7 +389,6 @@ JPanel userProcessContainer;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JCheckBox jcheckno;
     private javax.swing.JCheckBox jcheckyes;
@@ -413,6 +396,7 @@ JPanel userProcessContainer;
     private javax.swing.JTextField txtPassword;
     private javax.swing.JTextField txtUsername;
     // End of variables declaration//GEN-END:variables
+
     private void populateTable() {
 
         System.out.println("Inside populate Table");
@@ -438,6 +422,9 @@ JPanel userProcessContainer;
               for(int i =0; i< z.size(); i++){
               cmbzipcode.addItem(z.get(i).toString());
               }
+
+//    }
+//    }
     }
 
 }

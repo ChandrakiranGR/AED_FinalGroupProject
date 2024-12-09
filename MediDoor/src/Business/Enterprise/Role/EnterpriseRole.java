@@ -15,7 +15,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author shivanisugurushetty
+ * @author Nidhi Raghavendra
  */
 public abstract class EnterpriseRole {
     public enum EnterpriseRoleType {
@@ -23,7 +23,8 @@ public abstract class EnterpriseRole {
         VaccinationAdmin("Vaccination Admin"),
         Pharmacies("Pharmacies Admin"),
         EquipmentsAdmin("Equipments Admin"),
-        DiagnosticsAdmin("Lab Diagnostics Admin");
+        DiagnosticsAdmin("Lab Diagnostics Admin"),
+        BloodBankAdmin("Blood Bank Admin");
         
         private String value;
         private EnterpriseRoleType(String value) {
@@ -46,6 +47,7 @@ public abstract class EnterpriseRole {
             al.add(EnterpriseRoleType.Pharmacies);
             al.add(EnterpriseRoleType.VaccinationAdmin);
             al.add(EnterpriseRoleType.EquipmentsAdmin);
+            al.add(EnterpriseRoleType.BloodBankAdmin);
             
             return al;
         }

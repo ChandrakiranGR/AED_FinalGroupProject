@@ -1,9 +1,9 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package Business.Customer;
-
 
 import Business.Orders.Cart;
 import Business.Orders.Order;
@@ -12,14 +12,11 @@ import Business.WorkQueue.ReportUploadWorkRequest;
 import Business.WorkQueue.WorkQueue;
 import java.util.ArrayList;
 
-import java.util.ArrayList;
-
 /**
  *
- * @author antaradeshmukh
+ * @author Nidhi Raghavendra
  */
 public class Customer {
-    
     private String name;
     private String email;
     private String location;
@@ -176,5 +173,4 @@ public class Customer {
     public String toString(){
         return name;
     }
-    
 }

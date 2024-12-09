@@ -13,7 +13,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author shivanisugurushetty
+ * @author Nidhi Raghavendra
  */
 public class LabOrgDiagnosticsEnterprise extends Enterprise {
     public LabOrgDiagnosticsEnterprise(String name, String location){

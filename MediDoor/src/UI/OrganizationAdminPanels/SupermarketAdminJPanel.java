@@ -1,6 +1,7 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package UI.OrganizationAdminPanels;
 
@@ -20,7 +21,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author shivanisugurushetty
+ * @author Nidhi Raghavendra
  */
 public class SupermarketAdminJPanel extends javax.swing.JPanel {
 
@@ -64,9 +65,8 @@ public class SupermarketAdminJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
         jTabbedPane1 = new javax.swing.JTabbedPane();
-        jPanel2 = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         ordeTable = new javax.swing.JTable();
         btnAccept = new javax.swing.JButton();
@@ -74,9 +74,9 @@ public class SupermarketAdminJPanel extends javax.swing.JPanel {
         btnreqPrescription = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
         prodTable = new javax.swing.JTable();
-        jPanel3 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
 
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jTabbedPane1.setBackground(new java.awt.Color(253, 252, 249));
         jTabbedPane1.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -85,8 +85,8 @@ public class SupermarketAdminJPanel extends javax.swing.JPanel {
             }
         });
 
-        jPanel2.setBackground(new java.awt.Color(253, 252, 249));
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.setBackground(new java.awt.Color(253, 252, 249));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         ordeTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -118,7 +118,7 @@ public class SupermarketAdminJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(ordeTable);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, -1, 276));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, -1, 276));
 
         btnAccept.setBackground(new java.awt.Color(0, 102, 102));
         btnAccept.setForeground(new java.awt.Color(255, 255, 255));
@@ -128,7 +128,7 @@ public class SupermarketAdminJPanel extends javax.swing.JPanel {
                 btnAcceptActionPerformed(evt);
             }
         });
-        jPanel2.add(btnAccept, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 400, -1, -1));
+        jPanel1.add(btnAccept, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 400, -1, -1));
 
         btnreject.setBackground(new java.awt.Color(255, 153, 51));
         btnreject.setForeground(new java.awt.Color(255, 255, 255));
@@ -138,7 +138,7 @@ public class SupermarketAdminJPanel extends javax.swing.JPanel {
                 btnrejectActionPerformed(evt);
             }
         });
-        jPanel2.add(btnreject, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 400, -1, -1));
+        jPanel1.add(btnreject, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 400, -1, -1));
 
         btnreqPrescription.setBackground(new java.awt.Color(102, 102, 102));
         btnreqPrescription.setForeground(new java.awt.Color(255, 255, 255));
@@ -148,7 +148,7 @@ public class SupermarketAdminJPanel extends javax.swing.JPanel {
                 btnreqPrescriptionActionPerformed(evt);
             }
         });
-        jPanel2.add(btnreqPrescription, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 400, -1, -1));
+        jPanel1.add(btnreqPrescription, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 400, -1, -1));
 
         prodTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -175,53 +175,46 @@ public class SupermarketAdminJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(prodTable);
 
-        jPanel2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 70, -1, 280));
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 70, -1, 280));
 
-        jTabbedPane1.addTab("MANAGE ORDERS", jPanel2);
+        jTabbedPane1.addTab("MANAGE ORDERS", jPanel1);
 
-        jPanel3.setBackground(new java.awt.Color(253, 252, 249));
-        jPanel3.addMouseListener(new java.awt.event.MouseAdapter() {
+        jPanel2.setBackground(new java.awt.Color(253, 252, 249));
+        jPanel2.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jPanel3MouseClicked(evt);
+                jPanel2MouseClicked(evt);
             }
         });
 
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1500, Short.MAX_VALUE)
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1495, Short.MAX_VALUE)
         );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 965, Short.MAX_VALUE)
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 972, Short.MAX_VALUE)
         );
 
-        jTabbedPane1.addTab("MANAGE PRODUCTS", jPanel3);
+        jTabbedPane1.addTab("MANAGE PRODUCTS", jPanel2);
 
-        jPanel1.add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1500, 1000));
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1500, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1000, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1500, 1000));
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jTabbedPane1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane1MouseClicked
+        // TODO add your handling code here:
+        populateOrders();
+        jTabbedPane1.setComponentAt(0, jPanel1);
+        jTabbedPane1.setComponentAt(1, new PharmacyProductJPanel(userprocessocntainer, ecosystem, user, network, organization, enterprise));
+
+    }//GEN-LAST:event_jTabbedPane1MouseClicked
+
+    private void jPanel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel2MouseClicked
+        // TODO add your handling code here:
+        System.out.println("CAME HERE!!!");
+        jPanel2.add(new PharmacyProductJPanel(userprocessocntainer, ecosystem, user, network, organization, enterprise));
+    }//GEN-LAST:event_jPanel2MouseClicked
 
     private void ordeTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ordeTableMouseClicked
         // TODO add your handling code here:
@@ -233,6 +226,7 @@ public class SupermarketAdminJPanel extends javax.swing.JPanel {
         this.orderid = Integer.valueOf((Integer) source.getModel().getValueAt(row, column));
         fetchOrderObject();
         populateItems();
+
     }//GEN-LAST:event_ordeTableMouseClicked
 
     private void btnAcceptActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAcceptActionPerformed
@@ -246,6 +240,7 @@ public class SupermarketAdminJPanel extends javax.swing.JPanel {
         } catch (Exception e) {
 
         }
+
 
     }//GEN-LAST:event_btnAcceptActionPerformed
 
@@ -265,23 +260,10 @@ public class SupermarketAdminJPanel extends javax.swing.JPanel {
     private void btnreqPrescriptionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnreqPrescriptionActionPerformed
         // TODO add your handling code here:
 
-        //        SEND MAIL TO REQUEST PRESCRIPTION
-        this.currentOrder.setStatus("PRESCRIPTION REQUIRED");
-        populateOrders();
+//        SEND MAIL TO REQUEST PRESCRIPTION
+           this.currentOrder.setStatus("PRESCRIPTION REQUIRED");
+           populateOrders();
     }//GEN-LAST:event_btnreqPrescriptionActionPerformed
-
-    private void jPanel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseClicked
-        // TODO add your handling code here:
-        System.out.println("CAME HERE!!!");
-        jPanel2.add(new PharmacyProductJPanel(userprocessocntainer, ecosystem, user, network, organization, enterprise));
-    }//GEN-LAST:event_jPanel3MouseClicked
-
-    private void jTabbedPane1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jTabbedPane1MouseClicked
-        // TODO add your handling code here:
-        populateOrders();
-        jTabbedPane1.setComponentAt(0, jPanel1);
-        jTabbedPane1.setComponentAt(1, new PharmacyProductJPanel(userprocessocntainer, ecosystem, user, network, organization, enterprise));
-    }//GEN-LAST:event_jTabbedPane1MouseClicked
 
     public void fetchOrderObject() {
         for (Customer customer : this.network.getCustomerDirectory().getCustomerList()) {
@@ -335,13 +317,13 @@ public class SupermarketAdminJPanel extends javax.swing.JPanel {
             System.out.println("IN SUPERMARKET Admin POPULATE ORDER ------ " + e);
         }
     }
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAccept;
     private javax.swing.JButton btnreject;
     private javax.swing.JButton btnreqPrescription;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;

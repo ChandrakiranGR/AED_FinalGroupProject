@@ -20,7 +20,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author shivanisugurushetty
+ * @author Nidhi Raghavendra
  */
 public class EquipmentEnterpriseRole extends EnterpriseRole {
     @Override

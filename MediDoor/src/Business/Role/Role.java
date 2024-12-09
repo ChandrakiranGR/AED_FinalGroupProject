@@ -1,6 +1,7 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package Business.Role;
 
@@ -14,7 +15,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author vish
+ * @author Nidhi Raghavendra
  */
 public abstract class Role {
     
@@ -28,7 +29,8 @@ public abstract class Role {
         MarketManager("Supermarket Manager"),
         LabAssistant("Lab Assistant"),
         LabTester("Lab Tester"),
-        DeliveryAgent("Delivery Agent");
+        DeliveryAgent("Delivery Agent"),
+        BloodBankAdmin("Blood Bank Admin");
         
         private String value;
         private RoleType(String value) {
@@ -56,6 +58,7 @@ public abstract class Role {
             al.add(RoleType.PharmaOrgAdmin.getValue());
             al.add(RoleType.Pharmacist.getValue());
             al.add(RoleType.Prescriber.getValue());
+            al.add(RoleType.BloodBankAdmin.getValue());
             
             return al;
             

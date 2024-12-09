@@ -1,6 +1,7 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package Business.UserAccount;
 
@@ -11,13 +12,9 @@ import java.util.ArrayList;
 
 /**
  *
- * @author vish
+ * @author Nidhi Raghavendra
  */
 public class UserAccountDirectory {
-
-    public void setUserAccountList(ArrayList<UserAccount> userAccountList) {
-        this.userAccountList = userAccountList;
-    }
 
     private ArrayList<UserAccount> userAccountList;
 
@@ -40,7 +37,7 @@ public class UserAccountDirectory {
     }
 
     public UserAccount createEnterpriseUser(String username, String password, Employee employee, EnterpriseRole eRole) {
-        UserAccount userEaccount = new UserAccount();
+        UserAccount userEaccount = new UserAccount("adminenterprise", "adminpass123");
         userEaccount.setEmployee(employee);
         userEaccount.setEnterpriseRole(eRole);
         userEaccount.setUsername(username);
@@ -50,7 +47,7 @@ public class UserAccountDirectory {
     }
 
     public UserAccount createUserAccount(String username, String password, Employee employee, Role role) {
-        UserAccount useraccount = new UserAccount();
+        UserAccount useraccount = new UserAccount("admin", "adminpass123");
         useraccount.setEmployee(employee);
         useraccount.setRole(role);
         useraccount.setUsername(username);

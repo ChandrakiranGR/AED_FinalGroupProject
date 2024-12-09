@@ -15,7 +15,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author shivanisugurushetty
+ * @author Nidhi Raghavendra
  */
 public class PharmaceuticalEnterpriseAdminRole extends EnterpriseRole {
     

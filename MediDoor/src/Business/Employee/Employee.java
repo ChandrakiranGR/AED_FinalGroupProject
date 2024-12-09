@@ -7,7 +7,7 @@ package Business.Employee;
 
 /**
  *
- * @author shivanisugurushetty
+ * @author Nidhi Raghavendra
  */
 public class Employee {
      private String name;

@@ -1,6 +1,7 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package Business.WorkQueue;
 
@@ -10,8 +11,9 @@ import java.util.ArrayList;
 
 /**
  *
- * @author vish
+ * @author Nidhi Raghavendra
  */
+
 // An order will be first created and linked to a Prescription
 
 public class PrescriptionUploadWorkRequest extends WorkRequest {

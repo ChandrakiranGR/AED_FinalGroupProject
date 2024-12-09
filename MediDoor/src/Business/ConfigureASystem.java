@@ -1,9 +1,12 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package Business;
 
+import Business.BloodBank.BloodBank ;
+import Business.BloodBank.BloodBankDirectory;
 import Business.Customer.Customer;
 import Business.Customer.CustomerDirectory;
 import Business.DeliveryAgent.DeliveryAgent;
@@ -12,6 +15,7 @@ import Business.Enterprise.Enterprise;
 import Business.Enterprise.EnterpriseDirectory;
 import Business.Enterprise.MedicalEquipments;
 import Business.Enterprise.Role.EnterpriseAdminRole;
+import Business.Enterprise.Role.EnterpriseBloodbank;
 import Business.Enterprise.Role.EquipmentEnterpriseRole;
 import Business.Enterprise.Role.LabEnterprise;
 import Business.Enterprise.Role.PharmaceuticalEnterpriseAdminRole;
@@ -33,19 +37,19 @@ import Business.UserAccount.UserAccount;
 import java.io.FileInputStream;
 import java.util.ArrayList;
 
-
 /**
  *
- * @author antaradeshmukh
+ * @author Nidhi Raghavendra
  */
 public class ConfigureASystem {
+
     public static Ecosystem configure() {
 
         System.out.println("CAME HERE");
         Ecosystem system = Ecosystem.getInstance();
 
         Employee employee = system.getEmployeeDirectory().createEmployee("sysadmin");
-        
+
         UserAccount ua = system.getUserAccountDirectory().createUserAccount("sysadmin", "sysadmin", employee, new SystemAdminRole());
 
         Network n = system.createNetwork();
@@ -67,6 +71,29 @@ public class ConfigureASystem {
         for (int j : arr2) {
             zips2.add(j);
         }
+        
+        
+        
+        
+        
+        // Add Blood Bank to the Ecosystem
+        // Add Blood Bank Enterprise for California
+
+// Ensure BloodBankDirectory exists
+
+
+// Add Blood Banks to California Enterprise
+
+
+
+
+
+
+     
+        // Add Blood Bank Enterprise for California
+
+
+   
 
 //        CREATE MUTLIPLE CUSTOMERS AND PEOPLE
         for (int i = 1; i < 10; i++) {
@@ -93,19 +120,49 @@ public class ConfigureASystem {
         Employee enterpriseEmployeeAdmin = system.getEmployeeDirectory().createEmployee("enterpriseadmin");
         UserAccount ua2 = system.getUserAccountDirectory().createEnterpriseUser("enterpriseadmin", "enterpriseadmin", enterpriseEmployeeAdmin, new EnterpriseAdminRole());
 
+        
+        
+   
+
+// Add Blood Bank Enterprise for Boston
+
+        
+        
+        
+        
 //        ONE ENTERPRISE
         EnterpriseDirectory edir = new EnterpriseDirectory();
         Enterprise e = edir.createEnterprise(Enterprise.EnterpriseType.Pharmaceutical, "Pharmaceutical", "California");
         Enterprise e1 = edir.createEnterprise(Enterprise.EnterpriseType.MedicalEquipements, "Medical Equipments", "California");
         Enterprise e2 = edir.createEnterprise(Enterprise.EnterpriseType.LabDiagnostics, "Lab Center & Diagnostics", "California");
         Enterprise e3 = edir.createEnterprise(Enterprise.EnterpriseType.Vaccination, "Immunization & Vaccination", "California");
+        //Enterprise e4 = edir.createEnterprise(Enterprise.EnterpriseType.BloodBank, "California Blood bank", "California");
+
+             Enterprise e4 = edir.createEnterprise(Enterprise.EnterpriseType.BloodBank, "California Blood Bank", "California");
+if (e4 != null) {
+    e4.setBloodBankDirectory(new BloodBankDirectory()); // Initialize BloodBankDirectory
+    e4.setDeliveryAgentsInEnterpiselist(new ArrayList<>()); // Initialize Delivery Agent List
+}
+
+
+
+
 
         EnterpriseDirectory edir2 = new EnterpriseDirectory();
         Enterprise eB = edir2.createEnterprise(Enterprise.EnterpriseType.Pharmaceutical, "Pharmaceutical", "Boston");
         Enterprise e1B = edir2.createEnterprise(Enterprise.EnterpriseType.MedicalEquipements, "Medical Equipments", "Boston");
         Enterprise e2B = edir2.createEnterprise(Enterprise.EnterpriseType.LabDiagnostics, "Lab Center & Diagnostics", "Boston");
         Enterprise e3B = edir2.createEnterprise(Enterprise.EnterpriseType.Vaccination, "Immunization & Vaccination", "Boston");
-
+       Enterprise e4B = edir2.createEnterprise(Enterprise.EnterpriseType.BloodBank, "Boston Blood Bank", "Boston");
+if (e4B != null) {
+    e4B.setBloodBankDirectory(new BloodBankDirectory()); // Initialize BloodBankDirectory
+    e4B.setDeliveryAgentsInEnterpiselist(new ArrayList<>()); // Initialize Delivery Agent List
+}
+        
+        
+        
+        
+        
 //        CREATE ENTERPRISE USER ADMINS FOR 2 ENTERPRISES
         Employee pharmaEntemp = new Employee();
         pharmaEntemp.setName("PHARMA ENTERPRISE ADMIN CALIFORNIA");
@@ -122,6 +179,12 @@ public class ConfigureASystem {
         Employee vaccineEntAdmin = new Employee();
         vaccineEntAdmin.setName("VACCINE AND IMMUNIZATION ENTERPRISE ADMIN CALIFORNIA");
         e3.getEnterpriseUserAccountDirectory().createEnterpriseUser("vaccineenterprise", "vaccineenterprise", vaccineEntAdmin, new VaccinationEnterpriseRole());
+        
+        Employee bloodEmployee = new Employee();
+        vaccineEntAdmin.setName("Bloodbank ADMIN CALIFORNIA");
+        UserAccount createEnterpriseUser = e4.getEnterpriseUserAccountDirectory().createEnterpriseUser("BloodBank", "BloodBank", bloodEmployee, new EnterpriseBloodbank());
+        
+        
 
         Employee pharmaEntemp2 = new Employee();
         pharmaEntemp.setName("PHARMA ENTERPRISE ADMIN BOSTON");
@@ -138,6 +201,76 @@ public class ConfigureASystem {
         Employee vaccineEntAdmin2 = new Employee();
         vaccineEntAdmin2.setName("VACCINE AND IMMUNIZATION ENTERPRISE ADMIN BOSTON");
         e3B.getEnterpriseUserAccountDirectory().createEnterpriseUser("Bvaccineenterprise", "Bvaccineenterprise", vaccineEntAdmin2, new VaccinationEnterpriseRole());
+        
+        Employee bloodBankAdminCalifornia = new Employee();
+bloodBankAdminCalifornia.setName("California Blood Bank Admin");
+e4.getEnterpriseUserAccountDirectory().createEnterpriseUser(
+    "CalBloodBankAdmin", // Username
+    "CalBloodBankPass",  // Password
+    bloodBankAdminCalifornia,
+    new EnterpriseBloodbank() // Role for Blood Bank Admin
+);
+
+Employee bloodBankAdminBoston = new Employee();
+bloodBankAdminBoston.setName("Boston Blood Bank Admin");
+        UserAccount createEnterpriseUser1 = e4B.getEnterpriseUserAccountDirectory().createEnterpriseUser(
+                "BosBloodBankAdmin", // Username
+                "BosBloodBankPass",  // Password
+                bloodBankAdminBoston,
+                new EnterpriseBloodbank() // Role for Blood Bank Admin
+        );
+        
+        
+        // Add Blood Banks to California Blood Bank Enterprise// Add Blood Banks to California Blood Bank Enterprise
+BloodBankDirectory californiaBloodBankDirectory = e4.getBloodBankDirectory();
+
+// Create Blood Bank 1 in California
+BloodBank californiaBloodBank1 = californiaBloodBankDirectory.addBloodBank("California Blood Bank 1", 
+    "Los Angeles", 
+    "A+", 
+    100, 
+    "123-456-7890", 
+    "admin1",  // Username for admin
+    "adminpass123"  // Password for admin
+);
+
+// Create Blood Bank 2 in California
+BloodBank californiaBloodBank2 = californiaBloodBankDirectory.addBloodBank("California Blood Bank 2", 
+    "San Francisco", 
+    "O-", 
+    50, 
+    "987-654-3210", 
+    "admin2",  // Username for admin
+    "adminpass456"  // Password for admin
+);
+
+// Add Blood Banks to Boston Blood Bank Enterprise
+BloodBankDirectory bostonBloodBankDirectory = e4B.getBloodBankDirectory();
+
+// Create Blood Bank 1 in Boston
+BloodBank bostonBloodBank1 = bostonBloodBankDirectory.addBloodBank("Boston Blood Bank 1", 
+    "Boston", 
+    "B+", 
+    80, 
+    "222-333-4444", 
+    "admin3",  // Username for admin
+    "adminpass789"  // Password for admin
+);
+
+// Create Harvard Blood Bank in Boston
+BloodBank bostonBloodBank2 = bostonBloodBankDirectory.addBloodBank("Harvard Blood Bank", 
+    "Cambridge", 
+    "AB-", 
+    60, 
+    "555-666-7777", 
+    "admin4",  // Username for admin
+    "adminpass012"  // Password for admin
+);
+
+
+       
+
+
 
 //        For Pharma enterprise
 //        create delivery agents in enterprise
@@ -224,6 +357,11 @@ public class ConfigureASystem {
 
         }
         e3B.setDeliveryAgentsInEnterpiselist(delListV2);
+        
+        
+        
+
+
 
         // For Medical equipment Enterprise
         //  create delivery agents in enterprise

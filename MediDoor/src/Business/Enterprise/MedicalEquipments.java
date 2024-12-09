@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author shivanisugurushetty
+ * @author Nidhi Raghavendra
  */
 public class MedicalEquipments extends Enterprise {
     public MedicalEquipments(String name, String location){

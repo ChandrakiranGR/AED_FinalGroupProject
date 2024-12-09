@@ -1,5 +1,9 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 package Business.Organization;
-
 
 import Business.Role.LabAssistantRole;
 import Business.Role.LabTesterRole;
@@ -7,15 +11,9 @@ import Business.Role.PharmacistRole;
 import Business.Role.Role;
 import java.util.ArrayList;
 
-
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-
 /**
  *
- * @author chandrkiran
+ * @author Nidhi Raghavendra
  */
 public class PharmacyOrganization extends Organization {
     public PharmacyOrganization(String name, String location, int zipcode) {

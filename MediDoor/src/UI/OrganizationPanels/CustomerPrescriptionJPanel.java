@@ -1,6 +1,7 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package UI.OrganizationPanels;
 
@@ -20,7 +21,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author shivanisugurushetty
+ * @author Nidhi Raghavendra
  */
 public class CustomerPrescriptionJPanel extends javax.swing.JPanel {
 
@@ -58,7 +59,7 @@ public class CustomerPrescriptionJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        jFileChooser1 = new javax.swing.JFileChooser();
         jLabel1 = new javax.swing.JLabel();
         dropdownOrders = new javax.swing.JComboBox<>();
         jButton1 = new javax.swing.JButton();
@@ -67,12 +68,12 @@ public class CustomerPrescriptionJPanel extends javax.swing.JPanel {
         jFile = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
-        jPanel1.setBackground(new java.awt.Color(253, 252, 249));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setBackground(new java.awt.Color(253, 252, 249));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel1.setBorder(javax.swing.BorderFactory.createCompoundBorder(javax.swing.BorderFactory.createEtchedBorder(), javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED)));
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 30, 460, 600));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 30, 460, 600));
 
         dropdownOrders.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] {  }));
         dropdownOrders.addActionListener(new java.awt.event.ActionListener() {
@@ -80,7 +81,7 @@ public class CustomerPrescriptionJPanel extends javax.swing.JPanel {
                 dropdownOrdersActionPerformed(evt);
             }
         });
-        jPanel1.add(dropdownOrders, new org.netbeans.lib.awtextra.AbsoluteConstraints(77, 69, 160, -1));
+        add(dropdownOrders, new org.netbeans.lib.awtextra.AbsoluteConstraints(77, 69, 160, -1));
 
         jButton1.setBackground(new java.awt.Color(0, 153, 153));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -90,7 +91,7 @@ public class CustomerPrescriptionJPanel extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(283, 69, -1, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(283, 69, -1, -1));
 
         itemsTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -117,7 +118,7 @@ public class CustomerPrescriptionJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(itemsTable);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(63, 124, 294, 350));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(63, 124, 294, 350));
 
         jFile.setBackground(new java.awt.Color(0, 102, 102));
         jFile.setForeground(new java.awt.Color(255, 255, 255));
@@ -127,7 +128,7 @@ public class CustomerPrescriptionJPanel extends javax.swing.JPanel {
                 jFileActionPerformed(evt);
             }
         });
-        jPanel1.add(jFile, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 520, -1, -1));
+        add(jFile, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 520, -1, -1));
 
         jButton2.setBackground(new java.awt.Color(0, 102, 102));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
@@ -137,38 +138,8 @@ public class CustomerPrescriptionJPanel extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 570, -1, -1));
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1500, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1500, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1000, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1000, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 570, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
-
-    private void dropdownOrdersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dropdownOrdersActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_dropdownOrdersActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:1
-        populateOrderDetails();
-    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jFileActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jFileActionPerformed
         // TODO add your handling code here:
@@ -182,11 +153,17 @@ public class CustomerPrescriptionJPanel extends javax.swing.JPanel {
 
         ImageIcon ii = new ImageIcon(this.chosenFile.getAbsolutePath());
         jLabel1.setIcon(ii);
+
     }//GEN-LAST:event_jFileActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:1
+        populateOrderDetails();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-        //        update order
+//        update order
         if (this.chosenFile != null) {
             this.orderToUpdate.setStatus("PRESCRIPTION UPLOADED");
             this.orderToUpdate.setPrescription(this.chosenFile);
@@ -196,7 +173,12 @@ public class CustomerPrescriptionJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "You forgot an attachment");
         }
     }//GEN-LAST:event_jButton2ActionPerformed
-public void populateDp() {
+
+    private void dropdownOrdersActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dropdownOrdersActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_dropdownOrdersActionPerformed
+
+    public void populateDp() {
 
         for (Order o : this.orderlist) {
             if (o.getStatus().equals("PRESCRIPTION REQUIRED")) {
@@ -242,8 +224,8 @@ public void populateDp() {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jFile;
+    private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     // End of variables declaration//GEN-END:variables
 }

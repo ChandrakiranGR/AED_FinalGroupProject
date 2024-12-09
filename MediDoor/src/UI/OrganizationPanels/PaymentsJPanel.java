@@ -1,6 +1,7 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package UI.OrganizationPanels;
 
@@ -13,7 +14,7 @@ import javax.swing.table.DefaultTableModel;
 
 /**
  *
- * @author shivanisugurushetty
+ * @author Nidhi Raghavendra
  */
 public class PaymentsJPanel extends javax.swing.JPanel {
 
@@ -44,10 +45,9 @@ public class PaymentsJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         comboOrder = new javax.swing.JComboBox();
-        jPanel2 = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         itemtable = new javax.swing.JTable();
@@ -65,22 +65,22 @@ public class PaymentsJPanel extends javax.swing.JPanel {
         jScrollPane2 = new javax.swing.JScrollPane();
         PAYtABLE = new javax.swing.JTable();
 
-        jPanel1.setBackground(new java.awt.Color(253, 252, 249));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setBackground(new java.awt.Color(253, 252, 249));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setText("SWIFT PAYMENT");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(558, 62, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(558, 62, -1, -1));
 
-        jPanel1.add(comboOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 140, 210, -1));
+        add(comboOrder, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 140, 210, -1));
 
-        jPanel2.setBackground(new java.awt.Color(204, 255, 204));
-        jPanel2.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel2.setForeground(new java.awt.Color(0, 102, 102));
-        jPanel2.setFont(new java.awt.Font("Times New Roman", 1, 11)); // NOI18N
-        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.setBackground(new java.awt.Color(204, 255, 204));
+        jPanel1.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jPanel1.setForeground(new java.awt.Color(0, 102, 102));
+        jPanel1.setFont(new java.awt.Font("Times New Roman", 1, 11)); // NOI18N
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setText("ORDER REVIEW");
-        jPanel2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, -1, -1));
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 30, -1, -1));
 
         itemtable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -107,36 +107,36 @@ public class PaymentsJPanel extends javax.swing.JPanel {
         });
         jScrollPane1.setViewportView(itemtable);
 
-        jPanel2.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 280, 250));
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 280, 250));
 
         jLabel3.setText("DELIVERY FEE");
-        jPanel2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, -1, -1));
+        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 390, -1, -1));
 
         jLabel4.setText("TAX");
-        jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, -1, -1));
+        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, -1, -1));
 
         jLabel5.setText("ADDRESS");
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, -1, -1));
+        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 350, -1, -1));
 
         jLabel6.setText("ORDER TOTAL");
-        jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 460, -1, -1));
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 460, -1, -1));
 
         jLabel7.setText("....");
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 350, -1, -1));
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 350, -1, -1));
 
         jLabel8.setText("$ 5.00");
-        jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 390, -1, -1));
+        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 390, -1, -1));
 
         jLabel9.setText("$ 3.5");
-        jPanel2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 420, -1, -1));
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 420, -1, -1));
 
         LABELtOTAL.setText(".");
-        jPanel2.add(LABELtOTAL, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 460, 40, -1));
+        jPanel1.add(LABELtOTAL, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 460, 40, -1));
 
         jLabel10.setText("$");
-        jPanel2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 460, -1, -1));
+        jPanel1.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 460, -1, -1));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 130, 320, 510));
+        add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 130, 320, 510));
 
         jButton1.setBackground(new java.awt.Color(0, 102, 102));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
@@ -146,7 +146,7 @@ public class PaymentsJPanel extends javax.swing.JPanel {
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 140, -1, -1));
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 140, -1, -1));
 
         jButton2.setBackground(new java.awt.Color(0, 102, 102));
         jButton2.setForeground(new java.awt.Color(255, 255, 255));
@@ -156,7 +156,7 @@ public class PaymentsJPanel extends javax.swing.JPanel {
                 jButton2ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 670, -1, -1));
+        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(800, 670, -1, -1));
 
         PAYtABLE.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -183,60 +183,40 @@ public class PaymentsJPanel extends javax.swing.JPanel {
         });
         jScrollPane2.setViewportView(PAYtABLE);
 
-        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, -1, -1));
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1500, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1500, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1000, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1000, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-
+        
         try {
             this.order = this.customer.findOrderById((int) comboOrder.getSelectedItem());
-
+            
             Double total = this.order.getPrice()  + 5.00 + 3.5;
-
+            
             populateItems();
             jLabel7.setText(this.customer.getAddress());
             LABELtOTAL.setText(String.valueOf(total));
-
+            
         } catch(Exception e) {
-
+            
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         // TODO add your handling code here:
-
-        this.order.getOrderPayment().setStatus("PAID");
-        this.order.getOrderPayment().setPaymentDate(new Date());
-        this.order.getOrderPayment().setAmount(Double.valueOf(LABELtOTAL.getText()));
-
-        this.order.setPrice(Double.valueOf(LABELtOTAL.getText()));
-
-        JOptionPane.showMessageDialog(null, "PAYMENT RECEIVED \n" + this.order.getOrderPayment().getPaymentID() + " is your Payment ID");
-        populatePayments();
+        
+       this.order.getOrderPayment().setStatus("PAID");
+       this.order.getOrderPayment().setPaymentDate(new Date());
+       this.order.getOrderPayment().setAmount(Double.valueOf(LABELtOTAL.getText()));
+       
+       this.order.setPrice(Double.valueOf(LABELtOTAL.getText()));
+       
+       JOptionPane.showMessageDialog(null, "PAYMENT RECEIVED \n" + this.order.getOrderPayment().getPaymentID() + " is your Payment ID");
+       populatePayments();
     }//GEN-LAST:event_jButton2ActionPerformed
-public void populatePayments() {
+
+    public void populatePayments() {
           this.payModel.setRowCount(0);
         
         try{
@@ -306,7 +286,6 @@ public void populatePayments() {
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     // End of variables declaration//GEN-END:variables

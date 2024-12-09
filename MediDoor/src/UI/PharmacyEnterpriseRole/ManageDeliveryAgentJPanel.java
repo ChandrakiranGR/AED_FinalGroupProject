@@ -1,6 +1,8 @@
+
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package UI.PharmacyEnterpriseRole;
 import Business.Customer.Customer;
@@ -25,7 +27,7 @@ import javax.swing.JPanel;
 import javax.swing.table.DefaultTableModel;
 /**
  *
- * @author shivanisugurushetty
+ * @author pannaga
  */
 public class ManageDeliveryAgentJPanel extends javax.swing.JPanel {
     JPanel userProcessContainer;
@@ -54,7 +56,11 @@ public class ManageDeliveryAgentJPanel extends javax.swing.JPanel {
         System.out.println("CAME INTO DELIVERY AGENT PANEL");
         dtm = (DefaultTableModel) deliveryjTable.getModel();
 
-       
+//        if(this.business == null) {
+//            JOptionPane.showMessageDialog(null, "Something went wrong");
+//        } else {
+//            System.out.println("this.ecosystem for pharma is not null");
+//        }
 
         System.out.println("Going inside populate table");
         populateTable();
@@ -74,6 +80,8 @@ public class ManageDeliveryAgentJPanel extends javax.swing.JPanel {
 
     }
 
+
+
     /**
      * This method is called from within the constructor to initialize the form.
      * WARNING: Do NOT modify this code. The content of this method is always
@@ -83,7 +91,6 @@ public class ManageDeliveryAgentJPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
@@ -103,24 +110,24 @@ public class ManageDeliveryAgentJPanel extends javax.swing.JPanel {
         jLabel1 = new javax.swing.JLabel();
         btnBack = new javax.swing.JButton();
 
-        jPanel1.setBackground(new java.awt.Color(253, 252, 249));
-        jPanel1.setPreferredSize(new java.awt.Dimension(1500, 1000));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setBackground(new java.awt.Color(253, 252, 249));
+        setPreferredSize(new java.awt.Dimension(1500, 1000));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setText("Name");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 155, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(89, 155, -1, -1));
 
         jLabel7.setText("Zipcode");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, -1, -1));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, -1, -1));
 
         jLabel8.setText("Username");
-        jPanel1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, -1, -1));
+        add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 290, -1, -1));
 
         jLabel9.setText("Password");
-        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 330, -1, -1));
-        jPanel1.add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 150, 194, -1));
-        jPanel1.add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, 194, -1));
-        jPanel1.add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, 194, -1));
+        add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 330, -1, -1));
+        add(txtName, new org.netbeans.lib.awtextra.AbsoluteConstraints(161, 150, 194, -1));
+        add(txtUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 280, 194, -1));
+        add(txtPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 320, 194, -1));
 
         btnAdd.setBackground(new java.awt.Color(0, 102, 102));
         btnAdd.setForeground(new java.awt.Color(255, 255, 255));
@@ -130,7 +137,7 @@ public class ManageDeliveryAgentJPanel extends javax.swing.JPanel {
                 btnAddActionPerformed(evt);
             }
         });
-        jPanel1.add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 360, 100, -1));
+        add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 360, 100, -1));
 
         btndelete.setBackground(new java.awt.Color(0, 102, 102));
         btndelete.setForeground(new java.awt.Color(255, 255, 255));
@@ -140,7 +147,7 @@ public class ManageDeliveryAgentJPanel extends javax.swing.JPanel {
                 btndeleteActionPerformed(evt);
             }
         });
-        jPanel1.add(btndelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 440, -1, -1));
+        add(btndelete, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 440, -1, -1));
 
         deliveryjTable.setBackground(new java.awt.Color(204, 255, 204));
         deliveryjTable.setModel(new javax.swing.table.DefaultTableModel(
@@ -156,10 +163,10 @@ public class ManageDeliveryAgentJPanel extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(deliveryjTable);
 
-        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 110, 477, 323));
+        add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 110, 477, 323));
 
         jLabel3.setText("Active");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, -1, -1));
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 250, -1, -1));
 
         jcheckyes.setText("yes");
         jcheckyes.addActionListener(new java.awt.event.ActionListener() {
@@ -167,7 +174,7 @@ public class ManageDeliveryAgentJPanel extends javax.swing.JPanel {
                 jcheckyesActionPerformed(evt);
             }
         });
-        jPanel1.add(jcheckyes, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 240, -1, -1));
+        add(jcheckyes, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 240, -1, -1));
 
         jcheckno.setText("no");
         jcheckno.addActionListener(new java.awt.event.ActionListener() {
@@ -175,17 +182,19 @@ public class ManageDeliveryAgentJPanel extends javax.swing.JPanel {
                 jchecknoActionPerformed(evt);
             }
         });
-        jPanel1.add(jcheckno, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 240, -1, -1));
+        add(jcheckno, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 240, -1, -1));
 
         cmbzipcode.setModel(new javax.swing.DefaultComboBoxModel(new String[] { " " }));
-        jPanel1.add(cmbzipcode, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 200, 200, -1));
-        jPanel1.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-200, 110, 1730, 1090));
+        add(cmbzipcode, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 200, 200, -1));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/resources/delivery-man-parcel-handover-to-customer-online-delivery-service-smartphone-cartoon-art-illustration-vector.jpeg"))); // NOI18N
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(-200, 110, 1730, 1090));
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 1, 24)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 102, 102));
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Manage Delivery agent");
-        jPanel1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 30, 1070, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 30, 1070, -1));
 
         btnBack.setBackground(new java.awt.Color(0, 102, 102));
         btnBack.setForeground(new java.awt.Color(255, 255, 255));
@@ -195,34 +204,14 @@ public class ManageDeliveryAgentJPanel extends javax.swing.JPanel {
                 btnBackActionPerformed(evt);
             }
         });
-        jPanel1.add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1481, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1481, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 986, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 986, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 30, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         // TODO add your handling code here:
 
-        Employee em = new Employee();
+
+      Employee em = new Employee();
         DeliveryAgent d = new DeliveryAgent();
         UserAccount u = d.getUseraccount();
 
@@ -246,7 +235,10 @@ public class ManageDeliveryAgentJPanel extends javax.swing.JPanel {
             JOptionPane.showMessageDialog(null, "Please fill the empty fields", "Warining", JOptionPane.WARNING_MESSAGE);
             return;
         }
-        
+//        if(txtZipcode.getText().length() < 5 || txtZipcode.getText().length() > 6){
+//            JOptionPane.showMessageDialog(null, "Zip code must be 5 or 6 digits", "Warining", JOptionPane.WARNING_MESSAGE);
+//            return;
+//        }
         System.out.println("Inside loop");
         boolean flag = business.getUserAccountDirectory().checkIfUsernameIsUnique(username);
         if(flag == false){
@@ -265,7 +257,7 @@ public class ManageDeliveryAgentJPanel extends javax.swing.JPanel {
             u.setPassword(password);
             u.setRole(new DeliveryAgentRole());
             u.setEmployee(employee);
-            //            d.setUseraccount(u);
+//            d.setUseraccount(u);
             d.setZipcodes(zipcodes);
             System.out.println("delivery- eneterprise");
             System.out.println("new changed ...... ");
@@ -290,7 +282,18 @@ public class ManageDeliveryAgentJPanel extends javax.swing.JPanel {
         jcheckyes.setSelected(false);
         jcheckno.setSelected(false);
 
+
+
+
     }//GEN-LAST:event_btnAddActionPerformed
+
+    private void jcheckyesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcheckyesActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jcheckyesActionPerformed
+
+    private void jchecknoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jchecknoActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jchecknoActionPerformed
 
     private void btndeleteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btndeleteActionPerformed
         // TODO add your handling code here:
@@ -302,6 +305,9 @@ public class ManageDeliveryAgentJPanel extends javax.swing.JPanel {
             return;
         }
 
+
+
+
         ArrayList<UserAccount> usrl = userdir.getUserAccountList();
         ArrayList<DeliveryAgent> delList = enterprise.getDeliveryAgentsInEnterpiselist();
         String deliveryman = dtm.getValueAt(selectrow,0).toString();
@@ -312,12 +318,12 @@ public class ManageDeliveryAgentJPanel extends javax.swing.JPanel {
         if(dialoguer == 0){
 
             try{
-                for(DeliveryAgent dm: delList){
-                    if(dm.getUseraccount().getEmployee().getName().equals(deliveryman) && dm.getUseraccount().getUsername().equals(uname)){
-                        delList.remove(dm);
-                        System.out.println("Removed delivery man");
-                    }
+            for(DeliveryAgent dm: delList){
+                if(dm.getUseraccount().getEmployee().getName().equals(deliveryman) && dm.getUseraccount().getUsername().equals(uname)){
+                    delList.remove(dm);
+                   System.out.println("Removed delivery man");
                 }
+            }
             }
             catch(Exception ex){
                 System.out.println("Exception caught");
@@ -325,28 +331,22 @@ public class ManageDeliveryAgentJPanel extends javax.swing.JPanel {
 
             for(UserAccount ua:usrl ){
                 if(ua.getUsername().equals(uname) || ua.getPassword().equals(passwd)){
-                    // usrl.remove(uname);
+                   // usrl.remove(uname);
                     usrl.remove(dtm.getValueAt(selectrow,3));
                     usrl.remove(dtm.getValueAt(selectrow,4));
-                    //  usrl.remove(ua.getPassword().equals(passwd));
+                  //  usrl.remove(ua.getPassword().equals(passwd));
 
                     System.out.println("Removed username and password");
                 }
             }
 
-            this.dtm.removeRow(selectrow);
-        }
+             this.dtm.removeRow(selectrow);
+      }
+
+
 
         populateTable();
     }//GEN-LAST:event_btndeleteActionPerformed
-
-    private void jcheckyesActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcheckyesActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jcheckyesActionPerformed
-
-    private void jchecknoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jchecknoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jchecknoActionPerformed
 
     private void btnBackActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBackActionPerformed
         // TODO add your handling code here:
@@ -361,8 +361,10 @@ public class ManageDeliveryAgentJPanel extends javax.swing.JPanel {
         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
+
     }//GEN-LAST:event_btnBackActionPerformed
-public void populateTable(){
+
+    public void populateTable(){
 
         System.out.println("Inside populate Table");
         dtm.setRowCount(0);
@@ -391,6 +393,44 @@ public void populateTable(){
 
     }
 
+
+
+
+//        for(Network n : business.getNetworks()){
+//
+//            for(int i=0; i < n.; i++){
+//
+//                Object [] row = new Object[3];
+//                row[0] = n.getCustomerDirectory().getCustomerList().get(i).getName();
+//                row[1] = n.getCustomerDirectory().getCustomerList().get(i).getEmail();
+//                row[2] = n.getCustomerDirectory().getCustomerList().get(i).getLocation();
+//                row[3] = n.getCustomerDirectory().getCustomerList().get(i).getAddress();
+//                row[4] = n.getCustomerDirectory().getCustomerList().get(i).getPhoneNumber();
+//                row[5] = n.getCustomerDirectory().getCustomerList().get(i).getZipcode();
+//                row[6] = n.getCustomerDirectory().getCustomerList().get(i).getUsername();
+//                row[7] = n.getCustomerDirectory().getCustomerList().get(i).getPassword();
+//
+//                dtm.addRow(row);
+//            }
+//        }
+
+//    for(Employee ent: business.getEmployeeDirectory().getEmployeeList()){
+//
+//    }
+
+//    for(Network network:business.getNetworks()){
+//                //Step 2.a: check against each enterprise
+//                for(int i=0; i < network.getEnterpriseDirectory().getEnterpriseList().size(); i++){
+//                    for(Enterprise enterprise:network.getEnterpriseDirectory().getEnterpriseList()){
+//
+//                    }
+//                    }
+//    }
+
+
+
+
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnAdd;
     private javax.swing.JButton btnBack;
@@ -404,7 +444,6 @@ public void populateTable(){
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JCheckBox jcheckno;
     private javax.swing.JCheckBox jcheckyes;

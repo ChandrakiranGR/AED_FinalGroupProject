@@ -1,8 +1,11 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package UI.LabCenters;
+
+
 import Business.Ecosystem;
 import Business.Employee.Employee;
 import Business.Enterprise.Enterprise;
@@ -17,12 +20,17 @@ import java.util.ArrayList;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
+
 /**
  *
- * @author chandrkiran
+ * @author vachanabelgavi
  */
 public class AddLabCentersJPanel extends javax.swing.JPanel {
-JPanel userProcessContainer;
+
+    /**
+     * Creates new form LabCentersJPanel
+     */
+    JPanel userProcessContainer;
     Ecosystem business;
     UserAccount account;
     Enterprise enterprise;
@@ -30,10 +38,8 @@ JPanel userProcessContainer;
     Organization organization;
     //ArrayList<LabAssistants> labassistants;
     ArrayList<Product> products;
-    /**
-     * Creates new form AddLabCentersJPanel
-     */
-   public AddLabCentersJPanel(JPanel userProcessContainer, Ecosystem business, UserAccount account, Network network, Enterprise enterprise, Organization organization) {
+    
+    public AddLabCentersJPanel(JPanel userProcessContainer, Ecosystem business, UserAccount account, Network network, Enterprise enterprise, Organization organization) {
         initComponents();
         
         this.userProcessContainer = userProcessContainer;
@@ -41,7 +47,18 @@ JPanel userProcessContainer;
         this.account = account;
         this.network = network;
         this.enterprise = this.network.getEnterpriseDirectory().getEnterprise("Lab Center & Diagnostics");
-        this.organization = this.enterprise.getOrganizationDirectory().getOrganizationByName("Sample Collection Center");     
+        this.organization = this.enterprise.getOrganizationDirectory().getOrganizationByName("Sample Collection Center");
+        /*
+        for (Network n : business.getNetworks()){
+            
+            this.enterprise = n.getEnterpriseDirectory().getEnterprise("Lab Center & Diagnostics");
+        }
+        
+        labassistants = new ArrayList<LabAssistants>();
+        
+ 
+        */
+        
         this.products = this.organization.getOrganizationProducts();
     }
 
@@ -54,7 +71,6 @@ JPanel userProcessContainer;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         txtTest = new javax.swing.JTextField();
@@ -62,22 +78,22 @@ JPanel userProcessContainer;
         btnAdd = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setBackground(new java.awt.Color(255, 255, 255));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel5.setText("Price ");
-        jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 220, -1, -1));
+        add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 220, -1, -1));
 
         jLabel7.setText("Test Name");
-        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 180, -1, -1));
-        jPanel1.add(txtTest, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 180, 180, -1));
+        add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 180, -1, -1));
+        add(txtTest, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 180, 180, -1));
 
         txtPrice.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtPriceActionPerformed(evt);
             }
         });
-        jPanel1.add(txtPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 220, 180, -1));
+        add(txtPrice, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 220, 180, -1));
 
         btnAdd.setText("Add");
         btnAdd.addActionListener(new java.awt.event.ActionListener() {
@@ -85,7 +101,7 @@ JPanel userProcessContainer;
                 btnAddActionPerformed(evt);
             }
         });
-        jPanel1.add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 300, 100, 49));
+        add(btnAdd, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 300, 100, 49));
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/UI/Images/icons8-back-50.png"))); // NOI18N
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -93,57 +109,33 @@ JPanel userProcessContainer;
                 jButton1ActionPerformed(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, -1, -1));
-
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1500, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1500, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1000, Short.MAX_VALUE)
-            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 1000, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 60, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
-
-    private void txtPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPriceActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_txtPriceActionPerformed
 
     private void btnAddActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddActionPerformed
         // TODO add your handling code here:
-
+        
         Pattern p;
-
+        
         //LabAssistants la = new LabAssistants();
 
         String test = txtTest.getText();
         double price = Double.parseDouble(txtPrice.getText());
+        
 
         if(test.isEmpty() || txtPrice.getText().isEmpty()){
-
+            
             JOptionPane.showMessageDialog(null, "Please fill the empty fields", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
-
+        
         String testmatch = "[A-Za-z]{1,100}";
         p = Pattern.compile(testmatch);
         if(p.matcher(test).matches()){
             JOptionPane.showMessageDialog(null, "Use only characters.", "Warning", JOptionPane.WARNING_MESSAGE);
             return;
         }
-
+        
         System.out.println("Inside loop");
         boolean flag = business.getUserAccountDirectory().checkIfUsernameIsUnique(test);
         if(flag == false){
@@ -156,16 +148,16 @@ JPanel userProcessContainer;
             System.out.println("Inside else statement");
             //Employee employee = business.getEmployeeDirectory().createEmployee(name);
             //business.getUserAccountDirectory().createUserAccount(username, password, employee , new LabAssistantRole());
-
+            
             prod.setName(test);
             prod.setPrice(price);
-
+            
             products.add(prod);
-            /*
+            /*        
             for(Network n : business.getNetworks()){
                 for(int i=0; i<n.getCustomerDirectory().getCustomerList().size(); i++){
                     for(int j=0; j<n.getCustomerDirectory().getCustomerList().get(i).getOrderlist().size(); j++){
-
+                        
                         n.getCustomerDirectory().getCustomerList().get(i).getOrderlist().get(j).setLabAssistant(la);
                     }
                 }
@@ -176,11 +168,16 @@ JPanel userProcessContainer;
 
         txtTest.setText("");
         txtPrice.setText("");
+
     }//GEN-LAST:event_btnAddActionPerformed
+
+    private void txtPriceActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtPriceActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtPriceActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        userProcessContainer.remove(this);
+         userProcessContainer.remove(this);
         CardLayout layout = (CardLayout) userProcessContainer.getLayout();
         layout.previous(userProcessContainer);
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -191,7 +188,6 @@ JPanel userProcessContainer;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JPanel jPanel1;
     private javax.swing.JTextField txtPrice;
     private javax.swing.JTextField txtTest;
     // End of variables declaration//GEN-END:variables

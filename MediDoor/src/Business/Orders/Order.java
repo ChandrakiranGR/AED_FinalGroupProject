@@ -1,20 +1,23 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package Business.Orders;
 
+//import Business.Payment.Payment;
 import Business.DeliveryAgent.DeliveryAgent;
 import Business.LabAssistants.LabAssistants;
 import Business.Payment.Payment;
+ 
 import java.util.ArrayList;
 import java.io.File;
+
 /**
  *
- * @author chandrkiran
+ * @author Nidhi Raghavendra
  */
 public class Order {
-    
     private String name;
     private String status;
     private double price;
@@ -23,6 +26,16 @@ public class Order {
     private static int count = 0;
     private String organizationname;
     private String enterprisename;
+    //private double totalPrice;
+/*
+    public double getTotalPrice() {
+        return totalPrice;
+    }
+
+    public void setTotalPrice(double totalPrice) {
+        this.totalPrice = totalPrice;
+    }
+  */  
     
     private ArrayList<OrderItem> itemsOrdered;
     
@@ -138,6 +151,5 @@ public class Order {
     public void setLabAssistant(LabAssistants labAssistant) {
         this.labAssistant = labAssistant;
     }
-    
     
 }

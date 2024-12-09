@@ -1,5 +1,6 @@
 package Business.Enterprise;
 
+import Business.BloodBank.BloodBank;
 import Business.Enterprise.Enterprise.EnterpriseType;
 import java.util.ArrayList;
 
@@ -11,7 +12,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author shivanisugurushetty
+ * @author Nidhi Raghavendra
  */
 public class EnterpriseDirectory {
     private ArrayList<Enterprise> enterpriselist;
@@ -49,6 +50,13 @@ public class EnterpriseDirectory {
             enterprise = new LabOrgDiagnosticsEnterprise(name, location);
             this.enterpriselist.add(enterprise);
         }
+          if(type == EnterpriseType.BloodBank) {
+        enterprise = new Enterprise(type, name, location); // Create a BloodBank enterprise
+        this.enterpriselist.add(enterprise);
+
+        // Create default BloodBanks for this enterprise
+       
+    }
         
         return enterprise;
     }

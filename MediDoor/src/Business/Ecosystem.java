@@ -1,7 +1,6 @@
-
-
-
 package Business;
+
+import Business.BloodBank.BloodBank;
 import Business.Customer.Customer;
 import Business.DB4OUtil.DB4OUtil;
 import Business.Enterprise.Enterprise;
@@ -12,13 +11,25 @@ import Business.Role.SystemAdminRole;
 import Business.UserAccount.UserAccount;
 import java.util.ArrayList;
 
+//
+import Business.BloodBank.BloodBankDirectory;//change
+import Business.Enterprise.Role.BloodBankAdminRole;
 
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+/**
+ *
+ * @author Nidhi Raghavendra
+ */
 public class Ecosystem extends Organization {
 
     public static Ecosystem ecosystem;
     private ArrayList<Network> networkList;
     
-//    private BloodBankDirectory bloodBankDirectory;//
+    private BloodBankDirectory bloodBankDirectory;//
 
     public Network createNetwork() {
         Network network = new Network();
@@ -30,17 +41,17 @@ public class Ecosystem extends Organization {
         super(null, "", "", 0);
 
         this.networkList = new ArrayList<Network>();
-//        this.bloodBankDirectory = new BloodBankDirectory();
+        this.bloodBankDirectory = new BloodBankDirectory();
     }
     //Getter for Blood Bank direc
-//    public BloodBankDirectory getBloodBankDirectory() {
-//        return this.bloodBankDirectory;
-//    }
+    public BloodBankDirectory getBloodBankDirectory() {
+        return this.bloodBankDirectory;
+    }
 
     // Setter for BloodBankDirectory (Optional, depending on design)
-//    public void setBloodBankDirectory(BloodBankDirectory bloodBankDirectory) {
-//        this.bloodBankDirectory = bloodBankDirectory;
-//    }
+    public void setBloodBankDirectory(BloodBankDirectory bloodBankDirectory) {
+        this.bloodBankDirectory = bloodBankDirectory;
+    }
 
     public ArrayList<Network> getNetworks() {
         return this.networkList;
@@ -80,7 +91,7 @@ public class Ecosystem extends Organization {
 //        main function
        System.out.println("Hey there!");
     DB4OUtil database = DB4OUtil.getInstance();
-    Ecosystem system = (Ecosystem) database.retrieveSystem();
+    Ecosystem system = database.retrieveSystem();
     
     // Initialize BloodBankDirectory if it's not already initialized
 //    if (system.getBloodBankDirectory() == null) {
@@ -91,20 +102,20 @@ public class Ecosystem extends Organization {
     
     
     
-//    
-//     if (system.getBloodBankDirectory() == null) {
-//        system.setBloodBankDirectory(new BloodBankDirectory());
-//    }
-//    
-//    // Create UserAccount for BloodBank Admin (During initialization)
-//  UserAccount bloodBankAdminAccount = new UserAccount("adminBank", "adminpass123");  // Create UserAccount for BloodBank Admin
+    
+     if (system.getBloodBankDirectory() == null) {
+        system.setBloodBankDirectory(new BloodBankDirectory());
+    }
+    
+    // Create UserAccount for BloodBank Admin (During initialization)
+  UserAccount bloodBankAdminAccount = new UserAccount("adminBank", "adminpass123");  // Create UserAccount for BloodBank Admin
 
 // Assign the BloodBankAdminRole to the UserAccount
 //bloodBankAdminAccount.setRole(new BloodBankAdminRole());
 
 // Create BloodBank and associate it with the UserAccount
-//BloodBank bloodBank = new BloodBank("City Blood Bank", "Downtown", "A+", 50, "123-456-7890");
-//bloodBank.setUserAccount(bloodBankAdminAccount);
+BloodBank bloodBank = new BloodBank("City Blood Bank", "Downtown", "A+", 50, "123-456-7890");
+bloodBank.setUserAccount(bloodBankAdminAccount);
 
 // Add the blood bank to the directory
 //system.getBloodBankDirectory().addBloodBank(bloodBank);

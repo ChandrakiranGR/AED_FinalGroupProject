@@ -1,8 +1,10 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package UI.OrganizationAdminPanels;
+
 import Business.Customer.Customer;
 import Business.Ecosystem;
 import Business.Enterprise.Enterprise;
@@ -20,9 +22,10 @@ import javax.swing.JPanel;
 import javax.swing.JTable;
 import javax.swing.filechooser.FileNameExtensionFilter;
 import javax.swing.table.DefaultTableModel;
+
 /**
  *
- * @author shivanisugurushetty
+ * @author Nidhi Raghavendra
  */
 public class MEdicalEquipmentAdminJPanel extends javax.swing.JPanel {
 
@@ -31,7 +34,7 @@ public class MEdicalEquipmentAdminJPanel extends javax.swing.JPanel {
     /**
      * Creates new form MEdicalEquipmentAdminJPanel
      */
-     private final JPanel userprocessocntainer;
+    private final JPanel userprocessocntainer;
     private final UserAccount user;
     private final Ecosystem ecosystem;
     private final Network network;
@@ -256,13 +259,13 @@ public class MEdicalEquipmentAdminJPanel extends javax.swing.JPanel {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 1534, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 12, Short.MAX_VALUE))
+                .addGap(0, 20, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 919, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 12, Short.MAX_VALUE))
+                .addGap(0, 11, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -277,29 +280,8 @@ public class MEdicalEquipmentAdminJPanel extends javax.swing.JPanel {
         fetchOrderObject();
         populateItems();
         populateOrders();
+
     }//GEN-LAST:event_ordeTableMouseClicked
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-        try {
-
-            this.currentOrder.setStatus("ACCEPTED");
-            populateOrders();
-        } catch (Exception e) {
-
-        }
-    }//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
-        try {
-
-            this.currentOrder.setStatus("REJECTED");
-            populateOrders();
-        } catch (Exception e) {
-
-        }
-    }//GEN-LAST:event_jButton2ActionPerformed
 
     private void addBt1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addBt1ActionPerformed
         // TODO add your handling code here:
@@ -348,6 +330,28 @@ public class MEdicalEquipmentAdminJPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton4ActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+        try {
+
+            this.currentOrder.setStatus("ACCEPTED");
+            populateOrders();
+        } catch (Exception e) {
+
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        // TODO add your handling code here:
+        try {
+
+            this.currentOrder.setStatus("REJECTED");
+            populateOrders();
+        } catch (Exception e) {
+
+        }
+    }//GEN-LAST:event_jButton2ActionPerformed
+
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         // TODO add your handling code here:
 
@@ -357,7 +361,8 @@ public class MEdicalEquipmentAdminJPanel extends javax.swing.JPanel {
         chooser.addChoosableFileFilter(filter);
         this.chosenFile = chooser.getSelectedFile();
     }//GEN-LAST:event_jButton3ActionPerformed
-public void fetchOrderObject() {
+
+    public void fetchOrderObject() {
         for (Customer customer : this.network.getCustomerDirectory().getCustomerList()) {
             for (Order o : customer.getOrderlist()) {
                 if (o.getOrderId() == this.orderid) {

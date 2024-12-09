@@ -1,6 +1,7 @@
 /*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
  */
 package Business.DeliveryAgent;
 
@@ -8,13 +9,11 @@ import Business.Enterprise.Enterprise;
 import Business.UserAccount.UserAccount;
 import java.util.ArrayList;
 
-
 /**
  *
- * @author antaradeshmukh
+ * @author Nidhi Raghavendra
  */
 public class DeliveryAgent {
-    
     private int deliveryboyId;
     private Enterprise enterprisename;
     private static int count = 0;
@@ -25,7 +24,7 @@ public class DeliveryAgent {
     public DeliveryAgent() {
         this.deliveryboyId = this.count++;
         this.active = true;
-        this.useraccount = new UserAccount();
+        this.useraccount = new UserAccount("admin", "adminpass123");
         this.zipcodes = new ArrayList<>();
     }
     

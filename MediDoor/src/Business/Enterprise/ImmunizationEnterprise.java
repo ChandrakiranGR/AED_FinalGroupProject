@@ -12,7 +12,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author shivanisugurushetty
+ * @author Nidhi Raghavendra
  */
 public class ImmunizationEnterprise extends Enterprise {
      public ImmunizationEnterprise(String name, String location){
